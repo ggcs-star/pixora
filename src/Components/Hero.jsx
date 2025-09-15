@@ -69,7 +69,7 @@ const Hero = () => {
           </div>
 
           {/* Right Side Hero Image Component*/}
-          <div className="w-full lg:w-1/3 flex justify-center relative">
+          <div className="w-full lg:w-1/3 flex justify-center relative ">
 
             <HeroImage />
 
