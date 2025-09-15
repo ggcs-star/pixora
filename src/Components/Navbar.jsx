@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import { FaChevronDown } from "react-icons/fa";
 import PixoraLogo from "../assets/Navbar-Logo/Pixora_Logo_SVG.svg"
@@ -8,6 +8,12 @@ const Navbar = ({ onNavClick }) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const [isCoursesOpen, setIsCoursesOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setMounted(true), 50);
+    return () => clearTimeout(t);
+  }, []);
 
 
     const handleNavClick = (section) => {
@@ -16,7 +22,9 @@ const Navbar = ({ onNavClick }) => {
         setIsOpen(false);
       }
     };
+    
 
+    // border-b-[3px] border-[#e5287b] <- nav tag border in px & border color
 
 
       return (
@@ -29,9 +37,13 @@ const Navbar = ({ onNavClick }) => {
                             py-4 sm:py-5 md:py-6 lg:py-3 
                             px-4 sm:px-6 lg:px-16 2xl:h-[4rem]
                             text-white z-50 
-                            bg-black/20 backdrop-blur-md 
-                            border-b-[3px] border-[#e5287b] 2xl:px-20 2xl:py-2 "
+                            bg-black/20 backdrop-blur-md  
+                             2xl:px-20 2xl:py-2 "
                 >   
+
+                {/* Animation bottom border <- Navbar Animation Border Bottom CSS in Index.css File*/}
+                <span className={`nav-bottom-line ${mounted ? "start" : ""}`} />
+                
 
                   <div
                     className=" text-xl sm:text-2xl lg:text-xl font-bungee font-extrabold tracking-wide  cursor-pointer 2xl:text-3xl"
@@ -167,7 +179,7 @@ const Navbar = ({ onNavClick }) => {
 
                   {/* Mobile Dropdown */}
                   {/* <div
-                    className={`fixed top-16 left-0 w-full bg-gradient-to-r from-blue-700 via-purple-700 to-pink-600 
+                    className={`fixed top-13 left-0 w-full bg-gradient-to-r  from-blue-700 via-purple-700 to-pink-600 
                   text-white font-medium z-40 py-6 px-6 flex flex-col items-center gap-4 md:hidden 
                   transition-transform duration-300 ease-in-out ${
                     isOpen ? "translate-x-0" : "-translate-x-full"
@@ -226,13 +238,14 @@ const Navbar = ({ onNavClick }) => {
                     <Button className="cursor-pointer mt-4 text-black">Enquire Now</Button>
                   </div> */}
 
+                  {/* bg-gradient-to-r  from-blue-700 via-purple-700 to-pink-600 */}
                   <div
-                    className={`fixed top-12 left-0 w-full 
-                              bg-black/80 backdrop-blur-md text-white font-medium z-40 
+                    className={`fixed top-13 left-0 w-full 
+                              bg-gradient-to-r  from-blue-700 via-purple-700 to-pink-600 backdrop-blur-md text-white font-medium z-40 
                                 flex flex-col gap-4 md:hidden 
-                                overflow-hidden transition-all duration-500 ease-in-out 
+                                overflow-hidden transition-transform duration-500 ease-in-out 
                                 ${
-                                  isOpen ? "max-h-screen py-6 px-6 opacity-100" : "max-h-0 opacity-0"
+                                  isOpen ? "translate-x-0 opacity-100 py-6 px-6" : "-translate-x-full opacity-0"
                                 }`}
                   >
 
@@ -250,15 +263,18 @@ const Navbar = ({ onNavClick }) => {
                       About
                     </button>
 
-                    {/* Courses Dropdown */}
+                    {/* Courses Dropdown Start */}
                     <div className="flex flex-col items-start w-full">
 
+                      {/* Courses Button */}
                       <button
                         onClick={() => setIsCoursesOpen(!isCoursesOpen)}
                         className="hover:text-green-400 flex items-center gap-1 transition-colors duration-200 w-full justify-between"
                       >
 
                         <span>Courses</span>
+
+                        {/* Mobile View Arrow Down Icon */}
                         <FaChevronDown
                           className={`transition-transform duration-300 ${
                             isCoursesOpen ? "rotate-180" : "rotate-0"
@@ -287,23 +303,29 @@ const Navbar = ({ onNavClick }) => {
                       </div>
 
                     </div>
-
+                    {/* Courses Dropdown End */}
+                    
+                    {/* Why Choose Us Button */}
                     <button
                       onClick={() => handleNavClick("whyChoose")}
                       className="hover:text-green-400 transition-colors duration-200 text-left w-full"
                     >
                       Why Choose Us
                     </button>
+                    
+                    {/* Contact Button */}
                     <button
                       onClick={() => handleNavClick("Contact")}
                       className="hover:text-green-400 transition-colors duration-200 text-left w-full"
                     >
                       Contact
                     </button>
-                    <Button className="cursor-pointer mt-4 text-black bg-white hover:bg-green-400 transition duration-300 w-40 text-left font-poppins">
-                      Enquire Now
-                    </Button>
+                    
+                    
+
                   </div>
+
+                  
                   
               </nav>
 

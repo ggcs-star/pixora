@@ -45,10 +45,10 @@ const CourseCard = ({ image, title, position, delay }) => {
     <div
       ref={ref}
       className={`relative 
-                  w-[220px] h-[300px]   // base width
+                  w-[270px] h-[300px]   // base width
                   sm:w-[240px] sm:h-[320px] 
-                  md:w-[290px] md:h-[340px] 
-                  2xl:w-[300px] 2xl:h-[420px] 
+                  md:w-[290px] md:h-[340px] xl:w-[21rem] 
+                  2xl:w-[380px] 2xl:h-[420px] 
                   mx-auto rounded-xl overflow-hidden shadow-lg group
                   transform transition-all duration-700 ease-out
                   ${visible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}`}
@@ -66,7 +66,7 @@ const CourseCard = ({ image, title, position, delay }) => {
 
       <div className="absolute bottom-12 left-4 right-4">
 
-        <h3 className="text-white text-xl sm:text-base font-semibold leading-tight  text-center  2xl:text-2xl">
+        <h3 className="text-white text-xl sm:text-base font-semibold leading-tight  text-center  2xl:text-2xl 2xl:mb-3">
           {title}
         </h3>
 
@@ -74,7 +74,7 @@ const CourseCard = ({ image, title, position, delay }) => {
 
       <button className="absolute bottom-0 left-0 w-full bg-green-500 text-black  font-medium px-4 py-2 xs:py-1 xs:text-xs flex items-center justify-center hover:bg-green-600 transition rounded-b-xl 2xl:text-2xl">
         View Course
-        <ArrowRight className="ml-2 w-4 h-4" />
+        <ArrowRight className="ml-2 w-3 h-3 xs:w-3 xs:h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-7 2xl:h-7" />
 
       </button>
 
@@ -130,12 +130,12 @@ const SuperpowerSection = () => {
 
           <div className="grid 
                           gap-y-6 
-                          gap-x-2   
+                          gap-x-1   xl:gap-x-1
                           xs:grid-cols-1 
                           sm:grid-cols-1 
                           md:grid-cols-2 
-                          lg:grid-cols-3 
-                          2xl:grid-cols-3 
+                          lg:grid-cols-3 lg:gap-1
+                          2xl:grid-cols-3 2xl:gap-1
                           justify-center font-poppins font-medium">
 
             {courses.map((course, idx) => (

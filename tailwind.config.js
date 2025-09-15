@@ -30,10 +30,23 @@ export const theme = {
       },
       
       // Animation Slid Left 
-      animation: {
-        'slide-in-left': 'slide-in-left 1s ease-out forwards',
-      },
+      // animation: {
+      //   'slide-in-left': 'slide-in-left 1s ease-out forwards',
+      // },
 
+      // borderExpand: {
+      //     "0%": { width: "0%", left: "50%", transform: "translateX(-50%)" },
+      //     "100%": { width: "100%", left: "0%", transform: "translateX(0)" },
+      //   },
+      // gradientMove: {
+      //   "0%": { backgroundPosition: "0% 50%" },
+      //   "100%": { backgroundPosition: "100% 50%" },
+      // },
+  },
+
+  animation: {
+    borderExpand: "borderExpand 1s ease-out forwards",
+    gradientMove: "gradientMove 2s linear infinite alternate",
   },
 
 };
