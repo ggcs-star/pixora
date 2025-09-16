@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import HeroImage from "./HeroImage";
 import BlueLine from "../assets/Hero/Blue-Line-Img.png";
-// import PinkLine from "../assets/Hero/Pink-Line-Img.png";
 import { FaWhatsapp } from "react-icons/fa";
 import HeadingText from "../assets/Hero-Section-Text/Headline Text.png";
 
@@ -32,7 +31,7 @@ const Hero = () => {
         </div>
 
         {/* Hero section - Left Side + Right Side Content Start */}
-        <div className=" max-w-[94%] 2xl:max-w-[95%] mx-auto space-x-3.5  mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-10 2xl:mt-36 4k:mt-40 flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-20 xl:gap-24 2xl:gap-82 4k:gap-40 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 2xl:py-28 4k:py-36 overflow-hidden">
+        <div className=" max-w-[92%] 2xl:max-w-[95%] mx-auto space-x-3.5  mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-5 2xl:mt-30 4k:mt-40 flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-20 xl:gap-24 2xl:gap-82 4k:gap-40 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 2xl:py-6 4k:py-36 overflow-hidden">
 
          
           <div className={`lg:w-1/2 max-w-2xl 2xl:max-w-4xl sm:space-y-1 text-center lg:text-left z-20 relative mt-13 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-16 2xl:mt-20 transform transition-transform duration-1000 ease-out ${loaded ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}>
@@ -95,7 +94,7 @@ const Hero = () => {
           </div>
 
           {/* Right Side Hero Image Component*/}
-          <div className="w-full lg:w-1/3 flex justify-center relative ">
+          <div className="w-auto lg:w-1/2 flex justify-center relative ">
 
             <HeroImage />
 
@@ -104,10 +103,6 @@ const Hero = () => {
 
         </div>
         {/* Hero section - Left Side + Right Side Content End */}
-
-
-        {/* <img src={PinkLine} alt="Pink Line" className="absolute bottom-[-40rem] left-[-1rem] w-[190%] max-w-none h-auto select-none z-0 2xl:-bottom-[10rem] 2xl:w-[90%] 2xl:h[10rem] pointer-events-none "/> */}
-      
 
       </section>
       {/* Section of Hero End */}

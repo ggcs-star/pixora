@@ -41,6 +41,7 @@ const Navbar = ({ onNavClick }) => {
                              2xl:px-20 2xl:py-2 "
                 >   
 
+
                 {/* Animation bottom border <- Navbar Animation Border Bottom CSS in Index.css File*/}
                 <span className={`nav-bottom-line ${mounted ? "start" : ""}`} />
                 

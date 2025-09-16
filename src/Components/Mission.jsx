@@ -5,7 +5,7 @@ import mission2 from "../assets/Mission/Mission-Img-2.png";
 import mission3 from "../assets/Mission/Mission-Img-3.png";
 import mission4 from "../assets/Mission/Mission-Img-4.png";
 import blurShape from "../assets/Mission/Mission-img-5.png";
-import PinkLine from "../assets/Hero/Pink-Line-Img.png";
+// import PinkLine from "../assets/Hero/Pink-Line-Img.png";
 
 const Mission = () => {
 
@@ -52,8 +52,9 @@ const Mission = () => {
       // Mission Section Start
       <section className="mission-container">
 
+
         <section
-          className="section relative  w-full py-16 sm:py-20 px-4 sm:px-6 lg:px-16 bg-gradient-to-b from-purple-700 via-blue-600 to-blue-700 border-b-[3px] border-[#e5287b]"
+          className="section relative  w-full py-16 sm:py-20 px-4 sm:px-6 lg:px-16 bg-gradient-to-b from-purple-700 via-blue-600 to-blue-700 border-b-[3px] border-[#db2370]"
           id="mission"
         >
           {/* Mission Section - BlurShape Image */}
@@ -95,6 +96,9 @@ const Mission = () => {
           {/* Cards Section End */}
 
         </section>
+        
+        {/* Pink Curve Line */}
+        {/* <img src={PinkLine} alt="Pink Line" className="absolute  bottom-[-38rem] left-0 w-[100%] max-w-none h-auto select-none z-0 2xl:-bottom-[10rem] 2xl:w-[90%] 2xl:h[10rem] pointer-events-none "/> */}
 
       </section>
       // Mission Section End

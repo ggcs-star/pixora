@@ -5,7 +5,7 @@ const HeroImage = () => {
 
     return (
       // Component of Hero Image Start
-      <div className="flex justify-center lg:justify-end mt-10 lg:mt-0 2xl:w-[-3000px]">
+      <div className="flex justify-center lg:justify-end mt-10 lg:mt-0 w-full ">
         
         {/* Hero Image */}
         <img
@@ -13,11 +13,10 @@ const HeroImage = () => {
           alt="Designer at work"
           className="
             rounded-2xl 
-            max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl
             w-full
-            shadow-xl
-            2xl:max-w-6xl 2xl:h-auto   
-          "
+            max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-5xl 
+            h-auto
+            shadow-xl"
         />
         
       </div>
