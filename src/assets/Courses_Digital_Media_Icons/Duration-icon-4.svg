@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="Group_186462" data-name="Group 186462" transform="translate(-1159 -1079)">
+    <circle id="Ellipse_4" data-name="Ellipse 4" cx="30" cy="30" r="30" transform="translate(1159 1079)" fill="#f75e5e"/>
+    <g id="hourglass" transform="translate(1089.284 1094)">
+      <path id="Path_98007" data-name="Path 98007" d="M154.375,149.672a16.188,16.188,0,0,0,6.325-5.562H148.05A16.193,16.193,0,0,0,154.375,149.672Z" transform="translate(-54.66 -135.666)" fill="#fff"/>
+      <path id="Path_98008" data-name="Path 98008" d="M127.64,283.847l2.111-2.25a7.357,7.357,0,0,1,10.729,0l2.2,2.347v-1.251c0-4.311-3.748-7.785-7.521-9.734-3.778,1.951-7.521,5.42-7.521,9.734Z" transform="translate(-35.446 -256.966)" fill="#fff"/>
+      <path id="Path_98009" data-name="Path 98009" d="M90.868,1.758H92.2V4.273a7.7,7.7,0,0,0,.388,2.413h14.266a7.7,7.7,0,0,0,.388-2.413V1.758h1.327a.879.879,0,0,0,0-1.758h-17.7a.879.879,0,0,0,0,1.758Z" transform="translate(-0.001)" fill="#fff"/>
+      <path id="Path_98010" data-name="Path 98010" d="M108.564,414.915h-2.552l-2.26-2.408a5.6,5.6,0,0,0-8.164,0l-2.26,2.408h-2.46a.879.879,0,0,0,0,1.758h17.7a.879.879,0,0,0,0-1.758Z" transform="translate(0 -386.673)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
