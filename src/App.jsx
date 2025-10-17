@@ -1,92 +1,3 @@
-// import React, { useRef, useState } from "react";
-// import "./App.css";
-// import Hero from "./Components/Hero";
-// import Navbar from "./Components/Navbar";
-// import Mission from "./Components/Mission";
-// import AboutSection from "./Components/About";
-// import SuperpowerSection from "./Components/SuperPower";
-// import WhyChooseUs from "./Components/WhyChooseUs";
-// import Contact from "./Components/Contact";
-// import Footer from "./Components/Footer";
-// import CourseDetails from "./Components/CourseDetails"; 
-
-// function App() {
-//   const homeRef = useRef(null);
-//   const aboutRef = useRef(null);
-//   const superpowerRef = useRef(null);
-//   const whyChooseRef = useRef(null);
-//   const ContactRef = useRef(null);
-
-//   // ✅ Track current page
-//   const [currentPage, setCurrentPage] = useState("home");
-//   const [selectedCourse, setSelectedCourse] = useState(null);
-
-//   const scrollToSection = (ref) => {
-//     ref.current?.scrollIntoView({ behavior: "smooth" });
-//   };
-
-//   // ✅ When user clicks "View Course"
-//   const handleViewCourse = (courseSlug) => {
-//     setSelectedCourse(courseSlug);
-//     setCurrentPage("course");
-//   };
-
-//   // ✅ When user clicks back from course details
-//   const handleBackToHome = () => {
-//     setCurrentPage("home");
-//     setSelectedCourse(null);
-//   };
-
-//   // ✅ If course page is active
-//   if (currentPage === "course") {
-//     return <CourseDetails slug={selectedCourse} onBack={handleBackToHome} />;
-//   }
-
-//   // ✅ Default home page content
-//   return (
-//     <div className="min-h-screen font-sans overflow-hidden">
-//       <Navbar
-//         onNavClick={{
-//           home: () => scrollToSection(homeRef),
-//           about: () => scrollToSection(aboutRef),
-//           superpower: () => scrollToSection(superpowerRef),
-//           whyChoose: () => scrollToSection(whyChooseRef),
-//           Contact: () => scrollToSection(ContactRef),
-//         }}
-//       />
-
-//       <div ref={homeRef}>
-//         <Hero />
-//       </div>
-
-//       <div>
-//         <Mission />
-//       </div>
-
-//       <div ref={aboutRef}>
-//         <AboutSection />
-//       </div>
-
-//       {/* ✅ Pass handleViewCourse to SuperpowerSection */}
-//       <div ref={superpowerRef}>
-//         <SuperpowerSection onViewCourse={handleViewCourse} />
-//       </div>
-
-//       <div ref={whyChooseRef}>
-//         <WhyChooseUs />
-//       </div>
-
-//       <div ref={ContactRef}>
-//         <Contact />
-//       </div>
-
-//       <Footer />
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React, { useRef, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -96,10 +7,15 @@ import Navbar from "./Components/Navbar";
 import Mission from "./Components/Mission";
 import AboutSection from "./Components/About";
 import SuperpowerSection from "./Components/SuperPower";
-import WhyChooseUs from "./Components/WhyChooseUs";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import CourseDetails from "./Components/CourseDetails";
+import DesignVideoEditingDetails from "./Components/DesignVideoEditingDetails";
+import AdvanceProgramDMCreation from "./Components/Advance_Program_DM_Creation";
+import About2 from "./Components/About2";
+import OurCourses from "./Components/OurCourses";
+import Why_Choose_Us_2 from "./Components/Why_Choose_Us_2";
+import Contact_Add from "./Components/Contact_Add";
 
 function HomePage({ scrollRefs, handleViewCourse }) {
   const { homeRef, aboutRef, superpowerRef, whyChooseRef, ContactRef, scrollToSection } =
@@ -107,8 +23,8 @@ function HomePage({ scrollRefs, handleViewCourse }) {
 
   return (
     <div className="min-h-screen font-sans overflow-hidden">
-      {/* ✅ Navbar with scrolling */}
-      <Navbar
+      {/* Navbar with scrolling */}
+      {/* <Navbar
         onNavClick={{
           home: () => scrollToSection(homeRef),
           about: () => scrollToSection(aboutRef),
@@ -116,29 +32,31 @@ function HomePage({ scrollRefs, handleViewCourse }) {
           whyChoose: () => scrollToSection(whyChooseRef),
           Contact: () => scrollToSection(ContactRef),
         }}
-      />
+      /> */}
 
-      {/* ✅ Page sections */}
+      {/* Page sections */}
       <div ref={homeRef}>
         <Hero />
+      </div>
+ 
+      <div ref={aboutRef}>
+        <AboutSection />
       </div>
 
       <div>
         <Mission />
       </div>
 
-      <div ref={aboutRef}>
-        <AboutSection />
-      </div>
+      
 
       <div ref={superpowerRef}>
-        {/* ✅ Pass router navigation handler */}
+        {/* Pass router navigation handler */}
         <SuperpowerSection onViewCourse={handleViewCourse} />
       </div>
 
-      <div ref={whyChooseRef}>
+      {/* <div ref={whyChooseRef}>
         <WhyChooseUs />
-      </div>
+      </div> */}
 
       <div ref={ContactRef}>
         <Contact />
@@ -172,7 +90,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* ✅ Home page */}
+        {/* Home page */}
         <Route
           path="/"
           element={
@@ -183,8 +101,14 @@ function App() {
           }
         />
 
-        {/* ✅ Course details page */}
+        {/* Course details page */}
         <Route path="/course/:slug" element={<CourseDetails />} />
+        <Route path="/about" element={<About2 />} />
+        <Route path="/courses" element={<OurCourses />} />
+        <Route path="/why-choose-us" element={<Why_Choose_Us_2 />} />
+        <Route path="/contactadd" element={<Contact_Add />} />
+        <Route path="/course/diploma-in-design-and-video-editing" element={<DesignVideoEditingDetails />} />
+        <Route path="/course/advance-program-in-digital-media-creation" element={<AdvanceProgramDMCreation />} />
       </Routes>
     </Router>
   );

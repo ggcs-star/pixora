@@ -1,158 +1,166 @@
-// import React, { useEffect, useRef, useState } from "react";
-// import { ArrowRight } from "lucide-react";
-// import Superpower1 from "../assets/SuperPower/Superpower-1.jpg";
-// import Superpower2 from "../assets/SuperPower/Superpower-2.jpg";
-// import Superpower3 from "../assets/SuperPower/Superpower-3.jpg";
-// import BackgroundImage from "../assets/SuperPower/SuperPower-4.png";
+// import React from "react";
+// import { useNavigate } from "react-router-dom";
+// import Navbar from "./Navbar";
 
-
-// const CourseCard = ({ image, title, position, delay }) => {
-
-//   const [ visible,setVisible ] = useState(false);
-//   const ref = useRef(null);
-
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             setVisible(true);
-//             observer.unobserve(entry.target);
-//           }
-//         });
-//       },
-//       { threshold: 0.3 }
-//     );
-
-//     if (ref.current) observer.observe(ref.current);
-
-//     return () => {
-//       if (ref.current) observer.unobserve(ref.current);
-//     };
-//   }, []);
-
-
-//   return (
-//     // <div
-//     //   ref={ref}
-//     //   className={`relative w-full h-98 xs:w-[240px] xs:h-[220px] sm:w-[260px] sm:h-[260px] md:w-[280px] md:h-[300px] 2xl:w-[360px] 2xl:h-[500px] 3xl:w-[400px] 3xl:h-[540px] mx-auto rounded-xl overflow-hidden shadow-lg group
-//     //     transform transition-all duration-700 ease-out 
-//     //     ${visible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}`}
-//     //   style={{
-//     //     transitionDelay: visible ? `${delay}ms` : "0ms", // staggered delay
-//     //   }}
-//     // >
-//     <div
-//       ref={ref}
-//       className={`relative 
-//                   w-[270px] h-[300px]   // base width
-//                   sm:w-[240px] sm:h-[320px] 
-//                   md:w-[290px] md:h-[340px] xl:w-[21rem] 
-//                   2xl:w-[380px] 2xl:h-[420px] 
-//                   mx-auto rounded-xl overflow-hidden shadow-lg group
-//                   transform transition-all duration-700 ease-out
-//                   ${visible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}`}
-//                 style={{
-//                   transitionDelay: visible ? `${delay}ms` : "0ms",
-//                 }}
-//     >
-//       <img
-//         src={image}
-//         alt={title}
-//         className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-//       />
-
-//       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
-
-//       <div className="absolute bottom-12 left-4 right-4">
-
-//         <h3 className="text-white text-xl sm:text-base font-semibold leading-tight  text-center  2xl:text-2xl 2xl:mb-3">
-//           {title}
-//         </h3>
-
-//       </div>
-
-//       <button className="absolute bottom-0 left-0 w-full bg-green-500 text-black  font-medium px-4 py-2 xs:py-1 xs:text-xs flex items-center justify-center hover:bg-green-600 transition rounded-b-xl 2xl:text-2xl">
-//         View Course
-//         <ArrowRight className="ml-2 w-3 h-3 xs:w-3 xs:h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-7 2xl:h-7" />
-
-//       </button>
-
-//     </div>
-//   );
-// };
-
+// import DigitalMediaDesign from "../assets/Videos/Digital Media & Design.mp4";
+// import DesignVideoEditing from "../assets/Videos/Design & Video Editing.mp4";
+// import UiUx from "../assets/Videos/UIUX.mp4";
+// import CertificateImage from "../assets/Courses_Digital_Media_Icons/Certificate_Img.png";
 
 // const SuperpowerSection = () => {
+//   const navigate = useNavigate();
 
-//   const courses = [
+//   // const handleInquiry = () => {
+//   //   navigate("/contact");
+//   // };
+
+//   const handleLearnMore = (slug) => {
+//     navigate(`/course/${slug}`);
+//     window.scrollTo({ top: 0, behavior: "smooth" });
+//   };
+
+//   const cardDetails = [
 //     {
-//       image: Superpower1,
-//       title: "Diploma in Digital Media & Design",
+//       id: 1,
+//       title: "Diploma in",
+//       highlight: "Digital Media & Design",
+//       description: "Intensive studio-style training for branding, print & digital creatives",
+//       gradientFrom: "#FB2F5C",
+//       gradientTo: "#F08540",
+//       btnColor: "#F5614C",
+//       video: DigitalMediaDesign,
+//       slug: "diploma-in-digital-media-design",
 //     },
 //     {
-//       image: Superpower3,
-//       title: "Diploma in Design & Video Editing",
+//       id: 2,
+//       title: "Diploma in",
+//       highlight: "Design & Video Editing",
+//       description: "Intensive studio-style training for branding, print & digital creatives",
+//       gradientFrom: "#F9F97F",
+//       gradientTo: "#81D246",
+//       btnColor: "#94D84F",
+//       video: DesignVideoEditing,
+//       slug: "diploma-in-design-and-video-editing",
 //     },
 //     {
-//       image: Superpower2,
-//       title: "Advance Program in Digital Media Creation",
+//       id: 3,
+//       title: "Advance Program in",
+//       highlight: "Digital Media Creation",
+//       description: "Intensive studio-style training for branding, print & digital creatives",
+//       gradientFrom: "#E04FFF",
+//       gradientTo: "#FFA26B",
+//       btnColor: "#E958DD",
+//       video: UiUx,
+//       slug: "advance-program-in-digital-media-creation",
 //     },
 //   ];
 
 //   return (
-  
-//       // SuperPower Section Start
-//       <section
-//             className="section relative py-20 text-white border-b-[3px] border-[#e5287b] bg-cover bg-center bg-no-repeat"
-//             style={{
-//               backgroundImage: `url(${BackgroundImage})`,
-//             }}
-//       >     
-      
-//       <div className="absolute inset-0 bg-gradient-to-b from-[#0e0f2d] via-[#14163d] to-[#0e0f2d] opacity-70 pointer-events-none z-[1]"></div>
-      
-//       <div className="relative z-[2] max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+//     <section className="relative py-16 sm:py-20 text-white bg-black">
+//       {/* Gradient Bottom Border */}
+//       <div
+//         className="absolute bottom-0 left-0 w-full h-[2px]"
+//         style={{
+//           background: "linear-gradient(to right, #442485, #8A1367, #FB2F5C, #F08540)",
+//         }}
+//       ></div>
 
-//         <div className="text-center mb-12">
-//           {/* Title of Superpower section */}
-//           <h2 className="text-3xl md:text-4xl  leading-snug font-poppins font-bold">
-//             Pick Your <span className="text-yellow-400 font-poppins font-bold">Superpower.</span>
+//       <div className="w-full max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+//         <Navbar />
 
+//         {/* Heading */}
+//         <div className="text-center mb-10 sm:mb-12 mt-6 sm:mt-8 px-2">
+//           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug">
+//             Pick Your <span className="text-white">Superpower.</span>
 //             <br />
-
-//             <span className="font-poppins font-bold">We’ll Train You to Use It.</span>
-
+//             <span>We'll Train You to Use It.</span>
 //           </h2>
-
 //         </div>
-        
 
-//           <div className="grid 
-//                           gap-y-6 
-//                           gap-x-1   xl:gap-x-1
-//                           xs:grid-cols-1 
-//                           sm:grid-cols-1 
-//                           md:grid-cols-2 
-//                           lg:grid-cols-3 lg:gap-1
-//                           2xl:grid-cols-3 2xl:gap-1
-//                           justify-center font-poppins font-medium">
+//         {/* Cards */}
+//         <div className="flex flex-col gap-8 sm:gap-10">
+//           {cardDetails.map((card) => (
+//             <div
+//               key={card.id}
+//               className="bg-[#161618] rounded-2xl shadow-lg flex flex-col md:flex-row justify-between items-center gap-6 lg:gap-10 p-5 sm:p-6 md:p-10 w-full 2xl:max-w-[1800px] mx-auto transition-transform duration-300 hover:scale-[1.01]"
+//             >
+//               {/* Text Section */}
+//               <div className="flex-1 w-full text-center md:text-left">
+//                 <h3 className="text-2xl sm:text-3xl font-semibold mb-3 leading-snug">
+//                   {card.title} <br className="hidden sm:block" />
+//                   <span
+//                     className="bg-clip-text text-transparent font-semibold"
+//                     style={{
+//                       backgroundImage: `linear-gradient(to right, ${card.gradientFrom}, ${card.gradientTo})`,
+//                     }}
+//                   >
+//                     {card.highlight}
+//                   </span>
+//                 </h3>
+//                 <p className="text-gray-300 mb-5 sm:mb-6 text-sm sm:text-base md:text-lg">
+//                   {card.description}
+//                 </p>
+//                 <div className="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4">
+//                   <button
+                  
+//                     // onClick={handleInquiry}
+//                     onClick={() => window.open("https://forms.gle/2e3p3YF5Fqqa4KiD7", "_blank")}
+//                     style={{ backgroundColor: card.btnColor }}
+//                     className="hover:opacity-90 text-black px-5 sm:px-6 py-2 rounded-full font-semibold transition duration-300 text-sm sm:text-base cursor-pointer"
+//                   >
+//                     Inquiry Now
+//                   </button>
+//                   <button
+//                     onClick={() => handleLearnMore(card.slug)}
+//                     className="border border-white text-white px-5 sm:px-6 py-2 rounded-full font-semibold hover:bg-white hover:text-black transition duration-300 text-sm sm:text-base cursor-pointer"
+//                   >
+//                     Learn More
+//                   </button>
+//                 </div>
+//               </div>
 
-//             {courses.map((course, idx) => (
-//               <CourseCard
-//                 key={idx}
-//                 image={course.image}
-//                 title={course.title}
-//                 delay={idx * 300} 
-//               />
-//             ))}
-            
+//               {/* Video Section */}
+//               <div className="flex-1 w-full max-w-sm sm:max-w-md lg:max-w-lg rounded-xl overflow-hidden">
+//                 <video
+//                   src={card.video}
+//                   autoPlay
+//                   loop
+//                   muted
+//                   playsInline
+//                   className="w-full h-48 sm:h-60 md:h-72 object-cover rounded-xl"
+//                 />
+//               </div>
+              
+//             </div>
+//           ))}
+
+
+//           {/* Certificate Card */}
+//           <div className="bg-[#161618] rounded-2xl shadow-lg flex flex-col md:flex-row justify-between items-center gap-4 lg:gap-6 p-4 sm:p-5 md:p-6 transition-transform duration-300 hover:scale-[1.01] w-full max-w-8xl mx-auto">
+//             {/* Text */}
+//             <div className="flex-1 flex justify-center md:justify-start text-center md:text-left">
+//               <span className="text-white text-lg sm:text-xl md:text-2xl leading-snug 2xl:text-4xl 2xl:w-[19rem]">
+//                 Earn the Pixohype certificate upon{" "}
+//                 <br className="hidden md:block" />
+//                 course completion.
+//               </span>
+//             </div>
+
+//             {/* Image */}
+//             <div className="flex-1 flex justify-center h-full">
+//               <div className="w-full max-w-[220px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px] 2xl:max-w-[400px] aspect-[4/3] border border-[#d1d5db] rounded-xl overflow-hidden flex items-center justify-center bg-[#0f0f0f]">
+//                 <img
+//                   src={CertificateImage}
+//                   alt="Pixohype Certificate"
+//                   className="w-full h-full object-cover"
+//                 />
+//               </div>
+//             </div>
 //           </div>
 
+//         </div>
 //       </div>
-
-//       </section>
-//       // SuperPower Section End
+//     </section>
 //   );
 // };
 
@@ -161,100 +169,124 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
-import Superpower1 from "../assets/SuperPower/Superpower-1.jpg";
-import Superpower2 from "../assets/SuperPower/Superpower-2.jpg";
-import Superpower3 from "../assets/SuperPower/Superpower-3.jpg";
-import BackgroundImage from "../assets/SuperPower/SuperPower-4.png";
 import Navbar from "./Navbar";
-
-const CourseCard = ({ image, title, delay, slug, onView }) => {
-  return (
-    <div
-      className={`relative w-[270px] h-[300px] sm:w-[240px] sm:h-[320px] md:w-[290px] md:h-[340px] xl:w-[21rem] 2xl:w-[380px] 2xl:h-[420px]
-                  mx-auto rounded-xl overflow-hidden shadow-lg group transform transition-all duration-700 ease-out`}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
-      <img
-        src={image}
-        alt={title}
-        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
-      <div className="absolute bottom-12 left-4 right-4">
-        <h3 className="text-white text-xl sm:text-base font-semibold text-center 2xl:text-2xl 2xl:mb-3">
-          {title}
-        </h3>
-      </div>
-      <button
-        onClick={() => onView(slug)}
-        className="absolute bottom-0 left-0 w-full bg-green-500 text-black font-medium px-4 py-2 xs:py-1 xs:text-xs flex items-center justify-center hover:bg-green-600 transition rounded-b-xl 2xl:text-2xl"
-      >
-        View Course
-        <ArrowRight className="ml-2 w-5 h-5" />
-      </button>
-    </div>
-  );
-};
+import { superpowerData } from "../DB/db";
 
 const SuperpowerSection = () => {
   const navigate = useNavigate();
 
-  const courses = [
-    {
-      id: 1,
-      image: Superpower1,
-      title: "Diploma in Digital Media & Design",
-      slug: "diploma-in-digital-media-design",
-    },
-    {
-      id: 2,
-      image: Superpower3,
-      title: "Diploma in Design & Video Editing",
-      slug: "diploma-in-design-and-video-editing",
-    },
-    {
-      id: 3,
-      image: Superpower2,
-      title: "Advance Program in Digital Media Creation",
-      slug: "advance-program-in-digital-media-creation",
-    },
-  ];
-
-  // ✅ Navigate to CourseDetails route
-  const handleViewCourse = (slug) => {
+  const handleLearnMore = (slug) => {
     navigate(`/course/${slug}`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <section
-      className="relative py-20 text-white border-b-[3px] border-[#e5287b] bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${BackgroundImage})` }}
-    >
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0e0f2d] via-[#14163d] to-[#0e0f2d] opacity-70 pointer-events-none z-[1]"></div>
+    <section className="relative py-16 sm:py-20 text-white bg-black">
+      {/* Gradient Bottom Border */}
+      <div
+        className="absolute bottom-0 left-0 w-full h-[2px]"
+        style={{
+          background: "linear-gradient(to right, #442485, #8A1367, #FB2F5C, #F08540)",
+        }}
+      ></div>
 
-      <div className="relative z-[2] max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div className="w-full max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <Navbar />
-        <div className="text-center mb-12 mt-8">
-          <h2 className="text-3xl md:text-4xl leading-snug font-poppins font-bold">
-            Pick Your <span className="text-yellow-400">Superpower.</span>
+
+        {/* Heading */}
+        <div className="text-center mb-10 sm:mb-12 mt-6 sm:mt-8 px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug">
+            {superpowerData.heading}
             <br />
-            <span>We’ll Train You to Use It.</span>
+            <span>{superpowerData.subheading}</span>
           </h2>
         </div>
 
-        <div className="grid gap-y-6 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center">
-          {courses.map((course, idx) => (
-            <CourseCard
-              key={course.id}
-              image={course.image}
-              title={course.title}
-              slug={course.slug}
-              delay={idx * 300}
-              onView={handleViewCourse}
-            />
+        {/* Cards */}
+        <div className="flex flex-col gap-8 sm:gap-10">
+          {superpowerData.cards.map((card) => (
+            <div
+              key={card.id}
+              className="bg-[#161618] rounded-2xl shadow-lg flex flex-col md:flex-row justify-between items-center gap-6 lg:gap-10 p-5 sm:p-6 md:p-10 w-full 2xl:max-w-[1800px] mx-auto transition-transform duration-300 hover:scale-[1.01]"
+            >
+              {/* Text Section */}
+              <div className="flex-1 w-full text-center md:text-left">
+                <h3 className="text-2xl sm:text-3xl font-semibold mb-3 leading-snug">
+                  {card.title} <br className="hidden sm:block" />
+                  <span
+                    className="bg-clip-text text-transparent font-semibold"
+                    style={{
+                      backgroundImage: `linear-gradient(to right, ${card.gradientFrom}, ${card.gradientTo})`,
+                    }}
+                  >
+                    {card.highlight}
+                  </span>
+                </h3>
+                <p className="text-gray-300 mb-5 sm:mb-6 text-sm sm:text-base md:text-lg">
+                  {card.description}
+                </p>
+                <div className="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4">
+                  <button
+                    onClick={() => window.open("https://forms.gle/2e3p3YF5Fqqa4KiD7", "_blank")}
+                    style={{ backgroundColor: card.btnColor }}
+                    className="hover:opacity-90 text-black px-5 sm:px-6 py-2 rounded-full font-semibold transition duration-300 text-sm sm:text-base cursor-pointer"
+                  >
+                    Inquiry Now
+                  </button>
+                  <button
+                    onClick={() => handleLearnMore(card.slug)}
+                    className="border border-white text-white px-5 sm:px-6 py-2 rounded-full font-semibold hover:bg-white hover:text-black transition duration-300 text-sm sm:text-base cursor-pointer"
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+
+              {/* Video Section */}
+              <div className="flex-1 w-full max-w-sm sm:max-w-md lg:max-w-lg rounded-xl overflow-hidden">
+                <video
+                  src={card.video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-48 sm:h-60 md:h-72 object-cover rounded-xl"
+                />
+              </div>
+            </div>
           ))}
+
+          {/* Certificate Card */}
+          <div className=" rounded-2xl shadow-lg flex flex-col md:flex-row justify-between items-center gap-4 lg:gap-16  p-4 sm:p-5 md:p-6 transition-transform duration-300  w-full max-w-[99rem]  mx-auto">
+            {/* Text */}
+            <div className="flex-1 flex justify-center md:justify-start text-center md:text-left">
+              <div className="text-white">
+                {/* Title */}
+                <h3 className="text-lg sm:text-xl md:text-3xl  2xl:text-3xl font-semibold text-[#94D84F] mb-2 sm:mb-3 md:mb-4">
+                  {superpowerData.certificate.title}
+                </h3>
+
+                {/* Text */}
+                <p className="text-base sm:text-lg md:text-sm md:w-100 leading-snug 2xl:text-xl 2xl:font-normal 2xl:w-[29rem] text-gray-200">
+                  {superpowerData.certificate.text}
+                  <br className="hidden md:block" />
+                </p>
+              </div>
+            </div>
+
+
+            {/* Image */}
+            <div className="flex-1 flex justify-center h-full">
+              <div className="w-full max-w-[220px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[560px] 2xl:max-w-[800px] aspect-[5/4] border border-[#d1d5db] rounded-xl overflow-hidden flex items-center justify-center bg-[#0f0f0f]">
+                <img
+                  src={superpowerData.certificate.img}
+                  alt="Pixohype Certificate"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -262,4 +294,3 @@ const SuperpowerSection = () => {
 };
 
 export default SuperpowerSection;
-

@@ -12,11 +12,11 @@ const MissionCard = ({ title, description, badge, badgeColor, image }) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setVisible(true);
-              observer.unobserve(entry.target);    // ek baar animation hone ke baad observe band
+              observer.unobserve(entry.target);   
             }
           });
         },
-        { threshold: 0.7, rootMargin: "0px 0px -100px 0px" }    // 100px bottom margin, animation will trigger slightly later
+        { threshold: 0.7, rootMargin: "0px 0px -100px 0px" }    
       );
 
       if (cardRef.current) {

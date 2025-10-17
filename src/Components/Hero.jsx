@@ -1,121 +1,190 @@
-import React, { useEffect, useState } from "react";
-import Button from "./Button";
-import HeroImage from "./HeroImage";
-import BlueLine from "../assets/Hero/Blue-Line-Img.png";
+// import React from "react";
+// import LeftEmoji from "../assets/Courses_Digital_Media_Icons/Hero_Bulb-Img.svg";
+// import RightEmoji from "../assets/Courses_Digital_Media_Icons/Hero_Plan-Img.svg";
+// import { FaWhatsapp } from "react-icons/fa";
+// import { useNavigate } from "react-router-dom";
+
+// // Import your video
+// import HeroVideo from "../assets/Videos/Hero sectio-Video.mp4";
+
+// const Hero = () => {
+//   const navigate = useNavigate();
+
+//   const handleLearning = () => {
+//     navigate("/courses");
+//   };
+
+//   return (
+//     <section className="relative w-full min-h-[80vh] sm:min-h-[80vh] md:min-h-[100vh] 2xl:min-h-[90vh] flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 text-white text-center overflow-hidden">
+      
+//       {/* Video Background */}
+//       <video
+//         autoPlay
+//         loop
+//         muted
+//         playsInline
+//         className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-80"
+//       >
+//         <source src={HeroVideo} type="video/mp4" />
+//       </video>
+
+//       {/* Gradient Overlay */}
+//       <div className="absolute bottom-0 left-0 w-full h-262 bg-gradient-to-t from-black to-transparent z-20"></div>
+
+
+//       {/* Bottom Gradient Line */}
+//       {/* <div
+//         className="absolute bottom-0 left-0 w-full h-[2px] z-20"
+//         style={{
+//           background:
+//             "linear-gradient(to right, #442485, #8A1367, #FB2F5C, #F08540)",
+//         }}
+//       ></div> */}
+
+
+//       {/* Heading */}
+//       <h1 className="z-20 mt-62  sm:mt-20 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl 2xl:text-7xl 2xl:w-[60rem] lg:mt-60 2xl:mt-[30rem]">
+//         Learn from a{" "}
+//         <span className="bg-gradient-to-r from-[#F988AE] to-[#F7BB97] bg-clip-text text-transparent">
+//           Designer
+//         </span>{" "}
+//         <br className="hidden sm:block" />
+//         Not Just a{" "}
+//         <span className="bg-gradient-to-r from-[#F988AE] to-[#F7BB97] bg-clip-text text-transparent">
+//           Trainer
+//         </span>
+//       </h1>
+
+
+//       {/* Sub Text */}
+//       <p className="z-20 mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+//         Learn to design the way it’s done in the real world. Not just tools, but
+//         the entire process - from client brief to final delivery.
+//       </p>
+
+//       {/* Buttons */}
+//       <div className="z-20 mt-6 sm:mt-8 flex flex-row items-center justify-center gap-4">
+//         <button
+//           className="bg-[#F5614C] hover:bg-[#e54b34] text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base transition-all duration-300"
+//           onClick={handleLearning}
+//         >
+//           Start Learning
+//         </button>
+
+//         <button
+//           onClick={() =>
+//             window.open("https://forms.gle/2e3p3YF5Fqqa4KiD7", "_blank")
+//           }
+//           className="border border-white text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
+//         >
+//           Inquiry Now
+//         </button>
+//       </div>
+
+
+
+
+//       {/* Whatsapp Icon */}
+//       <a
+//         href="https://wa.me/919999999999"
+//         target="_blank"
+//         rel="noopener noreferrer"
+//         className="fixed bottom-5 right-3 bg-[#00FF6F] hover:bg-green-600 text-white rounded-full p-3 shadow-lg z-50 transition transform hover:scale-110 2xl:p-3 3xl:p-8 4k:p-10"
+//         aria-label="WhatsApp"
+//       >
+//         <FaWhatsapp className="w-3 h-3 text-white sm:w-5 sm:h-5 2xl:w-10 2xl:h-10 3xl:w-12 3xl:h-12 4k:w-14 4k:h-14" />
+//       </a>
+//     </section>
+//   );
+// };
+
+// export default Hero;
+
+
+
+
+import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import HeadingText from "../assets/Hero-Section-Text/Headline Text.png";
+import { useNavigate } from "react-router-dom";
+import { heroData } from "../DB/db";
 
 const Hero = () => {
-  // Animation - Loaded State
-  const [loaded, setLoaded] = useState(false);
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    setLoaded(true);
-  }, []);
+  const handleClick = (btn) => {
+    if (btn.type === "primary") {
+      navigate(btn.onClickLink);
+    } else if (btn.type === "secondary") {
+      window.open(btn.onClickLink, "_blank");
+    }
+  };
 
   return (
-    // Hero Container Start
-    <section className="hero-container">
+    <section className="relative w-full min-h-[80vh] sm:min-h-[80vh] md:min-h-[100vh] 2xl:min-h-[90vh] flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 text-white text-center overflow-hidden">
+      
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-80"
+      >
+        <source src={heroData.video} type="video/mp4" />
+      </video>
 
-      {/* Section of Hero Start */}
-      <section id="home" className="section  relative w-full bg-gradient-to-b from-blue-700 via-purple-700 to-purple-700 text-white overflow-hidden">
+      {/* Gradient Overlay */}
+      <div className="absolute bottom-0 left-0 w-full h-262 bg-gradient-to-t from-black to-transparent z-20"></div>
 
+      {/* Heading */}
+      <h1 className="z-20 mt-62 sm:mt-20 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-2xl 2xl:text-6xl 2xl:w-[60rem] lg:mt-60 2xl:mt-[30rem]">
+        {heroData.heading.map((part, idx) =>
+          typeof part === "string" ? (
+            part
+          ) : (
+            <span
+              key={idx}
+              className={`bg-gradient-to-r ${part.gradient} bg-clip-text text-transparent`}
+            >
+              {part.text}
+            </span>
+          )
+        )}
+      </h1>
 
-        {/* Hero Image - Blue Line Curve */}
-        <div className="absolute top-[-39%]  left-[-6%]  h-full  overflow-hidden pointer-events-none select-none z-10  2xl:left-[-6%] ">
+      {/* Sub Text */}
+      <p className="z-20 mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+        {heroData.subText}
+      </p>
 
+      {/* Buttons */}
+      <div className="z-20 mt-6 sm:mt-8 flex flex-row items-center justify-center gap-4">
+        {heroData.buttons.map((btn, idx) => (
+          <button
+            key={idx}
+            onClick={() => handleClick(btn)}
+            className={`${
+              btn.type === "primary"
+                ? `bg-[${btn.bgColor}] hover:bg-[${btn.hoverColor}]`
+                : `border ${btn.border} hover:bg-${btn.hoverBg} hover:text-${btn.hoverText}`
+            } text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base transition-all duration-300 cursor-pointer`}
+          >
+            {btn.text}
+          </button>
+        ))}
+      </div>
 
-          <img src={BlueLine} alt="Blue Line" className="w-[3890px] h-[80%]  object-cover mix-blend-screen opacity-90 rounded-full 2xl:w-[160rem] "/>
-
-
-        </div>
-
-        {/* Hero section - Left Side + Right Side Content Start */}
-        <div className=" max-w-[92%] 2xl:max-w-[95%] mx-auto space-x-3.5  mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-5 2xl:mt-30 4k:mt-40 flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-20 xl:gap-24 2xl:gap-82 4k:gap-40 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 2xl:py-6 4k:py-36 overflow-hidden">
-
-         
-          <div className={`lg:w-1/2 max-w-2xl 2xl:max-w-4xl sm:space-y-1 text-center lg:text-left z-20 relative mt-13 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-16 2xl:mt-20 transform transition-transform duration-1000 ease-out ${loaded ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}>
-            
-
-            {/* Image of Left Side Content */}
-            <img src={HeadingText} alt="Heading-Text" className="mt-[40px]" />
-
-
-            {/* Paragraph of Left Side Content */}
-            <p className="text-gray-200 font-poppins font-medium mt-10 2xl:mt-14 2xl:mb-10 text-sm sm:text-sm md:text-xl lg:text-xs xl:text-sm 2xl:text-xl max-w-[40rem] mx-auto lg:mx-0">
-              Learn to design the way it’s done in the real world. Not just
-              tools, but the entire process – from client brief to final
-              delivery.
-            </p>
-
-
-            {/* Buttons of Hero Section Start */}
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start lg:gap-3 gap-4 sm:gap-6 mt-6">
-
-              
-              <div className="flex justify-evenly space-x-2 md:block 2xl:text-xl">
-                
-
-                {/* Call Us Button */}
-                <Button className="cursor-pointer text-xs md:text-base text-black transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-[0_4px_8px_rgba(0,0,0,1)]">
-                  Call Us
-                </Button>
-
-
-                {/* Explore Courses Button */}
-                <Button
-                      className={
-                        "cursor-pointer text-xs md:text-base text-white bg-transparent border border-white " +
-                        "transition-all duration-300 ease-in-out " +
-                        "hover:-translate-y-1 " +
-                        "hover:border-t-transparent hover:border-l-transparent hover:border-r-transparent " +
-                        "hover:border-b-2 hover:border-b-white hover:bg-transparent"
-                      }
-                >
-                  Explore Courses
-                </Button>
-
-
-              </div>
-
-
-              {/* Enquire Now Button — Only Mobile View */}
-              <div className="flex justify-center w-full md:hidden">
-
-                <Button className="cursor-pointer mt-4  text-xs md:text-base text-black bg-green-400 hover:bg-green-500 transition duration-300 w-30 text-left font-poppins">
-                  Enquire Now
-                </Button>
-
-              </div>
-
-            </div>
-          {/* Buttons of Hero Section End */}
-
-          </div>
-
-          {/* Right Side Hero Image Component*/}
-          <div className="w-auto lg:w-1/2 flex justify-center relative ">
-
-            <HeroImage />
-
-          </div>
-
-
-        </div>
-        {/* Hero section - Left Side + Right Side Content End */}
-
-      </section>
-      {/* Section of Hero End */}
-
-
-      {/* Link of Whatsapp Icon */}
-      <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className=" fixed bottom-5 right-3  bg-[#00FF6F] hover:bg-green-600  text-white rounded-full p-3 shadow-lg z-50 transition transform hover:scale-110 2xl:p-3 3xl:p-8 4k:p-10" aria-label="WhatsApp">
-        <FaWhatsapp className="w-3 h-3 text-white sm:w-5 sm:h-5 2xl:w-10 2xl:h-10 3xl:w-12 3xl:h-12 4k:w-14 4k:h-14"/>
+      {/* Whatsapp Icon */}
+      <a
+        href={heroData.whatsapp.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`fixed bottom-5 right-3 bg-[${heroData.whatsapp.bgColor}] hover:bg-green-600 text-white rounded-full p-3 shadow-lg z-50 transition transform hover:scale-110 2xl:p-3 3xl:p-8 4k:p-10`}
+        aria-label="WhatsApp"
+      >
+        <FaWhatsapp className="w-3 h-3 text-white sm:w-5 sm:h-5 2xl:w-10 2xl:h-10 3xl:w-12 3xl:h-12 4k:w-14 4k:h-14" />
       </a>
-
     </section>
-    // Hero Container End
-
   );
 };
 

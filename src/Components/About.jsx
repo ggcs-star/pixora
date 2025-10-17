@@ -1,163 +1,241 @@
-import React, { useEffect, useRef, useState } from "react";
-import { CheckCircle } from "lucide-react"; 
-import aboutImage from "../assets/About/About-Image.jpg";
-import aboutShape from "../assets/About/About-Img-2.png";
-import aboutShape2 from "../assets/About/About-Img.png";
+// import React from "react";
+// import Startup from '../assets/Courses_Digital_Media_Icons/start-up.svg';
+// import Flexible from '../assets/Courses_Digital_Media_Icons/Flexible.svg';
 
-// About Us - CheckList Items
-const ChecklistItem = ({ text }) => {
+// const AboutSection = () => {
+//   return (
+//     <section className="bg-black text-white px-4 md:px-12 py-12 md:py-20">
+      
+//       {/* <div className="max-w-2xl mx-auto">
+
+//         <div className="bg-[#18181b] p-6 md:p-10 rounded-2xl mb-8">
+//           <h2 className="text-lg md:text-xl font-semibold bg-gradient-to-r from-[#F988AE] to-[#F7BB97] bg-clip-text text-transparent mb-3">
+//             About
+//           </h2>
+
+//           <p className="text-gray-300 mb-4">
+//             Pixora, we train students to work like real designers handling client briefs,
+//             revisions, deadlines, and teamwork.
+//           </p>
+//           <p className="text-gray-400">
+//             Most institutes train you in software, but fail to prepare you for the real
+//             challenges of the design industry.
+//           </p>
+//         </div>
+
+        
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+//           <div className="bg-[#18181b] p-6 rounded-2xl flex flex-col justify-center">
+//             <h3 className="text-3xl md:text-4xl font-semibold bg-gradient-to-r from-[#F988AE] to-[#F7BB97] bg-clip-text text-transparent mb-1">
+//               10+
+//             </h3>
+//             <p className="text-gray-300 text-sm md:text-base">
+//               Years working designer
+//             </p>
+//           </div>
+
+          
+//           <div className="bg-[#18181b] p-6 rounded-2xl flex flex-col justify-center">
+//             <h3 className="text-3xl md:text-4xl font-semibold text-sky-400 mb-1">
+//               8–12
+//             </h3>
+//             <p className="text-gray-300 text-sm md:text-base">
+//               Batch Size & Flexible weekday batches
+//             </p>
+//           </div>
+
+          
+//           <div className="bg-[#18181b] p-6 rounded-2xl flex flex-col justify-center">
+//             <p className="text-gray-500 text-xs mb-1">Job Skills</p>
+//             <h3 className="text-white text-lg md:text-xl font-medium leading-snug">
+//               Communication, deadlines, teamwork
+//             </h3>
+//           </div>
+
+          
+//           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-2">
+            
+//             <div className="bg-[#18181b] flex-1 sm:flex-[1.2] p-6 rounded-2xl flex items-center space-x-4">
+//               <img src={Startup} alt="Startup_Img" className="w-10"/>
+//               <p className="text-gray-200 text-base md:text-lg w-[16rem]">
+//                 Client-style projects & workflows
+//               </p>
+//             </div>
+
+            
+//             <div className="bg-[#18181b] flex-1 sm:flex-[1.1] p-6 rounded-2xl flex items-center space-x-4">
+//               <img src={Flexible} alt="Flexible_Img" className="w-10"/>
+//               <p className="text-gray-200 text-base md:text-lg w-[16rem]">
+//                 Flexible weekday batches
+//               </p>
+//             </div>
+//           </div>
+
+//         </div>
+
+//       </div> */}
+
+//       <div className="w-full px-4 sm:px-16 md:px-10 lg:px-14 xl:px-5 2xl:px-0 max-w-4xl 2xl:max-w-6xl mx-auto ">
+//         {/* About Section */}
+//         <div className="bg-[#18181b] border border-[#2E2E2E] p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl mb-8 ">
+//           <div>
+//               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-[#F988AE] to-[#F7BB97] bg-clip-text text-transparent mb-3 ">
+//                 About
+//               </h2> 
+
+//               <p className="text-gray-300 text-sm sm:text-base lg:text-lg mb-4 2xl:text-2xl">
+//                 Framisty, we train students to work like real designers handling client briefs,
+//                 revisions, deadlines, and teamwork.
+//               </p>
+//               <p className="text-gray-400 text-sm sm:text-base lg:text-lg 2xl:text-2xl">
+//                 Most institutes train you in software, but fail to prepare you for the real
+//                 challenges of the design industry.
+//               </p>
+//           </div>
+          
+//         </div>
+
+//         {/* Info Grid */}
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 2xl:gap-10">
+//           {/* Years Experience */}
+//           <div className="bg-[#18181b] p-6 sm:p-8 rounded-2xl flex flex-col justify-center items-start border border-[#2E2E2E]">
+//             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#F988AE] to-[#F7BB97] bg-clip-text  text-transparent mb-1 ml-3">
+//               10+
+//             </h3>
+//             <p className="text-gray-300 text-sm md:text-base lg:text-lg ml-3">
+//               Years working designer
+//             </p>
+//           </div>
+
+//           {/* Batch Size */}
+//           <div className="bg-[#18181b] border border-[#2E2E2E] p-6 sm:p-8 rounded-2xl flex flex-col justify-center items-start">
+//             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-sky-400 mb-1">
+//               8–12
+//             </h3>
+//             <p className="text-gray-300 text-sm md:text-base lg:text-lg">
+//               Batch Size & Flexible weekday batches
+//             </p>
+//           </div>
+
+//           {/* Job Skills */}
+//           <div className="bg-[#18181b] border border-[#2E2E2E] p-6 sm:p-8 rounded-2xl flex flex-col justify-center">
+//             <p className="text-gray-500 text-xs sm:text-sm mb-1">Job Skills</p>
+//             <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-snug">
+//               Communication, deadlines, teamwork
+//             </h3>
+//           </div>
+//         </div>
+
+//         {/* Client Projects + Flexible Batches Row */}
+//         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 mt-4 sm:mt-6 lg:mt-8">
+//           {/* Client Projects */}
+//           <div className="bg-[#18181b] border border-[#2E2E2E] flex-1 sm:flex-[1.2] p-6 sm:p-8 rounded-2xl flex items-center space-x-4">
+//             <img src={Startup} alt="Startup_Img" className="w-10 sm:w-12 lg:w-14" />
+//             <p className="text-gray-200 text-sm sm:text-base lg:text-lg xl:text-xl w-auto">
+//               Client-style projects & workflows
+//             </p>
+//           </div>
+
+//           {/* Flexible Batches */}
+//           <div className="bg-[#18181b] border border-[#2E2E2E] flex-1 sm:flex-[1.1] p-6 sm:p-8 rounded-2xl flex items-center space-x-4">
+//             <img src={Flexible} alt="Flexible_Img" className="w-10 sm:w-12 lg:w-14" />
+//             <p className="text-gray-200 text-sm sm:text-base lg:text-lg xl:text-xl w-auto">
+//               Flexible weekday batches
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+
+
+//     </section>
+//   );
+// };
+
+// export default AboutSection;
+
+
+import React from "react";
+import { aboutData2 } from "../DB/db";
+
+const AboutSection = () => {
   return (
+    <section className="bg-black text-white px-4 md:px-12 py-12 md:py-20">
+      <div className="w-full px-4 sm:px-16 md:px-10 lg:px-14 xl:px-5 2xl:px-0 max-w-4xl 2xl:max-w-6xl mx-auto">
+        
+        {/* About Section */}
+        <div className="bg-[#18181b] border border-[#2E2E2E] p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl mb-8">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-[#F988AE] to-[#F7BB97] bg-clip-text text-transparent mb-3">
+            {aboutData2.aboutText.heading}
+          </h2>
+          <p className="text-gray-300 text-sm sm:text-base lg:text-lg mb-4 2xl:text-2xl">
+            {aboutData2.aboutText.paragraph1}
+          </p>
+          <p className="text-gray-400 text-sm sm:text-base lg:text-lg 2xl:text-2xl">
+            {aboutData2.aboutText.paragraph2}
+          </p>
+        </div>
 
-      <li className="flex items-start gap-3">
+        {/* Info Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 2xl:gap-10">
+          {aboutData2.infoCards.map((card, idx) => (
+            <div
+              key={idx}
+              className="bg-[#18181b] p-6 sm:p-8 rounded-2xl flex flex-col justify-center items-start border border-[#2E2E2E]"
+            >
+              {card.subtitle === "Job Skills" ? (
+                <>
+                  {/* Swap: subtitle on top, title below */}
+                  <p className="text-gray-500 text-xs sm:text-sm mb-1 ml-3">{card.subtitle}</p>
+                  <h3
+                    className={`text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-snug ml-3`}
+                  >
+                    {card.title}
+                  </h3>
+                </>
+              ) : card.gradient ? (
+                <h3
+                  className={`text-3xl sm:text-4xl lg:text-5xl font-semibold ${card.textColor} bg-gradient-to-r ${card.gradient} mb-1 ml-3`}
+                >
+                  {card.title}
+                </h3>
+              ) : (
+                <h3
+                  className={`text-3xl sm:text-4xl lg:text-2xl font-semibold ${card.textColor} mb-1 ml-3`}
+                >
+                  {card.title}
+                </h3>
+              )}
+          
+              {/* Subtitle for other cards */}
+              {card.subtitle !== "Job Skills" && (
+                <p className="text-gray-300 text-sm md:text-base lg:text-lg ml-3">
+                  {card.subtitle}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
 
-          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1 " />
 
-          <p
-            className="text-gray-200 text-sm leading-relaxed 2xl:text-xl"
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-
-      </li>
-
+        {/* Client Projects + Flexible Batches Row */}
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 mt-4 sm:mt-6 lg:mt-8">
+          {aboutData2.smallCards.map((item, idx) => (
+            <div
+              key={idx}
+              className={`bg-[#18181b] border border-[#2E2E2E] flex-1 sm:flex-[${item.flex}] p-6 sm:p-8 rounded-2xl flex items-center space-x-4`}
+            >
+              <img src={item.img} alt={`Img_${idx}`} className="w-10 sm:w-12 lg:w-14" />
+              <p className="text-gray-200 text-sm sm:text-base lg:text-lg xl:text-xl w-auto">
+                {item.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
-const AboutSection = () => {
-
-    const [visible, setVisible] = useState(false);
-    const ref = useRef(null);
-
-    // Animation 
-    useEffect(() => {
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setVisible(true);
-              observer.unobserve(entry.target); 
-            }
-          });
-        },
-        {
-          threshold: 0.5, 
-          rootMargin: "0px 0px -100px 0px", 
-        }
-      );
-
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-
-      return () => {
-        if (ref.current) observer.unobserve(ref.current);
-      };
-    }, []);
-
-    return (
-
-      // About Us Section Start
-      <section className="section relative bg-gradient-to-b from-[#0e0f2d] via-[#14163d] to-[#0e0f2d] text-white py-16 px-6 md:px-12 lg:px-20 overflow-hidden ">
-
-
-            {/* About Us - Image Shape 1 */}
-            <img
-              src={aboutShape2}
-              alt="Decorative blur"
-              className="pointer-events-none select-none absolute top-0 left-[-126px] w-40 md:w-56 lg:w-64 opacity-60 blur-[1px] z-0"
-              aria-hidden="true"
-            />
-
-            {/* About Us - Image Shape 2 */}
-            <img
-              src={aboutShape}
-              alt="Decorative blur"
-              className="pointer-events-none select-none absolute bottom-0 right-[-10rem] w-40 md:w-56 lg:w-64 opacity-60 blur-[1px] z-0 transform scale-x-[-1]"
-              aria-hidden="true"
-            />
-
-            {/* About Us Section Start */}
-            <div className="max-w-6xl mx-auto">
-
-                  {/* About Us - Header */}
-                  <h2 className="text-2xl md:text-3xl font-poppins font-semibold text-center mb-19 2xl:text-4xl">
-                    About Us
-                  </h2>
-
-                  {/* About Us - Right Side Content Start with Animation */}
-                  <div className="grid md:grid-cols-2 gap-12 2xl:gap-[20%] 2xl:grid-cols-2 items-stretch 2xl:items-center ">
-                      
-                      {/* About Us - About Left Side Image */}
-                      <div className="w-full h-100 2xl:w-[180%] 2xl:h-[110%]">
-
-                          <img
-                            src={aboutImage}
-                            alt="Team collaboration"
-                            className="w-full h-full rounded-2xl shadow-lg object-cover 2xl:ml-[-17rem]"
-                          />
-
-                      </div>
-
-                      
-                      <div
-                        ref={ref}
-                        className={`
-                          flex flex-col justify-center 2xl:ml-[-3rem]
-                          transform transition-all duration-1500 ease-out
-                          ${visible ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"}
-                        `}
-                      >
-
-                        <h3 className="text-xl md:text-2xl font-semibold leading-snug mb-4 2xl:w-[144%] 2xl:text-3xl font-poppins ">
-                          {/* About Us - Content of About Us */}
-                          <span className="text-yellow-400 font-poppins font-semibold">
-                            We Don’t Just Teach Keyboard Buttons,
-                          </span>{" "}
-
-                          <span className="text-yellow-400 font-poppins font-semibold ">
-                            We Teach Brains (and Deadlines).
-                          </span>
-
-                        </h3>
-                        {/* Paragraph of About Us */}
-                        <p className=" text-white text-sm md:text-base 2xl:text-xl 2xl:w-[140%] leading-relaxed mb-6 font-poppins font-semibold">
-                          At Pixora, we train students to work like real designers handling
-                          client briefs, revisions, deadlines, and teamwork.
-
-                        <br />
-                        {/* Paragraph of About Us */}
-                        <p className="font-poppins 2xl:w-[96%]">
-                          Most institutes train you in software, but fail to prepare you for
-                          the real challenges of the design industry.
-                        </p>
-
-                        </p>
-
-                        <h4 className="text-green-400 font-semibold mb-4 2xl:text-3xl font-poppins">
-                          We bridge that gap.
-                        </h4>
-                        
-                        {/* About Us - Description of List Items Start */}
-                        <ul className="space-y-4 font-poppins 2xl:w-[110%] font-semibold">
-
-                          <ChecklistItem text="Learn directly from a working professional with over <strong>10 years in IT, Graphic Design & Video Editing.</strong>" />
-                          <ChecklistItem text="Get trained in <strong>industry workflows, project management, and client communication.</strong>" />
-                          <ChecklistItem text="<strong>Build confidence</strong> to handle real deadlines and revisions, just like in agencies and studios." />
-
-                        </ul>
-                        {/* About Us - Description of List Items End */}
-                      </div>
-                      
-                  </div>
-                  {/* About Us - Right Side Content End */}
-
-            </div>
-            {/* About Us Section End */}
-
-      </section>
-      // About Us Section End
-
-    );
-};
-
 export default AboutSection;
+
