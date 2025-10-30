@@ -16,6 +16,7 @@ import Format from '../assets/Courses_Digital_Media_Icons/Format-icon-8.svg';
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import Footer from "./Footer";
 import { superpowerData } from "../DB/db";
+import Contact from "../Components/Contact";
 
 const course = {
   title: "Advance Program in Digital Media Creation",
@@ -25,44 +26,45 @@ const course = {
 const modules = [
   {
     module: "Module 1",
-    title: "Design Foundations (Weeks 1–2)",
+    title: "Design Thinking & Visual Foundations (Weeks 1–4)",
     lessons: [
-      "Visual language, color, typography basics, layout principles.",
-      "Sketch-to-rough workflows, critique sessions."
+      "Design Process & Problem Solving.",
+      "Color, Typography, and Layout for UI.",
+      "Wireframes & Mood Boards.",
+      "Tool Focus: Illustrator + Photoshop.",
     ]
   },
   {
     module: "Module 2",
-    title: "Branding & Logo (Weeks 3–4)",
+    title: "UI Design Essentials (Weeks 5–8)",
     lessons: [
-      "Brand strategy, positioning, and logo development.",
-      "Presentation and feedback rounds."
+      "Grid Systems, Components & Buttons.",
+      "Mobile & Web UI Design.",
+      "Design Systems, Consistency & Accessibility.",
+      "Tool Focus: Figma + XD.",
     ]
   },
   {
     module: "Module 3",
-    title: "Print & Publication (Weeks 5–6)",
+    title: "UX Research & Prototyping (Weeks 9–12)",
     lessons: [
-      "Editorial design, layout grids, and production-ready files.",
-      "Hands-on print project."
+        "User Research & Persona Development.",
+        "User Journey Mapping & Information Architecture.",
+        "Wireframing to Interactive Prototypes.",
+        "Usability Testing & Feedback.",
+        "Tool Focus: Figma + XD.",
     ]
   },
   {
     module: "Module 4",
-    title: "Digital & Social (Weeks 7–8)",
+    title: "Real Projects & Portfolio (Weeks 13–16)",
     lessons: [
-      "Design for screens, responsive layouts.",
-      "Social media campaigns, motion basics."
+      "Full App or Website Project.",
+      "Responsive Design (Mobile, Tablet, Web).",
+      "UI Kit & Case Study Preparation.",
+      "Portfolio Review & Presentation.",
     ]
   },
-  {
-    module: "Module 5",
-    title: "Portfolio Project & Review (Weeks 9–12)",
-    lessons: [
-      "Independent portfolio project.",
-      "One-on-one reviews and refinement."
-    ]
-  }
 ];
 
 
@@ -106,22 +108,19 @@ const AdvanceProgramDMCreation = () => {
                     />
                     <div className="absolute left-0 right-0 top-[72%] z-20 flex flex-col items-center text-center -translate-y-1/2 px-4">
                         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 drop-shadow-md">
-                            Advance Program in
+                            Diploma in
                         </h1>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
                         <span className="bg-gradient-to-r from-[#E04FFF] via-[#FF6D8D] to-[#FFA26B] bg-clip-text text-transparent">
-                            Digital Media Creation
+                            UI/UX Design
                         </span>
                         </h2>
                         <p className="max-w-2xl text-xs sm:text-sm md:text-base lg:text-lg opacity-90 mb-7">
-                        Intensive studio-style training for branding, print & digital creatives.
+                            Build beautiful and easy-to-use app & web interfaces.
                         </p>
                         <div className="flex gap-3 sm:gap-4 justify-center mt-2 mb-8 flex-wrap">
                         <button className="bg-[#F5614C] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full hover:bg-[#e64a36] font-semibold transition-all duration-300 text-xs sm:text-sm cursor-pointer" onClick={() => window.open("https://forms.gle/2e3p3YF5Fqqa4KiD7", "_blank")}>
-                            Inquiry Now
-                        </button>
-                        <button className="border border-white hover:bg-white hover:text-black text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full font-semibold transition text-xs sm:text-sm cursor-pointer">
-                            Download Brochure
+                            Enquire Now
                         </button>
                         </div>
                     </div>
@@ -139,7 +138,7 @@ const AdvanceProgramDMCreation = () => {
                         </span>
                         <div className="text-left">
                             <p className="text-sm sm:text-base font-normal leading-tight text-white">
-                            Aspiring graphic designers who want a fast, job-ready portfolio.
+                                Digital Interfaces, Wireframes, User Flow, and Visual Design.
                             </p>
                         </div>
                         </div>
@@ -182,7 +181,8 @@ const AdvanceProgramDMCreation = () => {
                         Advance Program in Digital Media Creation
                     </h2>
                     <p className="opacity-80 text-sm sm:text-base md:text-lg leading-relaxed">
-                        The Advance Program in Digital Media Creation is a comprehensive program that blends creativity with technology to prepare students for careers in the fast-evolving digital world. This course covers key areas such as graphic design, UI/UX, animation, video editing, digital marketing, and branding. Students will learn to create visually compelling content, design user-friendly interfaces, and develop digital strategies for real-world projects.
+                        A specialized course for building intuitive and visually appealing digital experiences. Students
+                        learn how to research, design, and prototype apps and websites using modern UI/UX principles.
                     </p>
                     </div>
 
@@ -196,7 +196,7 @@ const AdvanceProgramDMCreation = () => {
                             </span>
                             <div>
                                 <div className="text-xs sm:text-sm font-light text-white mb-1">Duration</div>
-                                <div className="font-medium text-sm sm:text-base text-white">3 Months</div>
+                                <div className="font-medium text-sm sm:text-base text-white">4 Months</div>
                             </div>
                             </div>
                             {/* Batches */}
@@ -206,27 +206,16 @@ const AdvanceProgramDMCreation = () => {
                             </span>
                             <div>
                                 <div className="text-xs sm:text-sm font-light text-white mb-1">Batches</div>
-                                <div className="font-medium text-sm sm:text-base text-white">Flexible Weekday (specify options)</div>
+                                <div className="font-medium text-sm sm:text-base text-white">Flexible Weekday</div>
                             </div>
                             </div>
-                            {/* Level */}
                             <div className="flex items-center mb-6">
-                            <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#8c3ffc] mr-4">
-                                <img src={Level} alt="Level Icon" className="max-h-6" />
-                            </span>
-                            <div>
-                                <div className="text-xs sm:text-sm font-light text-white mb-1">Level</div>
-                                <div className="font-medium text-sm sm:text-base text-white">Beginner</div>
-                            </div>
-                            </div>
-                            {/* Tools */}
-                            <div className="flex items-center mb-6">
-                            <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#f84b7f] mr-4">
+                            <span className="w-12 h-10 flex items-center justify-center rounded-full bg-[#f84b7f] mr-4">
                                 <img src={ToolsUsed} alt="Tools Icon" className="max-h-6" />
                             </span>
                             <div>
                                 <div className="text-xs sm:text-sm font-light text-white mb-1">Tools used</div>
-                                <div className="font-medium text-sm sm:text-base text-white">InDesign, Illustrator, Figma</div>
+                                <div className="font-medium text-sm sm:text-base text-white"> Adobe Illustrator, Photoshop, Adobe XD, Figma</div>
                             </div>
                             </div>
                             {/* Format */}
@@ -354,7 +343,7 @@ const AdvanceProgramDMCreation = () => {
                 </h2>
 
                 {/* Top box row */}
-                <div className="flex flex-col md:flex-row gap-6 w-full max-w-3xl justify-center mb-8">
+                <div className="flex flex-col md:flex-row gap-6 w-full max-w-4xl 2xl:max-w-5xl justify-center mb-8">
                     {/* Left Box */}
                     <div className="flex flex-1 bg-[#191919] rounded-xl px-6 py-6 shadow-lg min-h-[96px] items-center gap-4">
                     {/* Rocket icon */}
@@ -374,8 +363,8 @@ const AdvanceProgramDMCreation = () => {
                         </svg>
                     </span>
                     <span className="text-white text-lg sm:text-xl font-medium leading-snug">
-                        Project-based<br />
-                        assessment
+                        Project-Based <br />
+                        Evaluation
                     </span>
                     </div>
                     {/* Right Box */}
@@ -408,26 +397,26 @@ const AdvanceProgramDMCreation = () => {
                         </svg>
                     </span>
                     <span className="text-white text-lg sm:text-xl font-medium leading-snug">
-                        Placement<br />
-                        assistance
+                        Placement Support<br />
                     </span>
                     </div>
                 </div>
 
                 {/* Lower box with certificate */}
-                <div className="flex flex-col md:flex-row gap-6 w-full max-w-3xl bg-[#191919] rounded-xl px-8 py-8 shadow-lg items-center">
+                <div className="flex flex-col md:flex-row gap-6 w-full max-w-4xl 2xl:max-w-5xl bg-[#191919] rounded-xl px-8 py-8 shadow-lg items-center">
                     <div className="flex-1 flex justify-center md:justify-start text-center md:text-left">
                         <div className="text-white">
                             {/* Title */}
-                            <h3 className="text-lg sm:text-xl md:text-3xl  2xl:text-3xl font-semibold text-[#94D84F] mb-2 sm:mb-3 md:mb-4">
+                            <h3 className="text-lg sm:text-xl md:text-3xl 2xl:text-3xl font-semibold text-[#94D84F] mb-4">
                                 {superpowerData.certificate.title}
                             </h3>
-        
-                            {/* Text */}
-                            <p className="text-base sm:text-lg md:text-sm md:w-100 leading-snug 2xl:text-xl 2xl:font-normal 2xl:w-[29rem] text-gray-200">
-                                {superpowerData.certificate.text}
-                                <br className="hidden md:block" />
-                            </p>
+    
+                            {/* Points */}
+                            <ul className="text-sm  sm:text-lg  leading-snug md:text-sm md:font-medium md:w-[34rem] 2xl:text-[16px] xl:font-medium 2xl:w-[39rem] text-gray-200 list-decimal list-inside space-y-2">
+                                {superpowerData.certificate.points.map((point, index) => (
+                                <li key={index}>{point}</li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                     <div className="flex-1 flex justify-center mt-6 md:mt-0">
@@ -442,7 +431,7 @@ const AdvanceProgramDMCreation = () => {
                 </div>
 
                 {/* Title and Subtext */}
-                <div className="flex flex-col w-full max-w-3xl mx-auto mt-10 bg-[#191919] rounded-xl px-8 py-10 shadow-lg items-center">
+                <div className="flex flex-col w-full max-w-4xl 2xl:max-w-5xl mx-auto mt-10 bg-[#191919] rounded-xl px-8 py-10 shadow-lg items-center">
                     <h2 className="text-3xl font-bold text-white text-center mb-2">Diploma in</h2>
                     <h3
                     className="text-3xl font-bold text-center mb-3 bg-gradient-to-r from-[#fd426e] to-[#f48637] bg-clip-text text-transparent select-none"
@@ -451,146 +440,23 @@ const AdvanceProgramDMCreation = () => {
                         WebkitTextFillColor: "transparent",
                     }}
                     >
-                        Digital Media Creation
+                        UI/UX Design
                     </h3>
                     <p className="text-white opacity-90 text-base text-center mb-6 leading-normal max-w-md">
-                        Intensive studio-style training for branding,
+                        Build beautiful and easy-to-use app & web interfaces.
                     <br />
-                        print & digital creatives
                     </p>
 
                     {/* Inquiry Button */}
                     <button className="bg-[#F5614C] text-white px-6 py-2 rounded-full font-medium text-base mt-0 mx-auto cursor-pointer" onClick={() => window.open("https://forms.gle/2e3p3YF5Fqqa4KiD7", "_blank")}>
-                        Inquiry Now
+                        Enquire Now
                     </button>
                 </div>
             </section>
 
             {/* Contact Section */}
-            <section className="bg-[#161618] text-white py-12 px-4 md:px-10 section">
-                <div className="grid grid-cols-1 md:grid-cols-3 rounded-lg overflow-hidden max-w-[1200px] mx-auto gap-6">
-                {/* Contact Form */}
-                <form className="md:col-span-2 bg-transparent md:border-r md:border-gray-600 p-8 space-y-6 h-full">
-                    <h2 className="text-2xl font-semibold 2xl:text-4xl font-poppins">Send a Message</h2>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
-                    <div className="flex flex-col space-y-1">
-                        <label className="text-white text-sm 2xl:text-xl font-poppins font-semibold">Name</label>
-                        <input
-                        type="text"
-                        name="name"
-                        placeholder="Enter your name"
-                        className="w-full p-2 pl-3 rounded-md border border-white bg-transparent text-white placeholder-gray-500 2xl:text-xl font-semibold"
-                        />
-                    </div>
-
-                    <div className="flex flex-col space-y-1">
-                        <label className="text-white text-sm 2xl:text-xl font-poppins font-semibold">Mobile Number</label>
-                        <input
-                        type="text"
-                        name="mobile"
-                        placeholder="Enter your mobile number"
-                        className="w-full p-2 pl-3 rounded-md border border-white bg-transparent text-white placeholder-gray-500 2xl:text-xl font-poppins font-semibold"
-                        />
-                    </div>
-                    </div>
-
-                    <div className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 w-full">
-                    <div className="flex flex-col space-y-1 w-full md:w-1/2">
-                        <label className="text-white text-sm 2xl:text-xl font-poppins font-semibold">Email</label>
-                        <input
-                        type="email"
-                        name="email"
-                        placeholder="Enter your email address"
-                        className="w-full p-2 pl-3 rounded-md border border-white bg-transparent text-white placeholder-gray-500 2xl:text-xl font-poppins font-semibold"
-                        />
-                    </div>
-
-                    <div className="flex flex-col space-y-1 w-full md:w-1/2">
-                        <label className="text-white text-sm 2xl:text-xl font-poppins font-semibold">Course of Interest</label>
-                        <select
-                        name="course"
-                        className="w-full p-2 pl-3 rounded-md border border-white bg-transparent text-white placeholder-bg-transparent 2xl:text-xl font-poppins font-semibold"
-                        >
-                        <option className="bg-transparent" value="">
-                            Select
-                        </option>
-                        {/* options */}
-                        </select>
-                    </div>
-                    </div>
-
-                    <div className="flex flex-col space-y-1">
-                    <label className="text-white text-sm 2xl:text-xl font-poppins font-semibold">Message</label>
-                    <textarea
-                        name="message"
-                        placeholder="Write here..."
-                        className="w-full p-2 pl-3 rounded-md border border-white bg-transparent text-white placeholder-gray-500 min-h-[150px] 2xl:text-xl font-poppins font-semibold"
-                    />
-                    </div>
-
-                    <button
-                    type="submit"
-                    className="bg-[#F5614C] text-white px-3 py-3 transition w-[8rem] 3xl:w-[60rem] 4k:w-[42rem] 2xl:text-xl font-poppins font-semibold rounded-4xl cursor-pointer"
-                    >
-                    Submit
-                    </button>
-                </form>
-
-                {/* Right Side Content */}
-                <div className="bg-[#161618] p-8 space-y-4">
-                    <h2 className="text-2xl font-semibold font-poppins 2xl:text-4xl">Get in touch with us</h2>
-                    <p className="text-gray-300 text-sm 2xl:text-xl font-semibold font-poppins">
-                    Your future in design is just one form away. <br /> Don’t ghost us.
-                    </p>
-
-                    <div>
-                    <span className="font-semibold text-[#989898] text-sm 2xl:text-xl">Email:</span>
-                    <p className="text-gray-200 2xl:text-xl font-semibold font-poppins">info@pixsora.com</p>
-                    </div>
-
-                    <div>
-                    <span className="font-semibold text-[#989898] text-sm 2xl:text-xl">Chat on whatsapp:</span>
-                    <p className="text-gray-200 2xl:text-xl font-poppins font-semibold">+91 88845 18448</p>
-                    </div>
-
-                    <h3 className="text-[#989898] text-xs mb-[-1rem]">we'ar social to</h3>
-                    <div className="flex space-x-3 mt-6 2xl:space-x-6 2xl:mt-8 4k:space-x-8 4k:mt-10">
-                    <a
-                        href="https://facebook.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 transition transform hover:scale-110 2xl:p-4 4k:p-5"
-                    >
-                        <FaFacebookF className="text-white text-lg 2xl:text-3xl 4k:text-5xl" />
-                    </a>
-                    <a
-                        href="https://instagram.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 hover:opacity-90 transition transform hover:scale-110 2xl:p-4 4k:p-5"
-                    >
-                        <FaInstagram className="text-white text-lg 2xl:text-3xl 4k:text-5xl" />
-                    </a>
-                    <a
-                        href="https://youtube.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition transform hover:scale-110 2xl:p-4 4k:p-5"
-                    >
-                        <FaYoutube className="text-white text-lg 2xl:text-3xl 4k:text-5xl" />
-                    </a>
-                    <a
-                        href="https://linkedin.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-blue-700 hover:bg-blue-800 transition transform hover:scale-110 2xl:p-4 4k:p-5"
-                    >
-                        <FaLinkedinIn className="text-white text-lg 2xl:text-3xl 4k:text-5xl" />
-                    </a>
-                    </div>
-                </div>
-                </div>
+            <section className="contact-section">
+                <Contact />
             </section>
 
             {/* Footer Section */}

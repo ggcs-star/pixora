@@ -26,15 +26,13 @@ import RightEmoji from "../assets/Courses_Digital_Media_Icons/Hero_Plan-Img.svg"
 import HeroVideo from "../assets/Videos/Hero sectio-Video.mp4";
 
 // Mission Landing page section
-import AboutCard1 from "../assets/About/About_Card-1.png";
-import AboutCard2 from "../assets/About/About_Card-2.png";
-import AboutCard3 from "../assets/About/About_Card-3.png";
-import AboutCard4 from "../assets/About/About_Card-4.png";
+import RealProject from "../assets/Mission/Real-Project.png";
+import CreativeConfidence from "../assets/Mission/Creative-Confidence.png";
+import Be from "../assets/Mission/Be.png";
+import PlacementSupport from "../assets/Mission/Placement-Support.png";
 
 // Contact Landing Page section
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa";
-
-
 
 // Navbar Section
 export const navbarData = {
@@ -49,7 +47,7 @@ export const navbarData = {
     { name: "Contact", path: "/contactadd" },
   ],
   ctaButton: {
-    text: "Inquiry Now",
+    text: "Enquire Now",
     bgColor: "#F5614C",
     hoverColor: "#e64a36",
     link: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
@@ -62,9 +60,9 @@ export const aboutData = {
     title1: "We don't teach keyboard buttons.",
     title2Prefix: "We teach",
     title2Highlight: "design brains.",
-    description1: "Pixora you train like an industry pro",
-    description2: "Managing briefs, revisions, deadlines and teamwork.",
+    description1: "At Framisty, we don’t just train designers we shape creative thinkers.",
     buttonText: "Start Learning",
+    onClickLink: "/courses",
     backgroundGradient: {
       from: "#24143C",
       via: "#2B124C",
@@ -78,57 +76,43 @@ export const aboutData = {
     {
       id: 1,
       icon: AspiringIcon,
-      text: "Aspiring graphic designers who want a fast, job-ready portfolio.",
+      text: "Framisty Design Institute is a creative learning space built for tomorrow’s designers.",
     },
     {
       id: 2,
       icon: Graduates,
-      text: "Graduates seeking practical skills that matter to employers.",
+      text: "We blend professional training with real-world projects to help students master both design tools and creative thinking.",
     },
     {
       id: 3,
       icon: Freelancer,
-      text: "Freelancers who want professional workflows & handovers.",
+      text: "Our goal is to shape confident, industry-ready professionals who can turn imagination into impactful design.",
     },
   ],
 
   storySection: {
     heading: "Our Story",
     paragraphs: [
-      "GG Pixohype was founded to fix a common gap: institutes teach tools; we teach the process. Led by a working professional with 10+ years across IT, graphic design and animation, Pixora turns students into hireable creatives who know how to solve real problems, not just run software.",
-      "We believe small batches, live client-style projects, and honest feedback are the fastest path to mastery. Our mission is to make you job-ready, with a portfolio that proves it.",
+      "Framisty was created to bridge a crucial gap in design education — while most institutes teach software, we teach how to think, create, and solve like a designer.Founded by an industry professional with over a decade of experience in IT, graphic design, and animation, Framisty focuses on transforming learners into job-ready creatives who can handle real-world challenges with confidence.",
+
+      "We believe true design mastery comes from small batches, hands-on projects, real client briefs, and honest mentorship.",
+      "Our goal is simple — to shape bold, skilled, and industry-ready professionals with a strong portfolio that speaks for itself.",
     ],
   },
 
-  missionVision: [
+  missions: [
     {
       title: "Mission",
       icon: Mission,
-      text: "Make designers who are ready for the real world, confident, collaborative, and deadline-driven.",
-    },
-    {
-      title: "Vision",
-      icon: Vision,
-      text: "To be the go-to mentor-led studio-school for creatives in India.",
+      text: "To craft confident designers who think beyond software — creative minds who are industry-ready, adaptable, and thrive under real-world challenges and deadlines.",
     },
   ],
 
-  coreValues: [
+  visions: [
     {
-      title: "Practicality:",
-      desc: "We teach what works in client projects",
-    },
-    {
-      title: "Craftsmanship:",
-      desc: "Quality + speed",
-    },
-    {
-      title: "Accountability:",
-      desc: "Real revision cycles, real feedback.",
-    },
-    {
-      title: "Career-First:",
-      desc: "Portfolio and placements come first.",
+      title: "Vision",
+      icon: Vision,
+      text: "To build India’s most inspiring mentor-driven design institute, where creativity meets strategy and every learner becomes a professional creator.",
     },
   ],
 
@@ -145,26 +129,28 @@ export const aboutData = {
       video: DigitalMediaDesign,
       slug: "diploma-in-digital-media-design",
       btnColor: "#F5614C",
+      inquiryLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
     },
     {
       id: 2,
-      title: "Diploma in",
+      title: "Advanced Diploma in",
       highlight: "Design & Video Editing",
       description:
-        "Intensive studio-style training for branding, print & digital creatives",
+        "Advanced design meets dynamic motion — craft, edit & animate like a pro.",
       gradientFrom: "#F9F97F",
       gradientTo: "#81D246",
       color: "#8FE671",
       video: DesignVideoEditing,
       slug: "diploma-in-design-and-video-editing",
       btnColor: "#94D84F",
+      inquiryLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
     },
     {
       id: 3,
-      title: "Advance Program in",
-      highlight: "Digital Media Creation",
+      title: "Diploma in",
+      highlight: "UI/UX Design",
       description:
-        "Intensive studio-style training for branding, print & digital creatives",
+        "Build beautiful and easy-to-use app & web interfaces.",
       gradientFrom: "#E04FFF",
       gradientVia: "#FF6D8D",
       gradientTo: "#FFA26B",
@@ -172,13 +158,14 @@ export const aboutData = {
       video: UiUx,
       slug: "advance-program-in-digital-media-creation",
       btnColor: "#E958DD",
+      inquiryLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
     },
   ],
 
   rightIcon: Right,
 };
 
-// Course Data
+// Course Data - Navbar Section
 export const coursesData = [
   {
     id: 1,
@@ -192,26 +179,28 @@ export const coursesData = [
     video: DigitalMediaDesign,
     slug: "diploma-in-digital-media-design",
     btnColor: "#F5614C",
+    inquiryLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
   },
   {
     id: 2,
-    title: "Diploma in",
+    title: "Advanced Diploma in",
     highlight: "Design & Video Editing",
     description:
-      "Intensive studio-style training for branding, print & digital creatives",
+      "Advanced design meets dynamic motion — craft, edit & animate like a pro.",
     gradientFrom: "#F9F97F",
     gradientTo: "#81D246",
     color: "#8FE671",
     video: DesignVideoEditing,
     slug: "diploma-in-design-and-video-editing",
     btnColor: "#94D84F",
+    inquiryLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
   },
   {
     id: 3,
-    title: "Advance Program in",
-    highlight: "Digital Media Creation",
+    title: "Diploma in",
+    highlight: "UI/UX Design",
     description:
-      "Intensive studio-style training for branding, print & digital creatives",
+      "Build beautiful and easy-to-use app & web interfaces.",
     gradientFrom: "#E04FFF",
     gradientVia: "#FF6D8D",
     gradientTo: "#FFA26B",
@@ -219,25 +208,26 @@ export const coursesData = [
     video: UiUx,
     slug: "advance-program-in-digital-media-creation",
     btnColor: "#E958DD",
+    inquiryLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
   },
 ];
 
 
-// Why-Choose-Us - 2 Navbar
+// Why-Choose-Us - 2 Navbar Section
 export const coreValuesData = [
   {
     title:
-      "Portfolio with 8–10 polished case studies instead of scattered practice pieces.",
+      "Build a professional portfolio featuring 8–10 complete, real-world projects.",
   },
   {
-    title: "Industry-standard file handovers ready for print, web, and apps.",
+    title: "Learn how to create industry-ready files for print, web, and digital platforms.",
   },
   {
-    title: "Experience with client briefs, feedback loops, and version control.",
+    title: "Work on client-style briefs, manage feedback, and maintain version control.",
   },
   {
     title:
-      "Interview & freelance-ready soft skills: pitching, pricing, and client communication.",
+      "Develop communication and presentation skills for interviews and freelance work.",
   },
 ];
 
@@ -281,7 +271,7 @@ export const featuresData = [
   {
     feature: "Tools Taught",
     other: "Standard",
-    pixora: "Standard + AI + 3D basics",
+    pixora: "Standard + AI",
   },
 ];
 
@@ -289,30 +279,30 @@ export const featuresData = [
 export const infoCardsData = [
   {
     title: "10+",
-    subtitle: "Years working designer",
+    subtitle: "Trainers with 10+ years of Experience",
     gradient: "from-[#F988AE] to-[#F7BB97]",
   },
   {
     title: "8–12",
-    subtitle: "Batch Size & Flexible weekday batches",
+    subtitle: "Flexible batch size of 8 to 12 students",
     textColor: "text-sky-400",
   },
   {
-    title: "Communication, deadlines, teamwork",
+    title: "Master communication, teamwork, and time management",
     subtitle: "Job Skills",
     textColor: "text-white",
   },
 ];
 
-// Small Cards (Client Projects + Flexible Batches)
+// Small Cards
 export const smallCardsData = [
   {
     img: Startup,
-    text: "Client-style projects & workflows",
+    text: "Portfolio That Stands Out",
   },
   {
     img: Flexible,
-    text: "Flexible weekday batches",
+    text: "Convenient Weekday Timings",
   },
 ];
 
@@ -368,9 +358,10 @@ export const formFields = {
       { value: "", text: "Select" },
       { value: "UI/UX", text: "UI/UX" },
       { value: "Graphic Design", text: "Graphic Design" },
+      { value: "Video Editing", text: "Video Editing" },
     ],
   },
-  textarea: { label: "Message", placeholder: "Write here..." },
+  textarea: { label: "Message (Optional)", placeholder: "Write here..." },
   submitBtn: { text: "Submit" },
 };
 
@@ -379,17 +370,16 @@ export const whatsappData = {
 };
 
 
-
 // Hero Section
 export const heroData = {
   heading: [
     "Learn from a ",
     { text: "Designer", gradient: "from-[#F7BB97] to-[#F988AE]" },
-    " Not Just a ",
-    { text: "Trainer", gradient: "from-[#F7BB97] to-[#F988AE]" },
+    " Build a Career, ",
+    { text: "Not Just Skills", gradient: "from-[#F7BB97] to-[#F988AE]" },
   ],
   subText:
-    "Learn to design the way it’s done in the real world. Not just tools, but the entire process - from client brief to final delivery.",
+    "Learn the complete design process from client brief to final delivery, get certified, and earn your Internship Letter that proves your real-world experience.",
   buttons: [
     {
       text: "Start Learning",
@@ -399,7 +389,7 @@ export const heroData = {
       hoverColor: "#e54b34",
     },
     {
-      text: "Inquiry Now",
+      text: "Enquire Now",
       type: "secondary",
       onClickLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
       border: "border-white",
@@ -425,37 +415,35 @@ export const aboutData2 = {
   aboutText: {
     heading: "About",
     paragraph1:
-      "Framisty, we train students to work like real designers handling client briefs, revisions, deadlines, and teamwork.",
-    paragraph2:
-      "Most institutes train you in software, but fail to prepare you for the real challenges of the design industry.",
+      "At Framisty, we go beyond software training — we prepare students to think, work, and deliver like real designers. From handling client briefs to managing revisions, deadlines, and teamwork, we train you in real corporate environment.",
   },
   infoCards: [
     {
       title: "10+",
-      subtitle: "Years working designer",
+      subtitle: "Trainers with 10+ years of Experience",
       gradient: "from-[#F988AE] to-[#F7BB97]",
       textColor: "text-transparent bg-clip-text",
     },
     {
       title: "8-12",
-      subtitle: "Batch Size & Flexible weekday batches",
+      subtitle: "Flexible batch size of 8 to 12 students",
       textColor: "text-sky-400",
     },
     {
       subtitle: "Job Skills",
-      title: "Communication, deadlines, teamwork",
+      title: "Master communication, teamwork, and time management",
       textColor: "text-white",
     },
   ],
   smallCards: [
     {
       img: Startup,
-      text: "Client-style projects & workflows",
+      text: "Portfolio That Stands Out",
       flex: "1.2",
     },
     {
       img: Flexible,
-      text: "Flexible weekday batches",
+      text: "Convenient Weekday Timings",
       flex: "1.1",
     },
   ],
@@ -465,35 +453,35 @@ export const aboutData2 = {
 // Mission Section Landing Page
 export const missionData = {
   heading: "Our Mission is Simple",
-  subheading: "To make you a designer who’s ready for real-world jobs, not just classroom exercises.",
+  subheading: "To make you a designer who’s ready for real-world jobs, not just classroom.",
   cards: [
     {
       id: 1,
       bgColor: "#F9C6CF",
-      img: AboutCard1,
-      title: "Industry Mentor",
-      description: "Not a YouTube tutorial guy, A real hustler.",
+      img: RealProject,
+      title: "Real Projects",
+      description: "Mock-ups don’t get you hired.",
     },
     {
       id: 2,
       bgColor: "#67C3A5",
-      img: AboutCard2,
-      title: "Batch Size",
-      description: "No hiding at the back, we see you.",
+      img: CreativeConfidence,
+      title: "Creative Confidence",
+      description: "No copying Pinterest boards.",
     },
     {
       id: 3,
       bgColor: "#FAD0C4",
-      img: AboutCard3,
+      img: Be,
       title: "Portfolio Power",
-      description: "Your Behance gonna glow up.",
+      description: "Knowing tools isn’t enough.",
     },
     {
       id: 4,
       bgColor: "#B0E3F4",
-      img: AboutCard4,
+      img: PlacementSupport,
       title: "Placement Support",
-      description: "We don’t ghost you after class.",
+      description: "From class to career",
     },
   ],
 };
@@ -501,8 +489,8 @@ export const missionData = {
 
 // SuperPower Section Landing Page
 export const superpowerData = {
-  heading: "Pick Your Superpower.",
-  subheading: "We'll Train You to Use It.",
+  heading: "Pick Your Passion",
+  subheading: "We’ll Turn It into a Superpower",
   cards: [
     {
       id: 1,
@@ -517,9 +505,9 @@ export const superpowerData = {
     },
     {
       id: 2,
-      title: "Diploma in",
+      title: "Advanced Diploma in",
       highlight: "Design & Video Editing",
-      description: "Intensive studio-style training for branding, print & digital creatives",
+      description: "Advanced design meets dynamic motion — craft, edit & animate like a pro.",
       gradientFrom: "#F9F97F",
       gradientTo: "#81D246",
       btnColor: "#94D84F",
@@ -528,9 +516,9 @@ export const superpowerData = {
     },
     {
       id: 3,
-      title: "Advance Program in",
-      highlight: "Digital Media Creation",
-      description: "Intensive studio-style training for branding, print & digital creatives",
+      title: "Diploma in ",
+      highlight: "UI/UX Design",
+      description: "Build beautiful and easy-to-use app & web interfaces.",
       gradientFrom: "#E04FFF",
       gradientTo: "#FFA26B",
       btnColor: "#E958DD",
@@ -539,8 +527,12 @@ export const superpowerData = {
     },
   ],
   certificate: {
-    title: "Certificate & Internship letter Awaits!",
-    text: "Get certified and unlock a Free Internship Letter - proof of your skills and real-world experience.",
+    title: "Once You Complete the Course",
+    points: [
+      "Receive a Certificate of Completion recognizing your achievement.",
+      "Get a Free Internship Letter as proof of your practical learning and project work.",
+      "Showcase your skills and experience to potential employers.",
+    ],
     img: CertificateImage,
   },
 };
@@ -558,9 +550,9 @@ export const contactData = {
         label: "Course of Interest", 
         type: "select", 
         name: "course", 
-        options: ["Select", "UI/UX", "Graphic Design"] 
+        options: ["Select", "UI/UX", "Graphic Design","Video Editing"] 
       },
-      { label: "Message", type: "textarea", name: "message", placeholder: "Write here..." },
+      { label: "Message (Optional)" , type: "textarea", name: "message", placeholder: "Write here..." },
     ],
     submitButton: {
       text: "Submit",

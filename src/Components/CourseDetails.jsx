@@ -19,6 +19,7 @@ import {FaFacebookF,FaInstagram,FaYoutube,FaLinkedinIn, FaWhatsapp} from "react-
 import Button from './Button';
 import Footer from "./Footer";
 import { superpowerData } from "../DB/db";
+import Contact from "../Components/Contact";
 
 const courseData = {
   "diploma-in-digital-media-design": {
@@ -40,40 +41,54 @@ const modules = [
     module: "Module 1",
     title: "Design Foundations (Weeks 1–2)",
     lessons: [
-      "Visual language, color, typography basics, layout principles.",
-      "Sketch-to-rough workflows, critique sessions."
+      "Principles of Design & Visual Communication",
+      "Color Theory, Typography, and Layout Systems",
+      "Composition, Balance & Hierarchy",
+      "Hands-on: Poster & Layout Design",
+      "Tool Focus: Photoshop + Illustrator basics"
     ]
   },
   {
     module: "Module 2",
-    title: "Branding & Logo (Weeks 3–4)",
+    title: "Branding & Logo Design (Weeks 3–4)",
     lessons: [
-      "Brand strategy, positioning, and logo development.",
-      "Presentation and feedback rounds."
+      "Understanding Brand Identity & Brand Strategy.",
+      "Logo Creation Process — Sketch to Vector.",
+      "Brand Guidelines, Color Palette, and Typography Rules.",
+      "Real Brand Brief: Logo to Brand Collateral.",
+      "Tool Focus: Illustrator + CorelDRAW."
     ]
   },
   {
     module: "Module 3",
-    title: "Print & Publication (Weeks 5–6)",
+    title: "Print & Publication Design (Weeks 5–6)",
     lessons: [
-      "Editorial design, layout grids, and production-ready files.",
-      "Hands-on print project."
+      "Print-Ready Design Concepts: Bleeds, Margins, CMYK, Resolution.",
+      "Brochure, Flyer, and Magazine Layouts.",
+      "Packaging Design Fundamentals.",
+      "Prepress & Final File Delivery Workflow.",
+      "Tool Focus: InDesign + Photoshop.",
     ]
   },
   {
     module: "Module 4",
-    title: "Digital & Social (Weeks 7–8)",
+    title: "Digital & Social Media Design (Weeks 7–8)",
     lessons: [
-      "Design for screens, responsive layouts.",
-      "Social media campaigns, motion basics."
+      "Designing for Web & Social Media.",
+      "Ad Banners, Social Templates & Carousels.",
+      "Platform-specific Adaptations (Instagram, YouTube, Meta Ads).",
+      "Figma Introduction for Digital Layouts.",
+      "Tool Focus: Photoshop + Illustrator + Figma.",
     ]
   },
   {
     module: "Module 5",
     title: "Portfolio Project & Review (Weeks 9–12)",
     lessons: [
-      "Independent portfolio project.",
-      "One-on-one reviews and refinement."
+      "2–3 Professional-Level Projects.",
+      "Personal Branding & Portfolio Curation.",
+      "Behance / Dribbble Presentation.",
+      "Interview Preparation & Review.",
     ]
   }
 ];
@@ -147,14 +162,11 @@ const CourseDetails = () => {
                     </span>
                     </h2>
                     <p className="max-w-2xl text-xs sm:text-sm md:text-base lg:text-lg opacity-90 mb-7">
-                    Intensive studio-style training for branding, print & digital creatives.
+                        Intensive studio-style training for branding, print & digital creatives.
                     </p>
                     <div className="flex gap-3 sm:gap-4 justify-center mt-2 mb-8 flex-wrap">
                         <button className="bg-[#F5614C] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full hover:bg-[#e64a36] font-semibold transition-all duration-300 text-xs sm:text-sm cursor-pointer" onClick={() => window.open("https://forms.gle/2e3p3YF5Fqqa4KiD7", "_blank")}>
-                            Inquiry Now
-                        </button>
-                        <button className="border border-white hover:bg-white hover:text-black text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full font-semibold transition text-xs sm:text-sm cursor-pointer">
-                            Download Brochure
+                            Enquire Now
                         </button>
                     </div>
                 </div>
@@ -164,41 +176,41 @@ const CourseDetails = () => {
             {/* Info Card Section - 3 boxes */}
             <div className="relative z-30 w-full py-14 bg-black mt-[-3rem]">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-12">
-                    {/* Card 1 */}
-                    <div className="flex items-center bg-[#191919] rounded-2xl px-4 py-5 shadow-lg min-h-[94px] gap-4">
-                    <span className="w-20 h-10 flex items-center justify-center rounded-full">
-                        <img src={AspiringIcon} alt="Aspiring graphic designers" className="max-h-full" />
-                    </span>
-                    <div className="text-left">
-                        <p className="text-sm sm:text-base font-normal leading-tight text-white">
-                            Aspiring graphic designers who want a fast, job-ready portfolio.
-                        </p>
+                    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 mt-12">
+                        {/* Card 1 */}
+                        <div className="flex items-center bg-[#191919] rounded-2xl px-4 py-5 shadow-lg min-h-[94px] gap-4">
+                            <span className="w-20 h-10 flex items-center justify-center rounded-full">
+                                <img src={AspiringIcon} alt="Aspiring graphic designers" className="max-h-full" />
+                            </span>
+                        <div className="text-left">
+                            <p className="text-sm sm:text-base font-normal leading-tight text-white">
+                                Aspiring designers who want to build a strong, job-ready portfolio fast.
+                            </p>
+                        </div>
+                        </div>
+                        {/* Card 2 */}
+                        <div className="flex items-center bg-[#191919] rounded-2xl px-4 py-5 shadow-lg min-h-[94px] gap-4">
+                        <span className="w-20 h-10 flex items-center justify-center rounded-full">
+                            <img src={Graduates} alt="Graduates" className="max-h-full" />
+                        </span>
+                        <div className="text-left">
+                            <p className="text-sm sm:text-base font-normal leading-tight text-white">
+                                Graduates looking for real-world design skills that employers actually value.
+                            </p>
+                        </div>
+                        </div>
+                        {/* Card 3 */}
+                        <div className="flex items-center bg-[#191919] rounded-2xl px-4 py-5 shadow-lg min-h-[94px] gap-4">
+                        <span className="w-20 h-10 flex items-center justify-center rounded-full">
+                            <img src={Freelancer} alt="Freelancers" className="max-h-full" />
+                        </span>
+                        <div className="text-left">
+                            <p className="text-sm sm:text-base font-normal leading-tight text-white">
+                                Freelancers aiming to sharpen their workflows and deliver professional projects.
+                            </p>
+                        </div>
+                        </div>
                     </div>
-                    </div>
-                    {/* Card 2 */}
-                    <div className="flex items-center bg-[#191919] rounded-2xl px-4 py-5 shadow-lg min-h-[94px] gap-4">
-                    <span className="w-20 h-10 flex items-center justify-center rounded-full">
-                        <img src={Graduates} alt="Graduates" className="max-h-full" />
-                    </span>
-                    <div className="text-left">
-                        <p className="text-sm sm:text-base font-normal leading-tight text-white">
-                            Graduates seeking practical skills that matter to employers.
-                        </p>
-                    </div>
-                    </div>
-                    {/* Card 3 */}
-                    <div className="flex items-center bg-[#191919] rounded-2xl px-4 py-5 shadow-lg min-h-[94px] gap-4">
-                    <span className="w-20 h-10 flex items-center justify-center rounded-full">
-                        <img src={Freelancer} alt="Freelancers" className="max-h-full" />
-                    </span>
-                    <div className="text-left">
-                        <p className="text-sm sm:text-base font-normal leading-tight text-white">
-                            Freelancers who want professional workflows &amp; handovers.
-                        </p>
-                    </div>
-                    </div>
-                </div>
                 </div>
             </div>
         </section>
@@ -208,20 +220,22 @@ const CourseDetails = () => {
         <section className="w-full py-20 px-4 bg-black flex justify-center">
             <div className="max-w-5xl w-full mx-auto flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
                 
-                {/* Left: Overview Text */}
+                
                 <div className="md:w-1/2 mb-12 md:mb-0 text-white">
-                <p className="mb-4 text-xs sm:text-sm md:text-base opacity-70">
-                    Course Overview
-                </p>
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-3">
-                    Diploma in Digital Media & Design
-                </h2>
-                <p className="opacity-80 text-sm sm:text-base md:text-lg leading-relaxed">
-                    The Diploma in Digital Media & Design is a comprehensive program that blends creativity with technology to prepare students for careers in the fast-evolving digital world. This course covers key areas such as graphic design, UI/UX, animation, video editing, digital marketing, and branding. Students will learn to create visually compelling content, design user-friendly interfaces, and develop digital strategies for real-world projects.
-                </p>
+                    <p className="mb-4 text-xs sm:text-sm md:text-base opacity-70">
+                        Course Overview
+                    </p>
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-3">
+                        Diploma in Digital Media & Design
+                    </h2>
+                    <p className="opacity-80 text-sm sm:text-base md:text-lg leading-relaxed">
+                        A hands-on program designed to turn creative learners into skilled graphic designers. The
+                        course builds strong visual communication fundamentals and trains students to create
+                        professional print and digital designs for real-world brands.
+                    </p>
                 </div>
 
-                {/* Right: Key Facts Card */}
+                
                 <div className="md:w-[390px] w-full flex md:justify-end">
                     <div className="bg-[#181818] rounded-2xl px-6 py-7 shadow-xl w-full max-w-[390px] space-y-5">
                         {/* Duration */}
@@ -241,27 +255,16 @@ const CourseDetails = () => {
                         </span>
                         <div>
                             <div className="text-xs sm:text-sm font-light text-white mb-1">Batches</div>
-                            <div className="font-medium text-sm sm:text-base text-white">Flexible Weekday (specify options)</div>
+                            <div className="font-medium text-sm sm:text-base text-white">Flexible Weekday</div>
                         </div>
                         </div>
-                        {/* Level */}
                         <div className="flex items-center mb-6">
-                        <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#8c3ffc] mr-4">
-                            <img src={Level} alt="Level Icon" className="max-h-6" />
-                        </span>
-                        <div>
-                            <div className="text-xs sm:text-sm font-light text-white mb-1">Level</div>
-                            <div className="font-medium text-sm sm:text-base text-white">Beginner</div>
-                        </div>
-                        </div>
-                        {/* Tools */}
-                        <div className="flex items-center mb-6">
-                        <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#f84b7f] mr-4">
+                        <span className="w-17 h-10 flex items-center justify-center rounded-full bg-[#f84b7f] mr-4">
                             <img src={ToolsUsed} alt="Tools Icon" className="max-h-6" />
                         </span>
                         <div>
                             <div className="text-xs sm:text-sm font-light text-white mb-1">Tools used</div>
-                            <div className="font-medium text-sm sm:text-base text-white">InDesign, Illustrator, Figma</div>
+                            <div className="font-medium text-sm sm:text-base text-white">Adobe Illustrator, Adobe Photoshop, Adobe InDesign, CorelDRAW</div>
                         </div>
                         </div>
                         {/* Format */}
@@ -276,6 +279,7 @@ const CourseDetails = () => {
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -287,11 +291,11 @@ const CourseDetails = () => {
         }}>
             
             <div className="max-w-4xl w-full mx-auto flex flex-col items-center px-4 sm:px-6">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-3">
-                Summary of What You Will Study
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white text-center mb-3">
+                    Summary of What You Will Study
                 </h2>
-                <p className="text-base sm:text-lg opacity-80 text-white text-center mb-10 max-w-xl">
-                Intensive studio-style training for branding, print & digital creatives
+                <p className="text-base sm:text-lg lg:text-sm 2xl:text-sm opacity-80 text-white text-center mb-10 max-w-xl mt-3">
+                    Here’s your complete learning map — understand what you’ll study, the skills you’ll build, and how each module takes you closer to becoming an industry-ready designer.
                 </p>
 
                 <div className="w-full flex flex-col gap-4">
@@ -302,15 +306,15 @@ const CourseDetails = () => {
                     >
                     {/* --- Top Bar --- */}
                     <div className="flex items-center w-full px-4 py-2">
-                        <span className="flex items-center justify-center bg-[#F5614C] text-white px-8 py-4 font-medium text-sm rounded-md ml-2 my-2 whitespace-nowrap">
-                        {module}
+                        <span className="flex items-center justify-center bg-[#F5614C] text-white px-8 py-4  md:text-sm font-medium text-sm rounded-md ml-2 my-2 whitespace-nowrap">
+                            {module}
                         </span>
-                        <span className="ml-4 text-white text-sm sm:text-base flex-1">
-                        {title}
+                        <span className="ml-4 text-white text-sm sm:text-base md:text-xl flex-1">
+                            {title}
                         </span>
 
                         <button onClick={() => toggleModule(idx)} className="mr-3">
-                        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#232323]">
+                        <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#232323]">
                             {openIndex === idx ? (
                             // Minus icon
                             <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
@@ -339,32 +343,33 @@ const CourseDetails = () => {
                     {/* --- Expand Section --- */}
                     {openIndex === idx && (
                         <div className="px-6 pb-4 bg-black">
-                        <p className="text-sm text-gray-400 mb-2 mt-1">
-                            Lessons In this module
-                        </p>
-                        <ul className="space-y-2">
-                            {lessons.map((lesson, i) => (
-                            <li key={i} className="flex items-start gap-2 text-white text-sm">
-                                <svg
-                                className="mt-1 flex-shrink-0"
-                                width="18"
-                                height="18"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                >
-                                <circle cx="12" cy="12" r="12" fill="#22C55E" />
-                                <path
-                                    d="M7 13l3 3 7-7"
-                                    stroke="#fff"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                                </svg>
-                                <span>{lesson}</span>
-                            </li>
-                            ))}
-                        </ul>
+                            <div className=""></div>
+                            <p className="text-sm text-gray-400 mb-2 mt-1">
+                                Lessons In this module
+                            </p>
+                            <ul className="space-y-2">
+                                {lessons.map((lesson, i) => (
+                                    <li key={i} className="flex items-start gap-2 text-white text-sm">
+                                        <svg
+                                        className="mt-1 flex-shrink-0"
+                                        width="18"
+                                        height="18"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        >
+                                        <circle cx="12" cy="12" r="12" fill="#22C55E" />
+                                        <path
+                                            d="M7 13l3 3 7-7"
+                                            stroke="#fff"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                        </svg>
+                                        <span>{lesson}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     )}
                     </div>
@@ -392,7 +397,7 @@ const CourseDetails = () => {
             </h2>
 
             {/* Top box row */}
-            <div className="flex flex-col md:flex-row gap-6 w-full max-w-3xl justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-6 w-full max-w-4xl 2xl:max-w-5xl justify-center mb-8">
                 {/* Left Box */}
                 <div className="flex flex-1 bg-[#191919] rounded-xl px-6 py-6 shadow-lg min-h-[96px] items-center gap-4">
                 {/* Rocket icon */}
@@ -413,7 +418,7 @@ const CourseDetails = () => {
                 </span>
                 <span className="text-white text-lg sm:text-xl font-medium leading-snug">
                     Project-based<br />
-                    assessment
+                    Evaluation
                 </span>
                 </div>
                 {/* Right Box */}
@@ -447,25 +452,26 @@ const CourseDetails = () => {
                 </span>
                 <span className="text-white text-lg sm:text-xl font-medium leading-snug">
                     Placement<br />
-                    assistance
+                    assistance Included
                 </span>
                 </div>
             </div>
 
             {/* Lower box with certificate */}
-            <div className="flex flex-col md:flex-row gap-6 w-full max-w-3xl bg-[#191919] rounded-xl px-8 py-8 shadow-lg items-center">
+            <div className="flex flex-col md:flex-row gap-6 w-full max-w-4xl 2xl:max-w-5xl bg-[#191919] rounded-xl px-8 py-8 shadow-lg items-center">
                 <div className="flex-1 flex justify-center md:justify-start text-center md:text-left">
                     <div className="text-white">
                         {/* Title */}
-                        <h3 className="text-lg sm:text-xl md:text-3xl  2xl:text-3xl font-semibold text-[#94D84F] mb-2 sm:mb-3 md:mb-4">
+                        <h3 className="text-lg sm:text-xl md:text-3xl 2xl:text-3xl font-semibold text-[#94D84F] mb-4">
                             {superpowerData.certificate.title}
                         </h3>
-    
-                        {/* Text */}
-                        <p className="text-base sm:text-lg md:text-sm md:w-100 leading-snug 2xl:text-xl 2xl:font-normal 2xl:w-[29rem] text-gray-200">
-                            {superpowerData.certificate.text}
-                            <br className="hidden md:block" />
-                        </p>
+
+                        {/* Points */}
+                        <ul className="text-sm  sm:text-lg  leading-snug md:text-sm md:font-medium md:w-[34rem] 2xl:text-[16px] xl:font-medium 2xl:w-[39rem] text-gray-200 list-decimal list-inside space-y-2">
+                            {superpowerData.certificate.points.map((point, index) => (
+                            <li key={index}>{point}</li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
                 <div className="flex-1 flex justify-center mt-6 md:mt-0">
@@ -480,246 +486,34 @@ const CourseDetails = () => {
             </div>
 
             {/* Title and Subtext */}
-            <div className="flex flex-col w-full max-w-3xl mx-auto mt-10 bg-[#191919] rounded-xl px-8 py-10 shadow-lg items-center">
-                <h2 className="text-3xl font-bold text-white text-center mb-2">Diploma in</h2>
+            <div className="flex flex-col w-full max-w-4xl 2xl:max-w-5xl mx-auto mt-10 bg-[#191919] rounded-xl px-8 py-10 shadow-lg items-center">
+                <h2 className="text-xl sm:text-3xl font-bold text-white text-center mb-2">Diploma in</h2>
                 <h3
-                className="text-3xl font-bold text-center mb-3 bg-gradient-to-r from-[#fd426e] to-[#f48637] bg-clip-text text-transparent select-none"
-                style={{
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                }}
+                    className="text-xl sm:text-3xl font-bold text-center mb-3 bg-gradient-to-r from-[#fd426e] to-[#f48637] bg-clip-text text-transparent select-none"
+                    style={{
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                    }}
                 >
-                Digital Media &amp; Design
+                    Digital Media &amp; Design
                 </h3>
                 <p className="text-white opacity-90 text-base text-center mb-6 leading-normal max-w-md">
-                Intensive studio-style training for branding,
-                <br />
-                print & digital creatives
+                    Intensive studio-style training for branding,
+                {/* <br /> */}
+                    print & digital creatives
                 </p>
 
                 {/* Inquiry Button */}
                 <button className="bg-[#F5614C] text-white px-6 py-2 rounded-full font-medium text-base mt-0 mx-auto cursor-pointer" onClick={() => window.open("https://forms.gle/2e3p3YF5Fqqa4KiD7", "_blank")}>
-                Inquiry Now
+                    Enquire Now
                 </button>
             </div>
         </section>
 
  
         {/* Contact Section */}
-         <section className="bg-[#161618] text-white py-12 px-4 md:px-22  section flex justify-center">
-        
-            <div className="grid grid-cols-1 md:grid-cols-3   rounded-lg overflow-hidden 2xl:max-w-[80rem]  2xl:px-[-22rem] 2xl:py-24  3xl:max-w-[120rem] 3xl:px-20 
-                4k:max-w-[150rem] 4k:px-24">
-
-                {/* Contact Form Start - Left Side Content*/}
-                <form className="md:col-span-2 bg-transparent md:border-r md:border-gray-600 p-8 space-y-6 h-full ">
-
-                    {/* Header of Form - Left Side Content */}
-                    <h2 className="text-2xl font-semibold text-white-800 2xl:text-4xl font-poppins">
-                        Send a Message
-                    </h2>
-
-                    {/* Contact Form Start */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
-
-                        <div className="flex flex-col space-y-1 ">
-                            <label className="text-white text-sm 2xl:text-xl font-poppins font-semibold">Name</label>
-
-                            <input
-                            type="text"
-                            name="name"
-                            placeholder="Enter your name"
-                            className="w-full p-2 pl-3 rounded-md border-1 bg-tranparent border-white  text-white placeholder-gray-500 2xl:text-xl font-semibold"
-                            />
-                        </div>
-
-                        <div className="flex flex-col space-y-1">
-
-                        <label className="text-white text-sm 2xl:text-xl font-poppins font-semibold">Mobile Number</label>
-
-                        <input
-                            type="text"
-                            name="mobile"
-                            placeholder="Enter your mobile number"
-                            className="w-full p-2 pl-3 rounded-md border-1 bg-tranparent border-white text-white placeholder-gray-500 2xl:text-xl font-poppins font-semibold"
-                        />
-                        </div>
-
-                    </div>
-
-                    
-                    <div className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 w-full">
-                        {/* Email Input */}
-                        <div className="flex flex-col space-y-1 w-full md:w-1/2">
-                            <label className="text-white text-sm 2xl:text-xl font-poppins font-semibold">
-                            Email
-                            </label>
-                            <input
-                            type="email"
-                            name="email"
-                            placeholder="Enter your email address"
-                            className="w-full p-2 pl-3 rounded-md border bg-transparent border-white text-white placeholder-gray-500 2xl:text-xl font-poppins font-semibold"
-                            />
-                        </div>
-
-                        {/* Course Dropdown */}
-                        <div className="flex flex-col space-y-1 w-full md:w-1/2">
-                            <label className="text-white text-sm 2xl:text-xl font-poppins font-semibold">
-                            Course of Interest
-                            </label>
-                            <select
-                                name="course"
-                                className="w-full p-2 pl-3 rounded-md border  border-white text-white bg-transparent placeholder-bg-transparent 2xl:text-xl font-poppins font-semibold"
-                            >
-                            <option className="bg-transparent" value="">Select</option>
-                            {/* <option className="bg-transparent" value="web">Web Development</option>
-                            <option className="bg-transparent" value="app">App Development</option>
-                            <option className="bg-transparent" value="ai">Artificial Intelligence</option>
-                            <option className="bg-transparent" value="data">Data Science</option> */}
-                            </select>
-                        </div>
-                    </div>
-
-
-                    
-                    <div className="flex flex-col space-y-1">
-
-                        <label className="text-white text-sm 2xl:text-xl font-poppins font-semibold">Message</label>
-                        <textarea
-                            name="message"
-                            placeholder="Write here..."
-                            className="w-full p-2 pl-3 rounded-md border-1 bg-transparent border-white text-white placeholder-gray-500 min-h-[150px] 2xl:text-xl font-poppins font-semibold"
-                        />
-
-                    </div>
-
-                    {/* Submit Button of Contact Form*/}
-                    <button
-                        type="submit"
-                        className="bg-[#F5614C]  text-white  
-                        px-3 py-3  transition
-                        w-[8rem]              
-                        3xl:w-[60rem]         
-                        4k:w-[42rem]          
-                        2xl:text-xl font-poppins font-semibold rounded-4xl cursor-pointer" 
-                    >
-                        Submit
-                    </button>
-                    {/* Contact Form End */}
-
-                    {/* <div className="hidden md:block 2xl:text-xl ">
-                            <Button className="cursor-pointer text-black">Submit</Button>
-                        </div> */}
-
-                </form>
-                {/* Contact Form End */}
-
-                {/* Right Side Content Start */}
-                <div className="bg-[#161618] p-8 space-y-4">
-                    
-                    {/* Header of Right Side Content */}
-                    <h2 className="text-2xl font-semibold font-poppins 2xl:text-4xl">
-                        Get in touch with us
-                    </h2>
-                    
-                    {/* Paragraph of Right Side Content */}
-                    <p className="text-gray-300 text-sm 2xl:text-xl font-semibold font-poopins">
-                    Your future in design is just one form away. <br /> Don’t ghost us.
-                    </p>
-
-                    <div>
-                    {/* Right Side Content - Email */}
-                    <span className="font-semibold text-[#989898] text-sm 2xl:text-xl">
-                        Email:
-                    </span>
-
-                    <p className="text-gray-200 2xl:text-xl font-semibold font-poppins">info@pixsora.com</p>
-
-                    </div>
- 
-                    <div>
-                        {/* Chat on Whatsapp - Right Side Content */}
-                        <span className="font-semibold text-[#989898] text-sm 2xl:text-xl">
-                        Chat on whatsapp:
-                        </span>
-                        {/* Mobile Number of Right Side Content */}
-                        <p className="text-gray-200 2xl:text-xl font-poppins font-semibold">+91 88845 18448</p>
-
-                    </div>
-
-                    {/* Social Icons Start*/}
-                    <h3 className="text-[#989898] text-xs mb-[-1rem]">we'ar social to</h3>
-                    <div
-                    className="flex space-x-3 mt-6 
-                        2xl:space-x-6 2xl:mt-8 
-                        4k:space-x-8 4k:mt-10"
-                    >
-                    {/* Facebook Icon */}
-                    <a
-                        href="https://facebook.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-blue-600 
-                        hover:bg-blue-700 transition transform hover:scale-110
-                        2xl:p-4 4k:p-5"
-                    >
-                        <FaFacebookF
-                        className="text-white text-lg 
-                                    2xl:text-3xl 4k:text-5xl"
-                        />
-                    </a>
-                    {/*Instagram Icon */}
-                    <a
-                        href="https://instagram.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 
-                        hover:opacity-90 transition transform hover:scale-110
-                        2xl:p-4 4k:p-5"
-                    >
-                        <FaInstagram
-                        className="text-white text-lg 
-                                    2xl:text-3xl 4k:text-5xl"
-                        />
-                    </a>
-                    {/* Youtube Icon */}
-                    <a
-                        href="https://youtube.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-red-600 
-                        hover:bg-red-700 transition transform hover:scale-110
-                        2xl:p-4 4k:p-5"
-                    >
-                        <FaYoutube
-                        className="text-white text-lg 
-                                    2xl:text-3xl 4k:text-5xl"
-                        />
-                    </a>
-                    
-                    {/* LinkedIn Icon */}
-                    <a
-                        href="https://linkedin.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-blue-700 
-                        hover:bg-blue-800 transition transform hover:scale-110
-                        2xl:p-4 4k:p-5"
-                    >
-                        <FaLinkedinIn
-                        className="text-white text-lg 
-                                    2xl:text-3xl 4k:text-5xl"
-                        />
-                    </a>
-
-                    </div>
-                    {/* Social Icons End */}
-                    
-                </div>
-                {/* Right Side Content End */}
-
-            </div>
-        
+        <section className="contact-section">
+            <Contact />
         </section>
         
         {/* Footer Section */}

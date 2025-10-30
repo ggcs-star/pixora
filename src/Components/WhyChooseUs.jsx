@@ -89,54 +89,6 @@ const WhyChooseUs = () => {
       
       </div>
 
-      
-      {/* <div className="flex justify-center ">
-        <div className="w-full max-w-[1280px]  border border-white rounded-xl 2xl:max-w-[200rem] "> 
-          <table
-            className="w-full border-collapse text-xs sm:text-sm md:text-base rounded-xl overflow-hidden shadow-lg font-poppins   "
-            style={{
-              backgroundImage: `url(${bgImg}), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7))`,
-              backgroundSize: "contain", 
-              backgroundBlendMode: "color-burn",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-            }}
-          >
-            <thead>
-              <tr className="text-black  text-left 2xl:text-xl font-semibold">
-                <th className="py-3 px-3 sm:px-4 border-r border-white bg-white 2xl:p-[20px] font-poppins">
-                  Feature
-                </th>
-                <th className="py-3 px-3 sm:px-4 border-r border-white bg-white 2xl:p-[20px] font-poppins">
-                  Other Institutes
-                </th>
-                <th className="py-3 px-3 sm:px-4  bg-[#00ff6f] 2xl:p-[20px] font-poppins">
-                  PIXORA
-                </th>
-              </tr>
-            </thead>
-            
-            <tbody>
-              {features.map((item, index) => (
-                <tr
-                  key={index}
-                  className="bg-transparent border-b border-white"
-                >
-                  <td className="py-2.5 px-3 sm:px-4 text-white border-r border-white w-50 2xl:text-xl 2xl:p-[20px] font-poppins font-semibold">
-                    {item.feature}
-                  </td>
-                  <td className="py-2.5 px-3 sm:px-4 text-white border-r border-white w-100 2xl:text-xl 2xl:p-[20px] font-poppins font-semibold">
-                    {item.other}
-                  </td>
-                  <td className="py-2.5 px-3 sm:px-4 text-white w-100 2xl:text-xl 2xl:p-[20px] font-poppins font-semibold">
-                    {item.pixora}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div> */}
 
       <div className="flex justify-center ">
 

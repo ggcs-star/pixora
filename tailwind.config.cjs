@@ -65,6 +65,7 @@ export default {
       fontFamily: {
         bungee: ['Bungee', 'cursive'],
         poppins: ["Poppins", "sans-serif"],
+        customSans: ['"Custom Sans"', 'sans-serif'],
       },
       screens: {
         desktop: "2580px",
