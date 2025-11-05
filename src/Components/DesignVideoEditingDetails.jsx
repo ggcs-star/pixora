@@ -12,10 +12,13 @@ import Level from '../assets/Courses_Digital_Media_Icons/Level-icon-6.svg';
 import ToolsUsed from '../assets/Courses_Digital_Media_Icons/Tools_used-icon-7.svg';
 import Format from '../assets/Courses_Digital_Media_Icons/Format-icon-8.svg';
 
-import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaWhatsapp, FaPhoneAlt, FaCommentDots, FaTimes } from "react-icons/fa";
 import Footer from "./Footer";
 import { superpowerData } from "../DB/db";
 import Contact from "../Components/Contact";
+import SeoMeta from "./SeoMeta";
+import chatcall from "../assets/404_Not_Found/chat&call_icon.svg";
+
 
 const course = {
   title: "Diploma in Design & Video Editing",
@@ -90,8 +93,21 @@ const DesignVideoEditingDetails = () => {
         setOpenIndex(openIndex === index ? null : index);
       };
 
+    const [open,setOpen] = useState(false);
+      
+    const handleToggle = () => {
+        setOpen(!open);
+    }
+      
+
   return (
     <>
+
+        <SeoMeta
+        title="Design & Video Editing — Framisty Design Institute"
+        description="Master Photoshop, Premiere Pro, After Effects, and more in Framisty’s professional Design & Video Editing course. Build your creative portfolio today!"
+        url="https://framisty.com/design-video-editing"
+      />
 
         {/* Hero Section */}
         <section className="relative w-full text-white overflow-hidden bg-black" style={{
@@ -133,7 +149,7 @@ const DesignVideoEditingDetails = () => {
                         Advanced design meets dynamic motion — craft, edit & animate like a pro.
                     </p>
                     <div className="flex gap-3 sm:gap-4 justify-center mt-2 mb-8 flex-wrap">
-                    <button className="bg-[#F5614C] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full hover:bg-[#e64a36] font-semibold transition-all duration-300 text-xs sm:text-sm cursor-pointer" onClick={() => window.open("https://forms.gle/2e3p3YF5Fqqa4KiD7", "_blank")}>
+                    <button className="bg-[#F5614C] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full hover:bg-[#e64a36] font-semibold transition-all duration-300 text-xs sm:text-sm cursor-pointer" onClick={() => window.open("https://forms.gle/odQmgVp3aCMPTfPH7", "_blank")}>
                         Enquire Now
                     </button>
                     </div>
@@ -462,7 +478,7 @@ const DesignVideoEditingDetails = () => {
                 </p>
 
                 {/* Inquiry Button */}
-                <button className="bg-[#F5614C] text-white px-6 py-2 rounded-full font-medium text-base mt-0 mx-auto cursor-pointer" onClick={() => window.open("https://forms.gle/2e3p3YF5Fqqa4KiD7", "_blank")}>
+                <button className="bg-[#F5614C] text-white px-6 py-2 rounded-full font-medium text-base mt-0 mx-auto cursor-pointer" onClick={() => window.open("https://forms.gle/odQmgVp3aCMPTfPH7", "_blank")}>
                     Enquire Now
                 </button>
             </div>
@@ -476,10 +492,60 @@ const DesignVideoEditingDetails = () => {
         {/* Footer Section */}
         <Footer />
 
-        {/* Link of Whatsapp Icon */}
-        <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className=" fixed bottom-5 right-3  bg-[#00FF6F] hover:bg-green-600  text-white rounded-full p-3 shadow-lg z-50 transition transform hover:scale-110 2xl:p-3 3xl:p-8 4k:p-10" aria-label="WhatsApp">
-        <FaWhatsapp className="w-3 h-3 text-white sm:w-5 sm:h-5 2xl:w-10 2xl:h-10 3xl:w-12 3xl:h-12 4k:w-14 4k:h-14"/>
-        </a>
+        
+        {/* Whatsapp & Call Icon */}
+        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-2">
+            {/* Floating Options */}
+            {open && (
+            <div className="flex flex-col items-end space-y-3 transition-all duration-300">
+                {/* Chat with us */}
+                <div className="flex items-center space-x-3 text-black font-medium shadow-lg rounded-full px-4 py-1 transition">
+                <span className="text-white bg-[#F5614C] p-1 rounded-2xl px-4">
+                    Chat with us
+                </span>
+                <a
+                    href="https://wa.me/916352305842"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#F5614C] text-white rounded-full p-3 shadow-md flex items-center justify-center"
+                >
+                    <FaCommentDots size={26} />
+                </a>
+                </div>
+
+                {/* Call Me Now */}
+                <div className="flex items-center space-x-3 text-black font-medium shadow-lg rounded-full px-4 py-1 transition">
+                <span className="text-white bg-[#F5614C] p-1 rounded-2xl px-4">
+                    Call Me Now
+                </span>
+                <a
+                    href="tel:+916352305842"
+                    className="bg-[#F5614C] text-white rounded-full p-3 shadow-md flex items-center justify-center"
+                >
+                    <FaPhoneAlt size={26} />
+                </a>
+                </div>
+            </div>
+
+            )}
+
+            {/* Main Floating Button with Both Icons (Stacked) */}
+            <button
+                onClick={handleToggle}
+                aria-label="Toggle chat options"
+                className={`relative flex items-center justify-center w-14 h-14 mr-3 2xl:mr-2 rounded-full shadow-lg transition-all duration-300 ${
+                open ? "bg-gray-700 hover:bg-gray-800" : "bg-[#F5614C] hover:bg-[#E11D48]"
+                }`}
+            >
+                {open ? (
+                <FaTimes className="text-white text-2xl" />
+                ) : (
+                <>
+                    <img src={chatcall} alt="Chat_Call_Icon" className="text-lg w-10 filter invert brightness-200"/>
+                </>
+                )}
+            </button>
+        </div>
     </>
   );
 };

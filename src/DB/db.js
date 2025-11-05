@@ -41,8 +41,8 @@ export const navbarData = {
     alt: "Framisty_Logo",
   },
   menuLinks: [
-    { name: "About", path: "/about" },
     { name: "Courses", path: "/courses" },
+    { name: "About Us", path: "/about" },
     { name: "Why Choose Us", path: "/why-choose-us" },
     { name: "Contact", path: "/contactadd" },
   ],
@@ -50,7 +50,7 @@ export const navbarData = {
     text: "Enquire Now",
     bgColor: "#F5614C",
     hoverColor: "#e64a36",
-    link: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
+    link: "https://forms.gle/odQmgVp3aCMPTfPH7",
   },
 };
 
@@ -60,7 +60,8 @@ export const aboutData = {
     title1: "We don't teach keyboard buttons.",
     title2Prefix: "We teach",
     title2Highlight: "design brains.",
-    description1: "At Framisty, we don’t just train designers we shape creative thinkers.",
+    description1:
+      "At Framisty, we don’t just train designers we shape creative thinkers.",
     buttonText: "Start Learning",
     onClickLink: "/courses",
     backgroundGradient: {
@@ -129,7 +130,7 @@ export const aboutData = {
       video: DigitalMediaDesign,
       slug: "diploma-in-digital-media-design",
       btnColor: "#F5614C",
-      inquiryLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
+      inquiryLink: "https://forms.gle/odQmgVp3aCMPTfPH7",
     },
     {
       id: 2,
@@ -143,14 +144,13 @@ export const aboutData = {
       video: DesignVideoEditing,
       slug: "diploma-in-design-and-video-editing",
       btnColor: "#94D84F",
-      inquiryLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
+      inquiryLink: "https://forms.gle/odQmgVp3aCMPTfPH7",
     },
     {
       id: 3,
       title: "Diploma in",
       highlight: "UI/UX Design",
-      description:
-        "Build beautiful and easy-to-use app & web interfaces.",
+      description: "Build beautiful and easy-to-use app & web interfaces.",
       gradientFrom: "#E04FFF",
       gradientVia: "#FF6D8D",
       gradientTo: "#FFA26B",
@@ -158,7 +158,7 @@ export const aboutData = {
       video: UiUx,
       slug: "advance-program-in-digital-media-creation",
       btnColor: "#E958DD",
-      inquiryLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
+      inquiryLink: "https://forms.gle/odQmgVp3aCMPTfPH7",
     },
   ],
 
@@ -179,7 +179,7 @@ export const coursesData = [
     video: DigitalMediaDesign,
     slug: "diploma-in-digital-media-design",
     btnColor: "#F5614C",
-    inquiryLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
+    inquiryLink: "https://forms.gle/odQmgVp3aCMPTfPH7",
   },
   {
     id: 2,
@@ -193,14 +193,13 @@ export const coursesData = [
     video: DesignVideoEditing,
     slug: "diploma-in-design-and-video-editing",
     btnColor: "#94D84F",
-    inquiryLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
+    inquiryLink: "https://forms.gle/odQmgVp3aCMPTfPH7",
   },
   {
     id: 3,
     title: "Diploma in",
     highlight: "UI/UX Design",
-    description:
-      "Build beautiful and easy-to-use app & web interfaces.",
+    description: "Build beautiful and easy-to-use app & web interfaces.",
     gradientFrom: "#E04FFF",
     gradientVia: "#FF6D8D",
     gradientTo: "#FFA26B",
@@ -208,10 +207,9 @@ export const coursesData = [
     video: UiUx,
     slug: "advance-program-in-digital-media-creation",
     btnColor: "#E958DD",
-    inquiryLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
+    inquiryLink: "https://forms.gle/odQmgVp3aCMPTfPH7",
   },
 ];
-
 
 // Why-Choose-Us - 2 Navbar Section
 export const coreValuesData = [
@@ -220,10 +218,12 @@ export const coreValuesData = [
       "Build a professional portfolio featuring 8–10 complete, real-world projects.",
   },
   {
-    title: "Learn how to create industry-ready files for print, web, and digital platforms.",
+    title:
+      "Learn how to create industry-ready files for print, web, and digital platforms.",
   },
   {
-    title: "Work on client-style briefs, manage feedback, and maintain version control.",
+    title:
+      "Work on client-style briefs, manage feedback, and maintain version control.",
   },
   {
     title:
@@ -320,7 +320,6 @@ export const icons = {
   right: Right,
 };
 
-
 // Contact_Add Navbar section
 export const contactHeroData = {
   title: "Contact",
@@ -330,27 +329,42 @@ export const contactHeroData = {
 export const locationData = {
   heading: "Location",
   address:
-    "5th Floor, Grand Emporio, Shiv Habitat B-Block, Motera Stadium Rd, opp. S Mall, Motera, Ahmedabad, Gujarat 380005",
+    "5th Floor, Grand Emporio, Above Blinkit Warehouse, Motera Stadium Road, Motera, Ahmedabad, Gujarat-380005",
   mapSrc:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.157203862217!2d72.5901953!3d23.1022824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84cf69e1e7bb%3A0xa792826ac19c8f62!2sMotera%2C%20Ahmedabad%2C%20Gujarat%20380005!5e0!3m2!1sen!2sin!4v1698823849741!5m2!1sen!2sin",
 };
 
+// export const hoursData = {
+//   heading: "Hours",
+//   timings: "Monday to Saturday 08:00 AM to 07:00 PM",
+// };
+
 export const hoursData = {
-  heading: "Hours",
-  timings: "Monday to Friday 08:00 AM — 06:00 PM",
+  // heading: "Hours",
+  days: "Monday to Saturday",
+  timings: "08:00 AM to 07:00 PM",
 };
+
 
 export const dialData = {
   img: Dial,
-  phone: "+91 88845 18448",
-  rotate: "-rotate-12", 
+  phone: "+91 63523 05842",
+  rotate: "-rotate-12",
 };
 
 export const formFields = {
   inputs: [
     { label: "Name *", type: "text", placeholder: "Enter your name" },
-    { label: "Mobile Number *", type: "tel", placeholder: "Enter your mobile number" },
-    { label: "Email *", type: "email", placeholder: "Enter your email address" },
+    {
+      label: "Mobile Number *",
+      type: "tel",
+      placeholder: "Enter your mobile number",
+    },
+    {
+      label: "Email *",
+      type: "email",
+      placeholder: "Enter your email address",
+    },
   ],
   select: {
     label: "Course of Interest",
@@ -366,9 +380,8 @@ export const formFields = {
 };
 
 export const whatsappData = {
-  link: "https://wa.me/919999999999",
+  link: "https://wa.me/+916352305842",
 };
-
 
 // Hero Section
 export const heroData = {
@@ -391,7 +404,7 @@ export const heroData = {
     {
       text: "Enquire Now",
       type: "secondary",
-      onClickLink: "https://forms.gle/2e3p3YF5Fqqa4KiD7",
+      onClickLink: "https://forms.gle/odQmgVp3aCMPTfPH7",
       border: "border-white",
       hoverBg: "white",
       hoverText: "black",
@@ -408,7 +421,6 @@ export const heroData = {
   },
   video: HeroVideo,
 };
-
 
 // About Section Landing Page
 export const aboutData2 = {
@@ -449,11 +461,11 @@ export const aboutData2 = {
   ],
 };
 
-
 // Mission Section Landing Page
 export const missionData = {
   heading: "Our Mission is Simple",
-  subheading: "To make you a designer who’s ready for real-world jobs, not just classroom.",
+  subheading:
+    "To make you a designer who’s ready for real-world jobs, not just classroom.",
   cards: [
     {
       id: 1,
@@ -486,7 +498,6 @@ export const missionData = {
   ],
 };
 
-
 // SuperPower Section Landing Page
 export const superpowerData = {
   heading: "Pick Your Passion",
@@ -496,7 +507,8 @@ export const superpowerData = {
       id: 1,
       title: "Diploma in",
       highlight: "Digital Media & Design",
-      description: "Intensive studio-style training for branding, print & digital creatives",
+      description:
+        "Intensive studio-style training for branding, print & digital creatives",
       gradientFrom: "#FB2F5C",
       gradientTo: "#F08540",
       btnColor: "#F5614C",
@@ -507,7 +519,8 @@ export const superpowerData = {
       id: 2,
       title: "Advanced Diploma in",
       highlight: "Design & Video Editing",
-      description: "Advanced design meets dynamic motion — craft, edit & animate like a pro.",
+      description:
+        "Advanced design meets dynamic motion — craft, edit & animate like a pro.",
       gradientFrom: "#F9F97F",
       gradientTo: "#81D246",
       btnColor: "#94D84F",
@@ -537,22 +550,41 @@ export const superpowerData = {
   },
 };
 
-
 // Contact Section Landing Page
 export const contactData = {
   form: {
     heading: "Send a Message",
     fields: [
-      { label: "Name", type: "text", name: "name", placeholder: "Enter your name" },
-      { label: "Mobile", type: "text", name: "mobile", placeholder: "Enter your mobile number" },
-      { label: "Email", type: "email", name: "email", placeholder: "Enter your email address" },
-      { 
-        label: "Course of Interest", 
-        type: "select", 
-        name: "course", 
-        options: ["Select", "UI/UX", "Graphic Design","Video Editing"] 
+      {
+        label: "Name",
+        type: "text",
+        name: "name",
+        placeholder: "Enter your name",
       },
-      { label: "Message (Optional)" , type: "textarea", name: "message", placeholder: "Write here..." },
+      {
+        label: "Mobile",
+        type: "text",
+        name: "mobile",
+        placeholder: "Enter your mobile number",
+      },
+      {
+        label: "Email",
+        type: "email",
+        name: "email",
+        placeholder: "Enter your email address",
+      },
+      {
+        label: "Course of Interest",
+        type: "select",
+        name: "course",
+        options: ["Select", "UI/UX", "Graphic Design", "Video Editing"],
+      },
+      {
+        label: "Message (Optional)",
+        type: "textarea",
+        name: "message",
+        placeholder: "Write here...",
+      },
     ],
     submitButton: {
       text: "Submit",
@@ -565,12 +597,30 @@ export const contactData = {
     heading: "Get in touch with us",
     paragraph: "Your future in design is just one form away. \nDon’t ghost us.",
     email: "info@framisty.com",
-    whatsapp: "+91 88845 18448"
+    whatsapp: "+91 6352305842",
   },
   socialLinks: [
-    { icon: FaFacebookF, url: "https://facebook.com", bgColor: "bg-blue-600", hoverBg: "hover:bg-blue-700" },
-    { icon: FaInstagram, url: "https://instagram.com", bgColor: "bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600", hoverBg: "hover:opacity-90" },
-    { icon: FaYoutube, url: "https://youtube.com", bgColor: "bg-red-600", hoverBg: "hover:bg-red-700" },
-    { icon: FaLinkedinIn, url: "https://linkedin.com", bgColor: "bg-blue-700", hoverBg: "hover:bg-blue-800" },
-  ]
+    {
+      icon: FaFacebookF,
+      // Facebook URL
+      url: "https://www.facebook.com/profile.php?id=61583060914485",
+      bgColor: "bg-blue-600",
+      hoverBg: "hover:bg-blue-700",
+    },
+    {
+      icon: FaInstagram,
+      // Instragram URL
+      url: "https://www.instagram.com/framisty_design/",
+      bgColor: "bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600",
+      hoverBg: "hover:opacity-90",
+    },
+    // { icon: FaYoutube, url: "https://youtube.com", bgColor: "bg-red-600", hoverBg: "hover:bg-red-700" },
+    // { icon: FaLinkedinIn, url: "https://linkedin.com", bgColor: "bg-blue-700", hoverBg: "hover:bg-blue-800" },
+  ],
+};
+
+// Contact Landing Page Whatsapp Link
+export const whatsappData2 = {
+  // Whatsapp URL
+  link: "https://wa.me/916352305842",
 };

@@ -16,6 +16,8 @@ import About2 from "./Components/About2";
 import OurCourses from "./Components/OurCourses";
 import Why_Choose_Us_2 from "./Components/Why_Choose_Us_2";
 import Contact_Add from "./Components/Contact_Add";
+import NotFound from "./Components/NotFound";
+import { HelmetProvider } from "react-helmet-async";
 
 function HomePage({ scrollRefs, handleViewCourse }) {
   const { homeRef, aboutRef, superpowerRef, whyChooseRef, ContactRef, scrollToSection } =
@@ -88,29 +90,34 @@ function App() {
   };
 
   return (
-    <Router>
-      <Routes>
-        {/* Home page */}
-        <Route
-          path="/"
-          element={
-            <HomePage
-              scrollRefs={scrollRefs}
-              handleViewCourse={(slug) => (window.location.href = `/course/${slug}`)}
-            />
-          }
-        />
+    <HelmetProvider>
+      <Router>
+        <Routes>
+          {/* Home page */}
+          <Route
+            path="/"
+            element={
+              <HomePage
+                scrollRefs={scrollRefs}
+                handleViewCourse={(slug) => (window.location.href = `/course/${slug}`)}
+              />
+            }
+          />
 
-        {/* Course details page */}
-        <Route path="/course/:slug" element={<CourseDetails />} />
-        <Route path="/about" element={<About2 />} />
-        <Route path="/courses" element={<OurCourses />} />
-        <Route path="/why-choose-us" element={<Why_Choose_Us_2 />} />
-        <Route path="/contactadd" element={<Contact_Add />} />
-        <Route path="/course/diploma-in-design-and-video-editing" element={<DesignVideoEditingDetails />} />
-        <Route path="/course/advance-program-in-digital-media-creation" element={<AdvanceProgramDMCreation />} />
-      </Routes>
-    </Router>
+          {/* Course details page */}
+          <Route path="/course/:slug" element={<CourseDetails />} />
+          <Route path="/about" element={<About2 />} />
+          <Route path="/courses" element={<OurCourses />} />
+          <Route path="/superpower" element={<SuperpowerSection />} />
+          <Route path="/why-choose-us" element={<Why_Choose_Us_2 />} />
+          <Route path="/contactadd" element={<Contact_Add />} />
+          <Route path="/course/diploma-in-design-and-video-editing" element={<DesignVideoEditingDetails />} />
+          <Route path="/course/advance-program-in-digital-media-creation" element={<AdvanceProgramDMCreation />} />
+          <Route path="/not-found" element={<NotFound />} />
+          <Route path="*" element={<NotFound/>} />
+        </Routes>
+      </Router>
+    </HelmetProvider>
   );
 }
 

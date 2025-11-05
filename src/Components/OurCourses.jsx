@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import { coursesData, superpowerData } from "../DB/db";
+import SeoMeta from "./SeoMeta";
 
 const OurCourses = () => {
   const navigate = useNavigate();
@@ -24,6 +25,11 @@ const OurCourses = () => {
 
   return (
     <>
+      <SeoMeta
+        title="Framisty Design Institute"
+        description="Explore all design and video editing courses at Framisty Design Institute. Learn from professionals with real projects."
+        url="https://framisty.com/our-courses"
+      />
       {/* Hero Section */}
       <section
         className="relative w-full min-h-[30vh] 2xl:min-h-[9vh] flex flex-col items-center justify-center

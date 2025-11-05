@@ -15,6 +15,7 @@ import {
   superpowerData,
 } from "../DB/db";
 import { useNavigate } from "react-router-dom";
+import SeoMeta from "./SeoMeta";
 
 const Why_Choose_Us_2 = () => {
   const rowsRef = useRef([]);
@@ -32,6 +33,13 @@ const Why_Choose_Us_2 = () => {
 
   return (
     <>
+
+      <SeoMeta
+        title="Framisty Design Institute"
+        description="Learn about Framisty Design Institute — top-rated design institute in Ahmedabad offering hands-on training."
+        url="https://framisty.com/whychooseus"
+      />
+
       {/* Hero Section */}
       <section className="relative w-full min-h-[50vh] flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 text-center overflow-hidden bg-gradient-to-b from-[#24143C] via-[#2B124C] to-[#000000]">
         <Navbar />
