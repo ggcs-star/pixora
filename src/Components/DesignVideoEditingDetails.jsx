@@ -504,7 +504,7 @@ const DesignVideoEditingDetails = () => {
                     Chat with us
                 </span>
                 <a
-                    href="https://wa.me/916352305842"
+                    href="https://wa.me/919723235129"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-[#F5614C] text-white rounded-full p-3 shadow-md flex items-center justify-center"
@@ -519,7 +519,7 @@ const DesignVideoEditingDetails = () => {
                     Call Me Now
                 </span>
                 <a
-                    href="tel:+916352305842"
+                    href="tel:+919723235129"
                     className="bg-[#F5614C] text-white rounded-full p-3 shadow-md flex items-center justify-center"
                 >
                     <FaPhoneAlt size={26} />

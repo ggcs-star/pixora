@@ -348,7 +348,7 @@ export const hoursData = {
 
 export const dialData = {
   img: Dial,
-  phone: "+91 63523 05842",
+  phone: "+91 9723235129",
   rotate: "-rotate-12",
 };
 
