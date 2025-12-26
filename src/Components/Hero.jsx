@@ -157,7 +157,7 @@ const Hero = () => {
               onClick={handleToggle}
               aria-label="Toggle chat options"
               className={`relative flex items-center justify-center w-14 h-14 mr-3 2xl:mr-2 rounded-full shadow-lg transition-all duration-300 ${
-                open ? "bg-gray-700 hover:bg-gray-800" : "bg-[#F5614C] hover:bg-[#E11D48]"
+                open ? "bg-gray-700 hover:bg-gray-800" : "bg-[#F5614C] hover:bg-[#E11D48] cursor-pointer"
               }`}
             >
               {open ? (

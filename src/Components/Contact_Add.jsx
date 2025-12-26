@@ -27,104 +27,9 @@ const Contact_Add = ({ label, options }) => {
   const { register, handleSubmit, reset, formState: { errors }, } = useForm({ mode: "onChange", });
 
 
-  // const onSubmit = async (data) => {
-  //   try {
-  //     const payload = {
-  //       name: data.name,
-  //       mobile: data.mobile,
-  //       email: data.email,
-  //       course_of_interest: data.course,
-  //       message: data.message,
-  //     };
-
-  //     const response = await axios.post("http://192.168.0.111:8000/api/contact", payload);
-  //     console.log("Response:", response);
-
-  //     if (response.data.success) {
-  //       // Show backend message in toast
-  //       toast.success(response.data.message, {
-  //         position: "top-right",
-  //         autoClose: 3000,
-  //         hideProgressBar: false,
-  //         closeOnClick: true,
-  //         pauseOnHover: true,
-  //         draggable: true,
-  //         theme: "colored",
-  //       });
-
-  //       // Reset form fields after success
-  //       reset();
-  //     } else {
-  //       toast.error(response.data.message || "Something went wrong. Please try again.", {
-  //         position: "top-right",
-  //         autoClose: 3000,
-  //         theme: "colored",
-  //       });
-  //     }
-  //   } catch (error) {
-  //     console.error("Error submitting form:", error);
-  //     if (error.response && error.response.data && error.response.data.message) {
-  //       toast.error(error.response.data.message, {
-  //         position: "top-right",
-  //         autoClose: 3000,
-  //         theme: "colored",
-  //       });
-  //     } else {
-  //       toast.error("Server error! Please try again later.", {
-  //         position: "top-right",
-  //         autoClose: 3000,
-  //         theme: "colored",
-  //       });
-  //     }
-  //   }
-  // };
-
-
-
-//   const onSubmit = async (data) => {
-//     try {
-//       const payload = {
-//         name: data.name,
-//         mobile: data.mobile,
-//         email: data.email,
-//         course_of_interest: data.course,
-//         message: data.message,
-//       };
-
-//       const response = await sendContact(payload);
-//       console.log('Send Contact Form Response:', response);
-
-//       if (response?.data?.success) {
-//         toast.success(response.data.message, {
-//           position: "top-right",
-//           autoClose: 3000,
-//           theme: "colored",
-//         });
-//         reset();
-//       } else {
-//         toast.error(response?.data?.message || "Failed to send. Try again later.", {
-//           position: "top-right",
-//           autoClose: 3000,
-//           theme: "colored",
-//         });
-//       }
-//     } catch (error) {
-//       console.error("Error submitting form:", error);
-//       const msg =
-//         error?.response?.data?.message ||
-//         (error?.code === "ECONNABORTED"
-//           ? "Request timed out. Please try again."
-//           : "Server error! Please try again later.");
-//       toast.error(msg, {
-//         position: "top-right",
-//         autoClose: 3000,
-//         theme: "colored",
-//       });
-//     }
-// };
-
+  
   const onSubmit = async (data) => {
-    setLoading(true); // start loader immediately
+    setLoading(true); 
 
     try {
       const payload = {
@@ -137,7 +42,7 @@ const Contact_Add = ({ label, options }) => {
 
       // Timeout guard: if API delays too long, throw error
       const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 7000); // 7 sec limit
+      const timeout = setTimeout(() => controller.abort(), 7000); 
 
       const response = await sendContact(payload, { signal: controller.signal });
       clearTimeout(timeout);
@@ -174,7 +79,7 @@ const Contact_Add = ({ label, options }) => {
         theme: "colored",
       });
     } finally {
-      setLoading(false); // end loader immediately
+      setLoading(false); 
     }
   };
 
@@ -491,7 +396,7 @@ const Contact_Add = ({ label, options }) => {
                   disabled={loading}
                   className={`${
                     loading ? "bg-gray-500 cursor-not-allowed" : "bg-[#F75C3C] hover:bg-[#e44f30]"
-                  } text-white px-8 py-2 rounded-full text-sm font-medium transition flex items-center justify-center`}
+                  } text-white px-8 py-2 rounded-full text-sm font-medium transition flex items-center justify-center cursor-pointer`}
                 >
                   {loading ? (
                     <span className="flex items-center gap-2">

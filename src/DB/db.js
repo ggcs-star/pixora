@@ -610,7 +610,7 @@ export const contactData = {
     {
       icon: FaInstagram,
       // Instragram URL
-      url: "https://www.instagram.com/framisty_design/",
+      url: "https://www.instagram.com/framisty_institute/",
       bgColor: "bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600",
       hoverBg: "hover:opacity-90",
     },
