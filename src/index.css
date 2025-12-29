@@ -32,3 +32,33 @@
   0%   { transform: scaleX(0); background-position: 0% 50%; }
   100% { transform: scaleX(1); background-position: 100% 50%; }
 }
+
+
+@keyframes floatY {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-out; 
+  }
+  50% {
+    transform: translateY(-14px);
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1); 
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatYReverse {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateY(10px);
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1); 
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+

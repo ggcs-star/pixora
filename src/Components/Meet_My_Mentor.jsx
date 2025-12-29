@@ -93,29 +93,65 @@ import React from "react";
 import { mentorData } from "../DB/db";
 
 const MeetMyMentor = () => {
+
+    const floatStyle = {
+      animation: "floatY 3.2s infinite",
+    };
+
+    const floatStyleSlow = {
+      animation: "floatY 4.5s infinite",
+    };
+
+    const floatStyleReverse = {
+      animation: "floatYReverse 3.8s infinite",
+    };
+
+
+    const animationMap = {
+      normal: floatStyle,
+      slow: floatStyleSlow,
+      reverse: floatStyleReverse,
+    };
+
+
   return (
     <section className="w-full bg-black text-white overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-10 py-16 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
-          {/* ================= LEFT IMAGE ================= */}
-          <div className="relative flex justify-center lg:justify-start">
-            <img
-              src={mentorData.image}
-              alt="Mentor"
-              className="
-                w-[85%]
-                sm:w-[70%]
-                md:w-[60%]
-                lg:w-[100%]
-                max-w-none
-                object-contain
-                drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]
-              "
-            />
+         <div className="relative flex justify-center lg:justify-start">
+
+                {/* Mentor Image */}
+                <img
+                  src={mentorData.image}
+                  alt="Mentor"
+                  className="w-[85%] sm:w-[70%] md:w-[60%] lg:w-[100%] object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)] z-0"
+                />
+
+                {/* Floating Icons */}
+                {mentorData.floatingIcons.map((icon) => (
+                    <img
+                      key={icon.id}
+                      src={icon.img}
+                      alt={icon.alt}
+                      style={animationMap[icon.animation]}
+                      className={`
+                        absolute ${icon.position}
+                        ${icon.size}
+                        pointer-events-none
+                        drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)]
+                        drop-shadow-[0_3px_10px_rgba(245,97,76,0.35)]
+                      `}
+                    />
+                ))}
+
           </div>
 
-          {/* ================= RIGHT CONTENT ================= */}
+
+
+
+
+          {/*  RIGHT CONTENT  */}
           <div className="space-y-8 max-w-[560px]">
 
             {/* TITLE */}

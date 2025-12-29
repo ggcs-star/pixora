@@ -96,13 +96,13 @@ const OurCourses = () => {
                       <button
                         onClick={() => handleInquiry(card.inquiryLink)}
                         style={{ backgroundColor: card.btnColor }}
-                        className="hover:opacity-90 text-black px-6 py-2 rounded-full font-semibold transition duration-300"
+                        className="hover:opacity-90 text-black px-6 py-2 rounded-full font-semibold transition duration-300 cursor-pointer"
                       >
                         Enquire Now
                       </button>
                       <button
                         onClick={() => handleLearnMore(card.slug)}
-                        className="border border-white text-white px-6 py-2 rounded-full font-semibold hover:bg-white hover:text-black transition duration-300"
+                        className="border border-white text-white px-6 py-2 rounded-full font-semibold hover:bg-white hover:text-black transition cursor-pointer duration-300"
                       >
                         Learn More
                       </button>

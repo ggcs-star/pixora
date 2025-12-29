@@ -72,7 +72,7 @@ const Hero = () => {
               className="
                 pointer-events-auto
                 relative
-                mr-24 sm:mr-8 sm:mb-0 mb-20
+                mr-21 sm:mr-8 sm:mb-0 mb-38
                 w-[220px] sm:w-[300px] md:w-[220px]
                 bg-gradient-to-t from-[#ed365d] via-[#ed365d] to-[#ef8341]
                 text-white
@@ -115,7 +115,7 @@ const Hero = () => {
         <h1
           className="
             z-20 
-            mt-62 sm:mt-20 md:mt-24 lg:mt-60 xl:mt-64 2xl:mt-[30rem]
+            mt-42 sm:mt-20 md:mt-24 lg:mt-60 xl:mt-64 2xl:mt-[30rem]
             text-[clamp(1.2rem,6vw,1.8rem)] sm:text-3xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-7xl
             font-bold leading-tight
             max-w-[96%] sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl 2xl:w-[70rem]

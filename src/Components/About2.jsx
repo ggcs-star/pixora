@@ -25,6 +25,31 @@ const About2 = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
+    const floatStyle = {
+      animation: "floatY 3.2s infinite",
+    };
+
+    const floatStyleSlow = {
+      animation: "floatY 4.5s infinite",
+    };
+
+    const floatStyleReverse = {
+      animation: "floatYReverse 3.8s infinite",
+    };
+
+
+    const animationMap = {
+      normal: floatStyle,
+      slow: floatStyleSlow,
+      reverse: floatStyleReverse,
+    };
+
+  
+
+
+
+
+
 
   const { heroSection, infoCards, storySection, missionVision, coreValues, courses, rightIcon } = aboutData;
 
@@ -158,19 +183,31 @@ const About2 = () => {
           
                     {/* ================= LEFT IMAGE ================= */}
                     <div className="relative flex justify-center lg:justify-start">
+                    
+                      {/* Mentor Image */}
                       <img
                         src={mentorData.image}
                         alt="Mentor"
-                        className="
-                          w-[85%]
-                          sm:w-[70%]
-                          md:w-[60%]
-                          lg:w-[100%]
-                          max-w-none
-                          object-contain
-                          drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]
-                        "
+                        className="w-[85%] sm:w-[70%] md:w-[60%] lg:w-[100%] object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)] z-0"
                       />
+                    
+                      {/* Floating Icons */}
+                      {mentorData.floatingIcons.map((icon) => (
+                        <img
+                          key={icon.id}
+                          src={icon.img}
+                          alt={icon.alt}
+                          style={animationMap[icon.animation]}
+                          className={`
+                            absolute ${icon.position}
+                            ${icon.size}
+                            pointer-events-none
+                            drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)]
+                            drop-shadow-[0_3px_10px_rgba(245,97,76,0.35)]
+                          `}
+                        />
+                      ))}
+                    
                     </div>
           
                     {/* ================= RIGHT CONTENT ================= */}

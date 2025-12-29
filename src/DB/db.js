@@ -38,7 +38,12 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/f
 
 
 // Mentor Image 
-import MentorImage from "../assets/Meet_Your_Mentor_Img/Group 30.png";
+import MentorImage from "../assets/Meet_Your_Mentor_Img/Kavan_Img.png";
+import Ai from "../assets/Meet_Your_Mentor_Img/AI.svg";
+import Ps from "../assets/Meet_Your_Mentor_Img/PS.svg";
+import Ae from "../assets/Meet_Your_Mentor_Img/Ae.svg";
+import Xd from "../assets/Meet_Your_Mentor_Img/Xd.svg";
+import Pr from "../assets/Meet_Your_Mentor_Img/Pr.svg";
 
 
 
@@ -523,7 +528,7 @@ export const aboutData2 = {
 
 export const mentorData = {
   title: "Meet Your Mentor",
-  image: MentorImage ,
+  image: MentorImage,
 
   description: [
     "He has spent over a decade inside the world he teaches.",
@@ -533,7 +538,51 @@ export const mentorData = {
   ],
 
   promise:
-    "Guide students honestly, share what truly happens in the industry, and help them grow into confident creative professionals who are ready for the world outside the classroom."
+    "Guide students honestly, share what truly happens in the industry, and help them grow into confident creative professionals who are ready for the world outside the classroom.",
+
+  floatingIcons: [
+  {
+    id: "ai",
+    img: Ai,
+    alt: "AI",
+    position: "top-[18%] left-[12%]",
+    size: "w-14 sm:w-18",
+    animation: "normal",
+  },
+  {
+    id: "ps",
+    img: Ps,
+    alt: "Photoshop",
+    position: "top-[20%] right-[14%]",
+    size: "w-14 sm:w-18",
+    animation: "slow",
+  },
+  {
+    id: "ae",
+    img: Ae,
+    alt: "After Effects",
+    position: "bottom-[32%] left-[4%]",
+    size: "w-14 sm:w-20",
+    animation: "reverse",
+  },
+  {
+    id: "xd",
+    img: Xd,
+    alt: "XD",
+    position: "bottom-[29%] right-[2%]",
+    size: "w-12 sm:w-16",
+    animation: "normal",
+  },
+  {
+    id: "pr",
+    img: Pr,
+    alt: "Premiere Pro",
+    position: "bottom-[12%] right-[26%]",
+    size: "w-14 sm:w-16",
+    animation: "slow",
+  },
+],
+
 };
 
 
