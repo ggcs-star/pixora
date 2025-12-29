@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
-import { aboutData } from "../DB/db";
+import { aboutData, mentorData, videosData } from "../DB/db";
 
 const About2 = () => {
   const navigate = useNavigate();
@@ -152,8 +152,81 @@ const About2 = () => {
             ))}
           </div>
 
+          <section className="w-full bg-black text-white overflow-hidden">
+                <div className="max-w-[1280px] mx-auto px-6 lg:px-10 py-16 lg:py-24">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          
+                    {/* ================= LEFT IMAGE ================= */}
+                    <div className="relative flex justify-center lg:justify-start">
+                      <img
+                        src={mentorData.image}
+                        alt="Mentor"
+                        className="
+                          w-[85%]
+                          sm:w-[70%]
+                          md:w-[60%]
+                          lg:w-[100%]
+                          max-w-none
+                          object-contain
+                          drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]
+                        "
+                      />
+                    </div>
+          
+                    {/* ================= RIGHT CONTENT ================= */}
+                    <div className="space-y-8 max-w-[560px] text-left">
+          
+                      {/* TITLE */}
+                      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight font-[poppins] ">
+                        {mentorData.title}
+                      </h2>
+          
+                      {/* DESCRIPTION */}
+                      <div className="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
+                        {mentorData.description.map((text, index) => (
+                          <p key={index}>{text}</p>
+                        ))}
+                      </div>
+          
+                      {/* STATS */}
+                      <div className="flex flex-wrap gap-4 pt-4">
+                        <div className="bg-[#231a20] px-6 py-4 rounded-xl text-center min-w-[160px]">
+                          <p className="text-xl font-bold">10+ years</p>
+                          <p className="text-xs text-gray-400 mt-1">
+                            industry experience
+                          </p>
+                        </div>
+          
+                        <div className="bg-[#141d23] px-6 py-4 rounded-xl text-center min-w-[160px]">
+                          <p className="text-xl font-bold">3+ years</p>
+                          <p className="text-xs text-gray-400 mt-1">
+                            Educational Trainer
+                          </p>
+                        </div>
+          
+                        <div className="bg-[#1c1523] px-6 py-4 rounded-xl text-center min-w-[200px]">
+                          <p className="text-sm font-semibold">
+                            Projects that go
+                            <br />
+                            beyond counting
+                          </p>
+                        </div>
+                      </div>
+          
+                      {/* PROMISE BOX */}
+                      <div className="bg-[#1b1918] border border-white/10 rounded-xl p-6 text-sm text-gray-300 leading-relaxed">
+                        <p className="font-semibold text-white mb-2">
+                          His promise as a mentor is simple:
+                        </p>
+                        <p>{mentorData.promise}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
           {/* Courses Section */}
-          <div className="Explore-courses mb-10 mt-10 md:mb-14 md:mt-16">
+          {/* <div className="Explore-courses mb-10 mt-10 md:mb-14 md:mt-16">
             <div>
               <h2 className="text-white text-3xl md:text-4xl font-bold mb-10 md:mb-12 flex justify-center md:justify-center">
                 Explore Our Courses
@@ -175,9 +248,9 @@ const About2 = () => {
                     max-w-full
                   "
                 >
-                  {/* Left Section */}
+                  
                   <div className="flex-1 text-center md:text-center lg:text-left">
-                    <h3 className="text-2xl md:text-3xl font-semibold mb-3 text-white">
+                    <h3 className="text-2xl md:text-2xl font-semibold mb-3 text-white">
                       {card.title} <br />
                       <span
                         className="bg-clip-text text-transparent font-semibold"
@@ -210,7 +283,7 @@ const About2 = () => {
                     </div>
                   </div>
 
-                  {/* Right Section (Video) */}
+                  
                   <div className="flex-1 max-w-sm sm:max-w-md md:max-w-[32rem] lg:max-w-lg rounded-xl overflow-hidden">
                     <video
                       src={card.video}
@@ -224,7 +297,48 @@ const About2 = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
+
+          <div className="w-full flex justify-center px-3 sm:px-5 md:px-10 py-10 sm:py-14 md:py-16 mt-10 sm:mt-16 md:mt-20">
+                      <div className="w-full max-w-[67rem]  bg-[#1A1A1A] rounded-3xl px-4 sm:px-8 md:px-10 py-8 sm:py-10 md:py-12 text-center 2xl:max-w-[80rem]">
+                          
+                          
+                          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-5xl  font-bold text-white mb-3 sm:mb-5 leading-snug sm:leading-tight">
+                              
+                              Ready to Upgrade your  Design Career?
+                          </h2>
+          
+                          <p className="text-gray-300 text-xs sm:text-sm md:text-base lg:text-lg mb-6 sm:mb-8 leading-relaxed">
+                              Work on real-world projects, build a standout portfolio, and step confidently into the creative industry.
+                          </p>
+          
+                          
+                          <div className="mb-8 sm:mb-10">
+                          <button className="bg-[#F75C3C] cursor-pointer text-white font-medium text-sm sm:text-base md:text-lg py-2 sm:py-3 px-6 sm:px-8 md:px-6 md:py-2 rounded-full hover:bg-[#e44f30] transition-all duration-300" onClick={handleCourse}>
+                              Explore Courses
+                          </button>
+                          </div>
+          
+                          
+                          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+                          {videosData.map((video, index) => (
+                              <div key={index} className="overflow-hidden rounded-2xl w-full h-[220px] sm:h-[250px] md:h-[300px] lg:h-[340px]">
+                              <video
+                                  src={video}
+                                  autoPlay
+                                  loop
+                                  muted
+                                  playsInline
+                                  className="w-full h-full object-cover"
+                              />
+                              </div>
+                          ))}
+                          </div>
+          
+                      </div>
+                  </div>
+
+          
       </section>
 
 

@@ -38,60 +38,128 @@ const courseData = {
 };
 
 const modules = [
-  {
-    module: "Module 1",
-    title: "Design Foundations (Weeks 1–2)",
-    lessons: [
-      "Principles of Design & Visual Communication",
-      "Color Theory, Typography, and Layout Systems",
-      "Composition, Balance & Hierarchy",
-      "Hands-on: Poster & Layout Design",
-      "Tool Focus: Photoshop + Illustrator basics"
-    ]
-  },
+    {
+        module: "Module 1",
+        title: "Design Foundations (Weeks 1–2)",
+        lessons: [
+            {
+                title: "Principles of Design & Visual Communication",
+                desc: "Students explore how visuals speak. They learn how contrast, alignment, repetition, proximity, rhythm, movement, and unity guide the viewer’s eye and shape meaning."
+            },
+            {
+                title: "Color Theory, Typography & Layout Systems",
+                desc: "Students study color psychology, branding tones, font pairing, spacing, kerning, and structured grids to create clean, professional layouts."
+            },
+            {
+                title: "Composition, Balance & Visual Hierarchy",
+                desc: "Students arrange text, shapes, and images intentionally, learning how to direct focus using contrast, scale, spacing, and visual rhythm."
+            },
+            {
+                title: "Hands-on Poster & Layout Exercises",
+                desc: "Students convert ideas into posters, ads, and banners, applying all basic design concepts with real-world tasks."
+            },
+            {
+                title: "Tool Focus: Photoshop + Illustrator Basics",
+                desc: "Students learn layers, masks, pen tools, shapes, and export formats for both print and digital."
+            }
+        ]
+     },
   {
     module: "Module 2",
     title: "Branding & Logo Design (Weeks 3–4)",
     lessons: [
-      "Understanding Brand Identity & Brand Strategy.",
-      "Logo Creation Process — Sketch to Vector.",
-      "Brand Guidelines, Color Palette, and Typography Rules.",
-      "Real Brand Brief: Logo to Brand Collateral.",
-      "Tool Focus: Illustrator + CorelDRAW."
+        {
+            title: "Understanding Brand Identity",
+            desc: "Students understand brand personality, audience targeting, and how visuals help brands communicate trust and emotion."
+        },
+        {
+            title: "Logo Idea Development",
+            desc: "Students brainstorm, sketch, refine, and simplify logo ideas before moving to digital artwork."
+        },
+        {
+            title: "Logo Creation in Vector",
+            desc: "Students design scalable vector logos using Illustrator/CorelDRAW so that artwork remains sharp in any size."
+        },
+        {
+            title: "Creating Brand Guidelines",
+            desc: "Students build a basic brand rulebook including logo usage, spacing, color palette, and typography rules."
+        },
+        {
+            title: "Brand Collateral Practice",
+            desc: "Students convert their logo into stationery, social graphics, and mockups to see how branding works in real life."
+        }
     ]
-  },
-  {
-    module: "Module 3",
-    title: "Print & Publication Design (Weeks 5–6)",
-    lessons: [
-      "Print-Ready Design Concepts: Bleeds, Margins, CMYK, Resolution.",
-      "Brochure, Flyer, and Magazine Layouts.",
-      "Packaging Design Fundamentals.",
-      "Prepress & Final File Delivery Workflow.",
-      "Tool Focus: InDesign + Photoshop.",
-    ]
-  },
-  {
-    module: "Module 4",
-    title: "Digital & Social Media Design (Weeks 7–8)",
-    lessons: [
-      "Designing for Web & Social Media.",
-      "Ad Banners, Social Templates & Carousels.",
-      "Platform-specific Adaptations (Instagram, YouTube, Meta Ads).",
-      "Figma Introduction for Digital Layouts.",
-      "Tool Focus: Photoshop + Illustrator + Figma.",
-    ]
-  },
-  {
-    module: "Module 5",
-    title: "Portfolio Project & Review (Weeks 9–12)",
-    lessons: [
-      "2–3 Professional-Level Projects.",
-      "Personal Branding & Portfolio Curation.",
-      "Behance / Dribbble Presentation.",
-      "Interview Preparation & Review.",
-    ]
-  }
+    },
+    {
+        module: "Module 3",
+        title: "Branding & Logo Design (Weeks 3–4)",
+        lessons: [
+                {
+                    title: "Understanding Print Production",
+                    desc: "Students learn CMYK, resolution, bleeds, margins, paper sizes, and how to avoid printing errors."
+                },
+                {
+                    title: "Brochures, Flyers & Magazines",
+                    desc: "Students design structured layouts with grids, spacing, margins, and readable typography flow."
+                },
+                {
+                    title: "Packaging Design Basics",
+                    desc: " Students learn dielines, safety margins, barcode placement, and product information placement."
+                },
+                {
+                    title: "Pre-Press & Final Files",
+                    desc: "Students prepare print-ready PDFs and troubleshoot color, font, and quality issues."
+                },
+                {
+                    title: "Tool Focus",
+                    desc: " InDesign for layout structure, Photoshop for image retouching."
+                }
+        ]
+    },
+   {
+        module: "Module 4",
+        title: "Digital & Social Design (Weeks 7–8)",
+        lessons: [
+                {
+                    title: "Designing for Different Screens",
+                    desc: " Students understand resolutions, compression, file formats, and responsive layouts."
+                },
+                {
+                    title: "Social Media Content Creation",
+                    desc: "Students design ads, posts, carousels, story creatives, reels covers, and thumbnails."
+                },
+                {
+                    title: "Consistency in Campaigns",
+                    desc: " Students learn how to maintain one visual theme across multiple formats."
+                },
+                {
+                    title: "Figma Introduction",
+                    desc: "Students create digital layouts and reusable templates for fast content production."
+                },
+        ]
+    },
+   {
+        module: "Module 5",
+        title: "Portfolio & Presentation (Weeks 9–12)",
+        lessons: [
+                {
+                    title: "Building Final Projects",
+                    desc: "Students create 2–3 polished works showing creativity and logic."
+                },
+                {
+                    title: "Personal Branding",
+                    desc: "Students design their own identity: logo, bio, presentation style."
+                },
+                {
+                    title: "Online Portfolio Setup",
+                    desc: " Students upload structured case studies to Behance/Dribbble."
+                },
+                {
+                    title: "Interview & Review",
+                    desc: "Students practice presenting their work confidently and receiving feedback."
+                },
+        ]
+    },
 ];
 
 const CourseDetails = () => {
@@ -170,7 +238,7 @@ const CourseDetails = () => {
                     </h1>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
                     <span className="bg-gradient-to-r from-[#E04FFF] via-[#FF6D8D] to-[#FFA26B] bg-clip-text text-transparent">
-                        Digital Media & Design
+                        Graphic Design (Pixelcraft)
                     </span>
                     </h2>
                     <p className="max-w-2xl text-xs sm:text-sm md:text-base lg:text-lg opacity-90 mb-7">
@@ -237,8 +305,8 @@ const CourseDetails = () => {
                     <p className="mb-4 text-xs sm:text-sm md:text-base opacity-70">
                         Course Overview
                     </p>
-                    <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-3">
-                        Diploma in Digital Media & Design
+                    <h2 className="text-xl sm:text-2xl md:text-2xl font-semibold mb-3">
+                        Diploma in Graphic Design (PixelCraft)
                     </h2>
                     <p className="opacity-80 text-sm sm:text-base md:text-lg leading-relaxed">
                         A hands-on program designed to turn creative learners into skilled graphic designers. The
@@ -252,18 +320,18 @@ const CourseDetails = () => {
                     <div className="bg-[#181818] rounded-2xl px-6 py-7 shadow-xl w-full max-w-[390px] space-y-5">
                         {/* Duration */}
                         <div className="flex items-center mb-6">
-                        <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#f66a63] mr-4">
-                            <img src={Duration} alt="Duration Icon" className="max-h-6" />
+                        <span className="w-10 h-10 flex items-center justify-center rounded-full  mr-4">
+                            <img src={Duration} alt="Duration Icon" className="max-h-16" />
                         </span>
                         <div>
                             <div className="text-xs sm:text-sm font-light text-white mb-1">Duration</div>
-                            <div className="font-medium text-sm sm:text-base text-white">3 Months</div>
+                            <div className="font-medium text-sm sm:text-base text-white">3 Months | 12 Weeks</div>
                         </div>
                         </div>
                         {/* Batches */}
                         <div className="flex items-center mb-6">
-                        <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#10c6ea] mr-4">
-                            <img src={Batches} alt="Batches Icon" className="max-h-6" />
+                        <span className="w-10 h-10 flex items-center justify-center rounded-full  mr-4">
+                            <img src={Batches} alt="Batches Icon" className="max-h-16" />
                         </span>
                         <div>
                             <div className="text-xs sm:text-sm font-light text-white mb-1">Batches</div>
@@ -271,8 +339,8 @@ const CourseDetails = () => {
                         </div>
                         </div>
                         <div className="flex items-center mb-6">
-                        <span className="w-17 h-10 flex items-center justify-center rounded-full bg-[#f84b7f] mr-4">
-                            <img src={ToolsUsed} alt="Tools Icon" className="max-h-6" />
+                        <span className="w-17 h-10 flex items-center justify-center rounded-full  mr-4">
+                            <img src={ToolsUsed} alt="Tools Icon" className="max-h-16" />
                         </span>
                         <div>
                             <div className="text-xs sm:text-sm font-light text-white mb-1">Tools used</div>
@@ -281,8 +349,8 @@ const CourseDetails = () => {
                         </div>
                         {/* Format */}
                         <div className="flex items-center">
-                        <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#4983e4] mr-4">
-                            <img src={Format} alt="Format Icon" className="max-h-6" />
+                        <span className="w-10 h-10 flex items-center justify-center rounded-full  mr-4">
+                            <img src={Format} alt="Format Icon" className="max-h-16" />
                         </span>
                         <div>
                             <div className="text-xs sm:text-sm font-light text-white mb-1">Format</div>
@@ -313,11 +381,11 @@ const CourseDetails = () => {
                 <div className="w-full flex flex-col gap-4">
                 {modules.map(({ module, title, lessons }, idx) => (
                     <div
-                    key={idx}
-                    className="bg-black rounded-lg border border-[#212121] overflow-hidden"
+                        key={idx}
+                        className="bg-black rounded-lg border border-[#212121] overflow-hidden"
                     >
                     {/* --- Top Bar --- */}
-                    <div className="flex items-center w-full px-4 py-2">
+                    <div className="flex items-center w-full px-4 py-2 cursor-pointer" onClick={() => toggleModule(idx)}>
                         <span className="flex items-center justify-center bg-[#F5614C] text-white px-8 py-4  md:text-sm font-medium text-sm rounded-md ml-2 my-2 whitespace-nowrap">
                             {module}
                         </span>
@@ -326,29 +394,29 @@ const CourseDetails = () => {
                         </span>
 
                         <button onClick={() => toggleModule(idx)} className="mr-3">
-                        <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#232323]">
-                            {openIndex === idx ? (
-                            // Minus icon
-                            <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
-                                <path
-                                stroke="#fff"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                d="M8 12h8"
-                                />
-                            </svg>
-                            ) : (
-                            // Plus icon
-                            <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
-                                <path
-                                stroke="#fff"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                d="M12 8v8M8 12h8"
-                                />
-                            </svg>
-                            )}
-                        </span>
+                            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#232323]">
+                                {openIndex === idx ? (
+                                // Minus icon
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                                    <path
+                                    stroke="#fff"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    d="M8 12h8"
+                                    />
+                                </svg>
+                                ) : (
+                                // Plus icon
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                                    <path
+                                    stroke="#fff"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    d="M12 8v8M8 12h8"
+                                    />
+                                </svg>
+                                )}
+                            </span>
                         </button>
                     </div>
 
@@ -359,7 +427,7 @@ const CourseDetails = () => {
                             <p className="text-sm text-gray-400 mb-2 mt-1">
                                 Lessons In this module
                             </p>
-                            <ul className="space-y-2">
+                            {/* <ul className="space-y-2">
                                 {lessons.map((lesson, i) => (
                                     <li key={i} className="flex items-start gap-2 text-white text-sm">
                                         <svg
@@ -381,7 +449,46 @@ const CourseDetails = () => {
                                         <span>{lesson}</span>
                                     </li>
                                 ))}
-                            </ul>
+                            </ul> */}
+                            <ul className="space-y-4">
+                                {lessons.map((lesson, i) => (
+                                    <li key={i} className="flex items-start gap-3">
+
+                                    {/* Green Tick */}
+                                    <svg
+                                        className="mt-1 flex-shrink-0"
+                                        width="18"
+                                        height="18"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                    >
+                                        <circle cx="12" cy="12" r="12" fill="#22C55E" />
+                                        <path
+                                        d="M7 13l3 3 7-7"
+                                        stroke="#fff"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        />
+                                    </svg>
+
+                                    {/* Text Content */}
+                                    <div className="flex flex-col">
+                                        {/* Lesson Title */}
+                                        <span className="text-white text-sm font-medium">
+                                        {lesson.title}
+                                        </span>
+
+                                        {/* Lesson Description */}
+                                        <span className="text-gray-400 text-xs sm:text-sm leading-relaxed mt-1">
+                                        {lesson.desc}
+                                        </span>
+                                    </div>
+
+                                    </li>
+                                ))}
+                                </ul>
+
                         </div>
                     )}
                     </div>
@@ -470,20 +577,21 @@ const CourseDetails = () => {
             </div>
 
             {/* Lower box with certificate */}
-            <div className="flex flex-col md:flex-row gap-6 w-full max-w-4xl 2xl:max-w-5xl bg-[#191919] rounded-xl px-8 py-8 shadow-lg items-center">
+            {/* <div className="flex flex-col md:flex-row gap-6 w-full max-w-4xl 2xl:max-w-5xl bg-[#191919] rounded-xl px-8 py-8 shadow-lg items-center">
                 <div className="flex-1 flex justify-center md:justify-start text-center md:text-left">
                     <div className="text-white">
-                        {/* Title */}
+                        
                         <h3 className="text-lg sm:text-xl md:text-3xl 2xl:text-3xl font-semibold text-[#94D84F] mb-4">
                             {superpowerData.certificate.title}
                         </h3>
 
-                        {/* Points */}
-                        <ul className="text-sm  sm:text-lg  leading-snug md:text-sm md:font-medium md:w-[34rem] 2xl:text-[16px] xl:font-medium 2xl:w-[39rem] text-gray-200 list-decimal list-inside space-y-2">
+                        
+                        <ul className="text-sm  sm:text-lg  leading-snug md:text-sm md:font-medium md:w-[34rem] 2xl:text-[16px] xl:font-medium 2xl:w-[39rem] text-gray-200  list-inside space-y-2">
                             {superpowerData.certificate.points.map((point, index) => (
-                            <li key={index}>{point}</li>
+                                <li key={index}>{point}</li>
                             ))}
                         </ul>
+                        
                     </div>
                 </div>
                 <div className="flex-1 flex justify-center mt-6 md:mt-0">
@@ -495,7 +603,121 @@ const CourseDetails = () => {
                         />
                     </div>
                 </div>
+            </div> */}
+
+
+            <div className="
+                w-full 
+                max-w-4xl 
+                2xl:max-w-5xl 
+                bg-[#191919] 
+                rounded-2xl 
+                px-8 py-10 
+                shadow-lg 
+                space-y-12
+            ">
+
+                <div className="flex flex-col md:flex-row gap-6 items-center">
+
+                    {/* IMAGE */}
+                    <div className="flex-1 flex justify-center">
+                    <div className="
+                        w-full 
+                        max-w-[220px] sm:max-w-[280px] md:max-w-[320px] 
+                        lg:max-w-[560px] 2xl:max-w-[800px] 
+                        aspect-[5/4] 
+                        border border-[#d1d5db] 
+                        rounded-xl 
+                        overflow-hidden 
+                        bg-[#0f0f0f]
+                    ">
+                        <img
+                        src={superpowerData.certificate1.img}
+                        alt="Certificate"
+                        className="w-full h-full object-cover"
+                        />
+                    </div>
+                    </div>
+
+                    {/* TEXT */}
+                    <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-lg sm:text-xl md:text-3xl font-semibold text-[#94D84F] mb-4">
+                        {superpowerData.certificate1.title}
+                    </h3>
+
+                    <ul className="
+                        text-sm sm:text-lg md:text-sm 
+                        text-gray-200 
+                        leading-snug 
+                        md:font-medium 
+                        md:w-[34rem] 
+                        2xl:text-[16px] 
+                        2xl:w-[39rem] 
+                        space-y-2
+                    ">
+                        {superpowerData.certificate1.points.map((point, index) => (
+                        <li key={index}>{point}</li>
+                        ))}
+                    </ul>
+                    </div>
+
+                </div>
+
+                <div className="flex flex-col md:flex-row gap-6 items-center">
+
+                    {/* TEXT */}
+                    <div className="flex-1 text-center md:text-left">
+                        <h3 className="text-lg sm:text-xl md:text-3xl font-semibold text-[#94D84F] mb-4">
+                            {superpowerData.certificate.title}
+                        </h3>
+
+                        <ul className="
+                            text-sm sm:text-lg md:text-sm 
+                            text-gray-200 
+                            leading-snug 
+                            md:font-medium 
+                            md:w-[34rem] 
+                            2xl:text-[16px] 
+                            2xl:w-[39rem] 
+                            space-y-2
+                        ">
+                            {superpowerData.certificate.points.map((point, index) => (
+                            <li key={index}>{point}</li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* IMAGE */}
+                    <div className="flex-1 flex justify-center">
+                        <div className="
+                            w-full 
+                            max-w-[220px] sm:max-w-[280px] md:max-w-[320px] 
+                            lg:max-w-[560px] 2xl:max-w-[800px] 
+                            aspect-[5/4] 
+                            border border-[#d1d5db] 
+                            rounded-xl 
+                            overflow-hidden 
+                            bg-[#0f0f0f]
+                        ">
+                            <img
+                                src={superpowerData.certificate.img}
+                                alt="Certificate"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                    </div>
+
+                </div>
+
+                
+
+                
             </div>
+
+
+
+
+            
 
             {/* Title and Subtext */}
             <div className="flex flex-col w-full max-w-4xl 2xl:max-w-5xl mx-auto mt-10 bg-[#191919] rounded-xl px-8 py-10 shadow-lg items-center">
@@ -507,7 +729,7 @@ const CourseDetails = () => {
                         WebkitTextFillColor: "transparent",
                     }}
                 >
-                    Digital Media &amp; Design
+                    Graphic Design (Pixelcraft)
                 </h3>
                 <p className="text-white opacity-90 text-base text-center mb-6 leading-normal max-w-md">
                     Intensive studio-style training for branding,

@@ -18,9 +18,11 @@ import Why_Choose_Us_2 from "./Components/Why_Choose_Us_2";
 import Contact_Add from "./Components/Contact_Add";
 import NotFound from "./Components/NotFound";
 import { HelmetProvider } from "react-helmet-async";
+import Meet_My_Mentor from "./Components/Meet_My_Mentor";
+import { MotionVerse_Couse } from "./Components/MotionVerse_Couse";
 
 function HomePage({ scrollRefs, handleViewCourse }) {
-  const { homeRef, aboutRef, superpowerRef, whyChooseRef, ContactRef, scrollToSection } =
+  const { homeRef, aboutRef,mentorRef, superpowerRef, whyChooseRef, ContactRef, scrollToSection } =
     scrollRefs;
 
   return (
@@ -45,15 +47,21 @@ function HomePage({ scrollRefs, handleViewCourse }) {
         <AboutSection />
       </div>
 
-      <div>
-        <Mission />
+      <div ref={mentorRef} >
+        <Meet_My_Mentor />
       </div>
+
+      
 
       
 
       <div ref={superpowerRef}>
         {/* Pass router navigation handler */}
         <SuperpowerSection onViewCourse={handleViewCourse} />
+      </div>
+
+      <div>
+        <Mission />
       </div>
 
       {/* <div ref={whyChooseRef}>
@@ -113,6 +121,7 @@ function App() {
           <Route path="/contactadd" element={<Contact_Add />} />
           <Route path="/course/diploma-in-design-and-video-editing" element={<DesignVideoEditingDetails />} />
           <Route path="/course/advance-program-in-digital-media-creation" element={<AdvanceProgramDMCreation />} />
+          <Route path="/course/Advanced-Diploma-in-Design-Video-Editing-MotionVerse" element={<MotionVerse_Couse />} />
           <Route path="/not-found" element={<NotFound />} />
           <Route path="*" element={<NotFound/>} />
         </Routes>

@@ -26,47 +26,94 @@ const course = {
 };
 
 const modules = [
-  {
-    module: "Module 1",
-    title: "Design Thinking & Visual Foundations (Weeks 1–4)",
-    lessons: [
-      "Design Process & Problem Solving.",
-      "Color, Typography, and Layout for UI.",
-      "Wireframes & Mood Boards.",
-      "Tool Focus: Illustrator + Photoshop.",
-    ]
-  },
+    {
+        module: "Module 1",
+        title: "UX Research (Weeks 1–4)",
+        lessons: [
+            {
+                title: "Understanding Users",
+                desc: "Students learn user goals, problems, behavior patterns, and expectations."
+            },
+            {
+                title: "Persona & Journey Creation",
+                desc: " Students map user paths and identify pain points."
+            },
+            {
+                title: "Competitor & Market Study",
+                desc: " Students learn how to analyze existing apps and websites."
+            },
+            {
+                title: "Problem Statements",
+                desc: "Students convert findings into clear UX goals."
+            },
+        ]
+     },
   {
     module: "Module 2",
-    title: "UI Design Essentials (Weeks 5–8)",
+    title: "Wireframing & Structure (Weeks 5–8)",
     lessons: [
-      "Grid Systems, Components & Buttons.",
-      "Mobile & Web UI Design.",
-      "Design Systems, Consistency & Accessibility.",
-      "Tool Focus: Figma + XD.",
+        {
+            title: "Information Architecture",
+            desc: "Students organize menus, content, and navigation flows."
+        },
+        {
+            title: "Task & User Flows",
+            desc: "Students plan paths users follow to complete tasks smoothly."
+        },
+        {
+            title: "Wireframing",
+            desc: "Students create low-fidelity screens focusing on structure, not beauty yet."
+        },
+        {
+            title: "Responsive Thinking",
+            desc: "Students prepare layouts for mobile, tablet, and desktop."
+        },
     ]
-  },
-  {
-    module: "Module 3",
-    title: "UX Research & Prototyping (Weeks 9–12)",
-    lessons: [
-        "User Research & Persona Development.",
-        "User Journey Mapping & Information Architecture.",
-        "Wireframing to Interactive Prototypes.",
-        "Usability Testing & Feedback.",
-        "Tool Focus: Figma + XD.",
-    ]
-  },
-  {
-    module: "Module 4",
-    title: "Real Projects & Portfolio (Weeks 13–16)",
-    lessons: [
-      "Full App or Website Project.",
-      "Responsive Design (Mobile, Tablet, Web).",
-      "UI Kit & Case Study Preparation.",
-      "Portfolio Review & Presentation.",
-    ]
-  },
+    },
+    {
+        module: "Module 3",
+        title: "UI Visual Design (Weeks 9–12)",
+        lessons: [
+                {
+                    title: "Interface Principles",
+                    desc: "  Students learn clarity, contrast, feedback, and alignment."
+                },
+                {
+                    title: "Typography & Color Systems",
+                    desc: " Students apply readable text styles and accessible color combinations."
+                },
+                {
+                    title: "Components & UI Kits",
+                    desc: " Students build buttons, cards, forms, icons and reusable elements."
+                },
+                {
+                    title: "Design Systems",
+                    desc: "Students create consistent visual libraries for entire products."
+                },
+        ]
+    },
+   {
+        module: "Module 4",
+        title: "Prototyping & Case Study (Weeks 13–16)",
+        lessons: [
+                {
+                    title: "Interactive Prototypes",
+                    desc: " Students turn static screens into clickable app simulations."
+                },
+                {
+                    title: "Usability Testing",
+                    desc: "Students test designs with users and refine based on feedback."
+                },
+                {
+                    title: "Final UX Case Study",
+                    desc: " Students document research, ideas, process, and final design."
+                },
+                {
+                    title: "Portfolio Preparation",
+                    desc: "Students organize projects professionally for job applications."
+                },
+        ]
+    },
 ];
 
 
@@ -116,11 +163,11 @@ const AdvanceProgramDMCreation = () => {
                     />
                     <div className="absolute left-0 right-0 top-[72%] z-20 flex flex-col items-center text-center -translate-y-1/2 px-4">
                         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 drop-shadow-md">
-                            Diploma in
+                            Diploma in UI/UX 
                         </h1>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
                         <span className="bg-gradient-to-r from-[#E04FFF] via-[#FF6D8D] to-[#FFA26B] bg-clip-text text-transparent">
-                            UI/UX Design
+                            Design (Human Interface Lab)
                         </span>
                         </h2>
                         <p className="max-w-2xl text-xs sm:text-sm md:text-base lg:text-lg opacity-90 mb-7">
@@ -199,18 +246,18 @@ const AdvanceProgramDMCreation = () => {
                         <div className="bg-[#181818] rounded-2xl px-6 py-7 shadow-xl w-full max-w-[390px] space-y-5">
                             {/* Duration */}
                             <div className="flex items-center mb-6">
-                            <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#f66a63] mr-4">
-                                <img src={Duration} alt="Duration Icon" className="max-h-6" />
+                            <span className="w-10 h-10 flex items-center justify-center rounded-full  mr-4">
+                                <img src={Duration} alt="Duration Icon" className="max-h-16" />
                             </span>
                             <div>
                                 <div className="text-xs sm:text-sm font-light text-white mb-1">Duration</div>
-                                <div className="font-medium text-sm sm:text-base text-white">4 Months</div>
+                                <div className="font-medium text-sm sm:text-base text-white">4 Months | 16 Weeks</div>
                             </div>
                             </div>
                             {/* Batches */}
                             <div className="flex items-center mb-6">
-                            <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#10c6ea] mr-4">
-                                <img src={Batches} alt="Batches Icon" className="max-h-6" />
+                            <span className="w-10 h-10 flex items-center justify-center rounded-full  mr-4">
+                                <img src={Batches} alt="Batches Icon" className="max-h-16" />
                             </span>
                             <div>
                                 <div className="text-xs sm:text-sm font-light text-white mb-1">Batches</div>
@@ -218,8 +265,8 @@ const AdvanceProgramDMCreation = () => {
                             </div>
                             </div>
                             <div className="flex items-center mb-6">
-                            <span className="w-12 h-10 flex items-center justify-center rounded-full bg-[#f84b7f] mr-4">
-                                <img src={ToolsUsed} alt="Tools Icon" className="max-h-6" />
+                            <span className="w-12 h-10 flex items-center justify-center rounded-full  mr-4">
+                                <img src={ToolsUsed} alt="Tools Icon" className="max-h-16" />
                             </span>
                             <div>
                                 <div className="text-xs sm:text-sm font-light text-white mb-1">Tools used</div>
@@ -228,8 +275,8 @@ const AdvanceProgramDMCreation = () => {
                             </div>
                             {/* Format */}
                             <div className="flex items-center">
-                            <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#4983e4] mr-4">
-                                <img src={Format} alt="Format Icon" className="max-h-6" />
+                            <span className="w-10 h-10 flex items-center justify-center rounded-full  mr-4">
+                                <img src={Format} alt="Format Icon" className="max-h-16" />
                             </span>
                             <div>
                                 <div className="text-xs sm:text-sm font-light text-white mb-1">Format</div>
@@ -261,7 +308,7 @@ const AdvanceProgramDMCreation = () => {
                         className="bg-black rounded-lg border border-[#212121] overflow-hidden"
                         >
                         {/* --- Top Bar --- */}
-                        <div className="flex items-center w-full px-4 py-3">
+                        <div className="flex items-center w-full px-4 py-3 cursor-pointer" onClick={() => toggleModule(idx)}>
                             <span className="flex items-center justify-center bg-[#F5614C] text-white px-4 py-1 font-medium text-sm rounded-md ml-2 my-2 whitespace-nowrap">
                             {module}
                             </span>
@@ -299,32 +346,47 @@ const AdvanceProgramDMCreation = () => {
                         {/* --- Expand Section --- */}
                         {openIndex === idx && (
                             <div className="px-6 pb-4 bg-[#0F0F0F]">
-                            <p className="text-sm text-gray-400 mb-2 mt-1">
-                                Lessons In this module
-                            </p>
-                            <ul className="space-y-2">
+                                <p className="text-sm text-gray-400 mb-2 mt-1">
+                                    Lessons In this module
+                                </p>
+                                <ul className="space-y-4">
                                 {lessons.map((lesson, i) => (
-                                <li key={i} className="flex items-start gap-2 text-white text-sm">
+                                    <li key={i} className="flex items-start gap-3">
+
+                                    {/* Green Tick */}
                                     <svg
-                                    className="mt-1 flex-shrink-0"
-                                    width="18"
-                                    height="18"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
+                                        className="mt-1 flex-shrink-0"
+                                        width="18"
+                                        height="18"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
                                     >
-                                    <circle cx="12" cy="12" r="12" fill="#22C55E" />
-                                    <path
+                                        <circle cx="12" cy="12" r="12" fill="#22C55E" />
+                                        <path
                                         d="M7 13l3 3 7-7"
                                         stroke="#fff"
                                         strokeWidth="2"
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
-                                    />
+                                        />
                                     </svg>
-                                    <span>{lesson}</span>
-                                </li>
+
+                                    {/* Text Content */}
+                                    <div className="flex flex-col">
+                                        {/* Lesson Title */}
+                                        <span className="text-white text-sm font-medium">
+                                        {lesson.title}
+                                        </span>
+
+                                        {/* Lesson Description */}
+                                        <span className="text-gray-400 text-xs sm:text-sm leading-relaxed mt-1">
+                                        {lesson.desc}
+                                        </span>
+                                    </div>
+
+                                    </li>
                                 ))}
-                            </ul>
+                                </ul>
                             </div>
                         )}
                         </div>
@@ -411,15 +473,15 @@ const AdvanceProgramDMCreation = () => {
                 </div>
 
                 {/* Lower box with certificate */}
-                <div className="flex flex-col md:flex-row gap-6 w-full max-w-4xl 2xl:max-w-5xl bg-[#191919] rounded-xl px-8 py-8 shadow-lg items-center">
+                {/* <div className="flex flex-col md:flex-row gap-6 w-full max-w-4xl 2xl:max-w-5xl bg-[#191919] rounded-xl px-8 py-8 shadow-lg items-center">
                     <div className="flex-1 flex justify-center md:justify-start text-center md:text-left">
                         <div className="text-white">
-                            {/* Title */}
+                            
                             <h3 className="text-lg sm:text-xl md:text-3xl 2xl:text-3xl font-semibold text-[#94D84F] mb-4">
                                 {superpowerData.certificate.title}
                             </h3>
     
-                            {/* Points */}
+                            
                             <ul className="text-sm  sm:text-lg  leading-snug md:text-sm md:font-medium md:w-[34rem] 2xl:text-[16px] xl:font-medium 2xl:w-[39rem] text-gray-200 list-decimal list-inside space-y-2">
                                 {superpowerData.certificate.points.map((point, index) => (
                                 <li key={index}>{point}</li>
@@ -436,11 +498,119 @@ const AdvanceProgramDMCreation = () => {
                             />
                         </div>
                     </div>
-                </div>
+                </div> */}
+
+                <div className="
+                                w-full 
+                                max-w-4xl 
+                                2xl:max-w-5xl 
+                                bg-[#191919] 
+                                rounded-2xl 
+                                px-8 py-10 
+                                shadow-lg 
+                                space-y-12
+                            ">
+                
+                                <div className="flex flex-col md:flex-row gap-6 items-center">
+                
+                                    {/* IMAGE */}
+                                    <div className="flex-1 flex justify-center">
+                                    <div className="
+                                        w-full 
+                                        max-w-[220px] sm:max-w-[280px] md:max-w-[320px] 
+                                        lg:max-w-[560px] 2xl:max-w-[800px] 
+                                        aspect-[5/4] 
+                                        border border-[#d1d5db] 
+                                        rounded-xl 
+                                        overflow-hidden 
+                                        bg-[#0f0f0f]
+                                    ">
+                                        <img
+                                        src={superpowerData.certificate1.img}
+                                        alt="Certificate"
+                                        className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    </div>
+                
+                                    {/* TEXT */}
+                                    <div className="flex-1 text-center md:text-left">
+                                    <h3 className="text-lg sm:text-xl md:text-3xl font-semibold text-[#94D84F] mb-4">
+                                        {superpowerData.certificate1.title}
+                                    </h3>
+                
+                                    <ul className="
+                                        text-sm sm:text-lg md:text-sm 
+                                        text-gray-200 
+                                        leading-snug 
+                                        md:font-medium 
+                                        md:w-[34rem] 
+                                        2xl:text-[16px] 
+                                        2xl:w-[39rem] 
+                                        space-y-2
+                                    ">
+                                        {superpowerData.certificate1.points.map((point, index) => (
+                                        <li key={index}>{point}</li>
+                                        ))}
+                                    </ul>
+                                    </div>
+                
+                                </div>
+                
+                                <div className="flex flex-col md:flex-row gap-6 items-center">
+                
+                                    {/* TEXT */}
+                                    <div className="flex-1 text-center md:text-left">
+                                        <h3 className="text-lg sm:text-xl md:text-3xl font-semibold text-[#94D84F] mb-4">
+                                            {superpowerData.certificate.title}
+                                        </h3>
+                
+                                        <ul className="
+                                            text-sm sm:text-lg md:text-sm 
+                                            text-gray-200 
+                                            leading-snug 
+                                            md:font-medium 
+                                            md:w-[34rem] 
+                                            2xl:text-[16px] 
+                                            2xl:w-[39rem] 
+                                            space-y-2
+                                        ">
+                                            {superpowerData.certificate.points.map((point, index) => (
+                                            <li key={index}>{point}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                
+                                    {/* IMAGE */}
+                                    <div className="flex-1 flex justify-center">
+                                        <div className="
+                                            w-full 
+                                            max-w-[220px] sm:max-w-[280px] md:max-w-[320px] 
+                                            lg:max-w-[560px] 2xl:max-w-[800px] 
+                                            aspect-[5/4] 
+                                            border border-[#d1d5db] 
+                                            rounded-xl 
+                                            overflow-hidden 
+                                            bg-[#0f0f0f]
+                                        ">
+                                            <img
+                                                src={superpowerData.certificate.img}
+                                                alt="Certificate"
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                    </div>
+                
+                                </div>
+                
+                                
+                
+                                
+                            </div>
 
                 {/* Title and Subtext */}
                 <div className="flex flex-col w-full max-w-4xl 2xl:max-w-5xl mx-auto mt-10 bg-[#191919] rounded-xl px-8 py-10 shadow-lg items-center">
-                    <h2 className="text-3xl font-bold text-white text-center mb-2">Diploma in</h2>
+                    <h2 className="text-3xl font-bold text-white text-center mb-2">Diploma in UI/UX </h2>
                     <h3
                     className="text-3xl font-bold text-center mb-3 bg-gradient-to-r from-[#fd426e] to-[#f48637] bg-clip-text text-transparent select-none"
                     style={{
@@ -448,7 +618,7 @@ const AdvanceProgramDMCreation = () => {
                         WebkitTextFillColor: "transparent",
                     }}
                     >
-                        UI/UX Design
+                        Design (Human Interface Lab)
                     </h3>
                     <p className="text-white opacity-90 text-base text-center mb-6 leading-normal max-w-md">
                         Build beautiful and easy-to-use app & web interfaces.

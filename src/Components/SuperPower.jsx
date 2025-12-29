@@ -19,7 +19,11 @@ const SuperpowerSection = () => {
         description="Learn about Framisty Design Institute — top-rated design institute in Ahmedabad offering hands-on training."
         url="https://framisty.com/superpower"
       />
+
+
       <section className="relative py-16 sm:py-20 text-white bg-black">
+
+
         {/* Gradient Bottom Border */}
         <div
           className="absolute bottom-0 left-0 w-full h-[2px]"
@@ -31,6 +35,11 @@ const SuperpowerSection = () => {
         <div className="w-full max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <Navbar />
 
+          
+
+            
+
+
           {/* Heading */}
           <div className="text-center mb-10 sm:mb-12 mt-6 sm:mt-8 px-2">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug">
@@ -39,9 +48,10 @@ const SuperpowerSection = () => {
               <span>{superpowerData.subheading}</span>
             </h2>
           </div>
+          
 
           {/* Cards */}
-          <div className="flex flex-col gap-8 sm:gap-10">
+          <div className="flex flex-col gap-8 sm:gap-10 mb-10">
             {superpowerData.cards.map((card) => (
               <div
                 key={card.id}
@@ -94,39 +104,80 @@ const SuperpowerSection = () => {
               </div>
             ))}
 
-            {/* Certificate Card */}
-            <div className=" rounded-2xl shadow-lg flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6 xl:gap-20 2xl:gap-29  p-4 sm:p-5 md:p-6 transition-transform duration-300  w-full max-w-[99rem]  mx-auto">
+          </div>
+
+
+          <div className=" rounded-2xl shadow-lg flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6 xl:gap-20 2xl:gap-29  p-4 sm:p-5 md:p-6 transition-transform duration-300  w-full max-w-[99rem]  mx-auto">
               
               {/* Image */}
               <div className="flex-1 flex justify-center h-full">
                 <div className="w-full max-w-[220px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[489px] 2xl:max-w-[520px] aspect-[7/4] border border-[#d1d5db] rounded-xl overflow-hidden flex items-center justify-center bg-[#0f0f0f]">
                   <img
-                    src={superpowerData.certificate.img}
+                    src={superpowerData.certificate1.img}
                     alt="Pixohype Certificate"
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
 
+
+
               <div className="flex-1 flex justify-center lg:justify-start text-center lg:text-left">
                 <div className="text-white">
                   {/* Title */}
-                  <h3 className="text-lg sm:text-xl md:text-3xl 2xl:text-3xl font-semibold text-[#94D84F] mb-4">
-                    {superpowerData.certificate.title}
-                  </h3>
+                  {/* <h3 className="text-lg sm:text-xl md:text-3xl 2xl:text-3xl font-semibold text-[#94D84F] mb-4">
+                    {superpowerData.certificate1.title}
+                  </h3> */}
 
                   {/* Points */}
-                  <ul className="text-sm  sm:text-lg  leading-snug md:text-sm md:font-medium md:w-[34rem] 2xl:text-[16px] xl:font-medium 2xl:w-[39rem] text-gray-200 list-decimal list-inside space-y-2">
-                    {superpowerData.certificate.points.map((point, index) => (
+                  <ul className="text-sm  sm:text-lg  leading-snug md:text-lg  md:font-medium md:w-[34rem] 2xl:text-[20px] xl:font-medium 2xl:w-[39rem] text-gray-200  list-inside space-y-2">
+                    {superpowerData.certificate1.points.map((point, index) => (
                       <li key={index}>{point}</li>
                     ))}
                   </ul>
                 </div>
               </div>
 
+              
+
+          </div>
+
+          
+          <div className=" rounded-2xl shadow-lg flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6 xl:gap-20 2xl:gap-29  p-4 sm:p-5 md:p-6 transition-transform duration-300  w-full max-w-[99rem]  mx-auto">
+            
+            
+
+            <div className="flex-1 flex justify-center lg:justify-start text-center lg:text-left">
+                <div className="text-white">
+                  {/* Title */}
+                  {/* <h3 className="text-lg sm:text-xl md:text-3xl 2xl:text-3xl font-semibold text-[#94D84F] mb-4">
+                    {superpowerData.certificate.title}
+                  </h3> */}
+
+                  {/* Points */}
+                  <ul className="text-sm  sm:text-lg  leading-snug md:text-lg md:font-medium md:w-[34rem] 2xl:text-[20px] xl:font-medium 2xl:w-[39rem] text-gray-200  list-inside space-y-2">
+                    {superpowerData.certificate.points.map((point, index) => (
+                      <li key={index}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+            </div>
+
+            {/* Image */}
+            <div className="flex-1 flex justify-center h-full">
+              <div className="w-full max-w-[220px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[489px] 2xl:max-w-[520px] aspect-[7/4] border border-[#d1d5db] rounded-xl overflow-hidden flex items-center justify-center bg-[#0f0f0f]">
+                <img
+                  src={superpowerData.certificate.img}
+                  alt="Pixohype Certificate"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
 
           </div>
+
+
+
         </div>
       </section>
     </>

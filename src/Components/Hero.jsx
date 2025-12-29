@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaWhatsapp, FaPhoneAlt, FaCommentDots, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { heroData, whatsappData2 } from "../DB/db";
@@ -8,6 +8,7 @@ import SeoMeta from "./SeoMeta";
 const Hero = () => {
 
   const [open,setOpen] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleToggle = () => {
     setOpen(!open);
@@ -22,6 +23,18 @@ const Hero = () => {
       window.open(btn.onClickLink, "_blank");
     }
   };
+
+  
+
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    setShowPopup(true);
+  }, 1000); 
+
+  return () => clearTimeout(timer);
+}, []);
+
+
 
 
   // const handleWhatsAppClick = () => {
@@ -50,6 +63,54 @@ const Hero = () => {
 
         {/* Gradient Overlay */}
         <div className="absolute bottom-0 left-0 w-full h-262 bg-gradient-to-t from-black to-transparent z-20"></div>
+
+        {/*  Hero PopUp  */}
+        {showPopup && (
+          <div className="absolute inset-0 z-30 flex items-center justify-end pointer-events-none">
+
+            <div
+              className="
+                pointer-events-auto
+                relative
+                mr-24 sm:mr-8 sm:mb-0 mb-20
+                w-[220px] sm:w-[300px] md:w-[220px]
+                bg-gradient-to-t from-[#ed365d] via-[#ed365d] to-[#ef8341]
+                text-white
+                rounded-xl
+                px-4 py-3
+                shadow-2xl
+                animate-slideInRightUltraSmooth
+            "
+          >
+              {/* CLOSE BUTTON (OUTER) */}
+              <button
+                onClick={() => setShowPopup(false)}
+                className="
+                  absolute
+                  -top-3 -right-3
+                  w-6 h-6
+                  rounded-full
+                  bg-white
+                  flex items-center justify-center
+                  shadow-md
+                  hover:scale-110
+                  transition
+                "
+                aria-label="Close popup"
+              >
+                <FaTimes className="text-[#F5614C] text-sm" />
+              </button>
+
+                {/* TEXT */}
+                <p className="text-[13px] sm:text-sm font-semibold leading-snug">
+                  Ahmedabad’s only design institute with internships and real industry learning.
+                </p>
+            </div>
+
+          </div>
+          
+        )}
+
 
         <h1
           className="

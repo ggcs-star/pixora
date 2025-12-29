@@ -1,6 +1,7 @@
 import axios from "axios";
 
-export const API_BASE = "http://10.23.252.211:8000";
+// export const API_BASE = "https://10.23.252.211:8000";
+export const API_BASE = "https://backend.framisty.com/public";
 
 export const api = axios.create({
     baseURL: API_BASE,

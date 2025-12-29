@@ -11,11 +11,13 @@ import Right from "../assets/Courses_Digital_Media_Icons/Right.svg";
 import DigitalMediaDesign from "../assets/Videos/Digital Media & Design.mp4";
 import DesignVideoEditing from "../assets/Videos/Design & Video Editing.mp4";
 import UiUx from "../assets/Videos/UIUX.mp4";
+import DesignVideoEditing1 from "../assets/Videos/Motion_Graphics.mp4"
 
 // Why-Choose-Us-2 Navbar
 import Startup from "../assets/Courses_Digital_Media_Icons/start-up.svg";
 import Flexible from "../assets/Courses_Digital_Media_Icons/Flexible.svg";
 import CertificateImage from "../assets/Courses_Digital_Media_Icons/Course_Completion_Certificate.png";
+import CertificateImage1 from "../assets/Courses_Digital_Media_Icons/Offcial_certificate.png";
 
 // Contact_Add Navbar section
 import Dial from "../assets/Courses_Digital_Media_Icons/Dial SVG.svg";
@@ -33,6 +35,12 @@ import PlacementSupport from "../assets/Mission/Placement-Support.png";
 
 // Contact Landing Page section
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa";
+
+
+// Mentor Image 
+import MentorImage from "../assets/Meet_Your_Mentor_Img/Group 30.png";
+
+
 
 // Navbar Section
 export const navbarData = {
@@ -121,7 +129,7 @@ export const aboutData = {
     {
       id: 1,
       title: "Diploma in",
-      highlight: "Digital Media & Design",
+      highlight: "Graphic Design (PixalCraft)",
       description:
         "Intensive studio-style training for branding, print & digital creatives",
       gradientFrom: "#FB2F5C",
@@ -134,8 +142,8 @@ export const aboutData = {
     },
     {
       id: 2,
-      title: "Advanced Diploma in",
-      highlight: "Design & Video Editing",
+      title: "Diploma in",
+      highlight: "Video Editing (FrameStory)",
       description:
         "Advanced design meets dynamic motion — craft, edit & animate like a pro.",
       gradientFrom: "#F9F97F",
@@ -148,8 +156,8 @@ export const aboutData = {
     },
     {
       id: 3,
-      title: "Diploma in",
-      highlight: "UI/UX Design",
+      title: "Diploma in UI/UX ",
+      highlight: "Design (Human Interface Lab)",
       description: "Build beautiful and easy-to-use app & web interfaces.",
       gradientFrom: "#E04FFF",
       gradientVia: "#FF6D8D",
@@ -160,6 +168,18 @@ export const aboutData = {
       btnColor: "#E958DD",
       inquiryLink: "https://forms.gle/odQmgVp3aCMPTfPH7",
     },
+    {
+      id: 4,
+      title: "Advanced Diploma in Design &",
+      highlight: "Video Editing (MotionVerse)",
+      description: "Build beautiful and easy-to-use app & web interfaces.",
+      gradientFrom: "#E04FFF",
+      gradientTo: "#FFA26B",
+      btnColor: "#E958DD",
+      video: DesignVideoEditing1,
+      slug: "Advanced-Diploma-in-Design-Video-Editing-MotionVerse",
+      inquiryLink: "https://forms.gle/odQmgVp3aCMPTfPH7",
+  },
   ],
 
   rightIcon: Right,
@@ -170,7 +190,7 @@ export const coursesData = [
   {
     id: 1,
     title: "Diploma in",
-    highlight: "Digital Media & Design",
+    highlight: "Graphic Design (Pixelcraft)",
     description:
       "Intensive studio-style training for branding, print & digital creatives",
     gradientFrom: "#FB2F5C",
@@ -183,8 +203,8 @@ export const coursesData = [
   },
   {
     id: 2,
-    title: "Advanced Diploma in",
-    highlight: "Design & Video Editing",
+    title: "Diploma in",
+    highlight: "Video Editing (FrameStory)",
     description:
       "Advanced design meets dynamic motion — craft, edit & animate like a pro.",
     gradientFrom: "#F9F97F",
@@ -197,8 +217,8 @@ export const coursesData = [
   },
   {
     id: 3,
-    title: "Diploma in",
-    highlight: "UI/UX Design",
+    title: "Diploma in UI/UX ",
+    highlight: "Design (Human Interface Lab)",
     description: "Build beautiful and easy-to-use app & web interfaces.",
     gradientFrom: "#E04FFF",
     gradientVia: "#FF6D8D",
@@ -207,6 +227,18 @@ export const coursesData = [
     video: UiUx,
     slug: "advance-program-in-digital-media-creation",
     btnColor: "#E958DD",
+    inquiryLink: "https://forms.gle/odQmgVp3aCMPTfPH7",
+  },
+  {
+    id: 4,
+    title: "Advanced Diploma in Design &",
+    highlight: "Video Editing (MotionVerse)",
+    description: "Build beautiful and easy-to-use app & web interfaces.",
+    gradientFrom: "#2a3486",
+    gradientTo: "#6cc7bc",
+    btnColor: "#6cc7bc",
+    video: DesignVideoEditing1,
+    slug: "Advanced-Diploma-in-Design-Video-Editing-MotionVerse",
     inquiryLink: "https://forms.gle/odQmgVp3aCMPTfPH7",
   },
 ];
@@ -373,6 +405,7 @@ export const formFields = {
       { value: "UI/UX", text: "UI/UX" },
       { value: "Graphic Design", text: "Graphic Design" },
       { value: "Video Editing", text: "Video Editing" },
+      { value: "Motion Graphics", text: "Motion Graphics" },
     ],
   },
   textarea: { label: "Message (Optional)", placeholder: "Write here..." },
@@ -461,6 +494,53 @@ export const aboutData2 = {
   ],
 };
 
+
+// Meet My Mentor - Landing Page Section
+// export const mentorData = {
+//   title: "Meet Your Mentor",
+//   description: [
+//     "He has spent over a decade inside the world he teaches.",
+//     "His journey began in classrooms, helping students unlock creative tools and curious minds. For three years, he worked as an educational trainer. Then his path moved into the IT industry, where he spent more than ten years working on real client projects, tight deadlines, feedback loops, revisions, and everything in between. ",
+//     "Through those years, he noticed something important: many students finish courses knowing the software, but not creative decision making. "
+//   ],
+//   title1:[
+//     "They know the tools, yet still struggle with questions like:",
+//   ],
+//   highlights: [
+    
+//     "When should I use this technique?",
+//     "How do I build strong concepts, not just designs?",
+//     "How do I talk to clients and deliver work with confidence?",
+//   ],
+//   description1: [
+//     "This gap inspired Framisty Design Institute.",
+//     "Here, learning is practical and industry-focused. Students work with real workflows, real challenges, and internships that prepare them for real-life projects.",
+//     "His promise as a mentor is simple:  ",
+//     "Guide students honestly, share what truly happens in the industry, and help them grow into confident creative professionals who are ready for the world outside the classroom."
+//   ],
+//   image: MentorImage 
+// };
+
+export const mentorData = {
+  title: "Meet Your Mentor",
+  image: MentorImage ,
+
+  description: [
+    "He has spent over a decade inside the world he teaches.",
+    "His journey began in classrooms, helping students unlock creative tools and curious minds. For 3 years, he worked as an educational trainer.",
+    "Then his path moved into the IT industry, where he spent more than 10 years working on real client projects, tight deadlines, feedback loops, revisions, and everything in between.",
+    "Through those years, he noticed something important: many students finish courses knowing the software, but not creative decision making."
+  ],
+
+  promise:
+    "Guide students honestly, share what truly happens in the industry, and help them grow into confident creative professionals who are ready for the world outside the classroom."
+};
+
+
+
+
+
+
 // Mission Section Landing Page
 export const missionData = {
   heading: "Our Mission is Simple",
@@ -505,8 +585,8 @@ export const superpowerData = {
   cards: [
     {
       id: 1,
-      title: "Diploma in",
-      highlight: "Digital Media & Design",
+      title: "Diploma In ",
+      highlight: "Graphic Design (Pixelcraft)",
       description:
         "Intensive studio-style training for branding, print & digital creatives",
       gradientFrom: "#FB2F5C",
@@ -517,8 +597,8 @@ export const superpowerData = {
     },
     {
       id: 2,
-      title: "Advanced Diploma in",
-      highlight: "Design & Video Editing",
+      title: "Diploma In",
+      highlight: "Video Editing (Framestory)",
       description:
         "Advanced design meets dynamic motion — craft, edit & animate like a pro.",
       gradientFrom: "#F9F97F",
@@ -529,8 +609,8 @@ export const superpowerData = {
     },
     {
       id: 3,
-      title: "Diploma in ",
-      highlight: "UI/UX Design",
+      title: "Diploma in UI/UX  ",
+      highlight: "Design (Human Interface Lab)",
       description: "Build beautiful and easy-to-use app & web interfaces.",
       gradientFrom: "#E04FFF",
       gradientTo: "#FFA26B",
@@ -538,15 +618,31 @@ export const superpowerData = {
       video: UiUx,
       slug: "advance-program-in-digital-media-creation",
     },
+    {
+      id: 4,
+      title: "Advanced Diploma in Design & ",
+      highlight: "Video Editing (MotionVerse)",
+      description: "Build beautiful and easy-to-use app & web interfaces.",
+      gradientFrom: "#2a3486",
+      gradientTo: "#6cc7bc",
+      btnColor: "#6cc7bc",
+      video: DesignVideoEditing1,
+      slug: "Advanced-Diploma-in-Design-Video-Editing-MotionVerse",
+    },
   ],
   certificate: {
     title: "Once You Complete the Course",
     points: [
-      "Receive a Certificate of Completion recognizing your achievement.",
-      "Get a Free Internship Letter as proof of your practical learning and project work.",
-      "Showcase your skills and experience to potential employers.",
+      "You’ll also receive a Internship Letter, showcasing your hands-on experience and real-world design skills - a great addition to your professional portfolio or résumé.",
     ],
     img: CertificateImage,
+  },
+  certificate1: {
+    title: "Once You Complete the Course",
+    points: [
+      "Get an official Certificate on Completion to recognize your learning and achievements, showcase your skills with confidence, and add real value to your professional portfolio.",
+    ],
+    img: CertificateImage1,
   },
 };
 

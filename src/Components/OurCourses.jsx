@@ -76,7 +76,7 @@ const OurCourses = () => {
                 >
                   {/* Left Section */}
                   <div className="flex-1 text-center md:text-center lg:text-left">
-                    <h3 className="text-2xl md:text-3xl font-semibold mb-3 text-white">
+                    <h3 className="text-2xl md:text-xl font-semibold mb-3 text-white">
                       {card.title} <br />
                       <span
                         className="bg-clip-text text-transparent font-semibold"
@@ -125,10 +125,10 @@ const OurCourses = () => {
             </div>
         </div>
         
-        <div
+        {/* <div
           className="
             rounded-2xl shadow-lg 
-            flex flex-col lg:flex-row       /* tablet (md) tak column, lg+ par row */
+            flex flex-col lg:flex-row       
             justify-between items-center 
             gap-4 lg:gap-6 xl:gap-8 2xl:gap-29  
             p-4 sm:p-5 md:p-6 
@@ -136,7 +136,7 @@ const OurCourses = () => {
             w-full max-w-[69rem] mx-auto
           "
         >
-        {/* Image */}
+        
         <div className="flex-1 flex justify-center h-full">
           <div className="w-full max-w-[220px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[359px] 2xl:max-w-[520px] aspect-[7/4] border border-[#d1d5db] rounded-xl overflow-hidden flex items-center justify-center bg-[#0f0f0f]">
             <img
@@ -147,7 +147,7 @@ const OurCourses = () => {
           </div>
         </div>
 
-        {/* Text */}
+        
         <div
           className="
             flex-1 flex justify-center lg:justify-start 
@@ -155,12 +155,12 @@ const OurCourses = () => {
           "
         >
           <div className="text-white">
-            {/* Title */}
+            
             <h3 className="text-lg sm:text-xl md:text-3xl 2xl:text-3xl font-semibold text-[#94D84F] mb-4">
               {superpowerData.certificate.title}
             </h3>
 
-            {/* Points */}
+            
             <ul className="text-sm sm:text-lg leading-snug md:text-sm md:font-medium md:w-[34rem] 2xl:text-[16px] xl:font-medium 2xl:w-[39rem] text-gray-200 list-decimal list-inside space-y-2">
               {superpowerData.certificate.points.map((point, index) => (
                 <li key={index}>{point}</li>
@@ -168,10 +168,83 @@ const OurCourses = () => {
             </ul>
           </div>
         </div>
+      </div> */}
+
+      <div className=" rounded-2xl shadow-lg flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6 xl:gap-10 2xl:gap-1  p-4 sm:p-5 md:p-6  transition-transform duration-300  w-full max-w-[99rem]  mx-auto">
+                    
+            {/* Image */}
+            <div className="flex-1 flex justify-center h-full">
+              <div className="w-full max-w-[220px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[489px] 2xl:max-w-[520px] aspect-[7/4] border border-[#d1d5db] rounded-xl overflow-hidden flex items-center justify-center bg-[#0f0f0f]">
+                <img
+                  src={superpowerData.certificate1.img}
+                  alt="Pixohype Certificate"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+
+
+            <div className="flex-1 flex justify-center lg:justify-start text-center lg:text-left">
+              <div className="text-white">
+                {/* Title */}
+                {/* <h3 className="text-lg sm:text-xl md:text-3xl 2xl:text-3xl font-semibold text-[#94D84F] mb-4">
+                  {superpowerData.certificate1.title}
+                </h3> */}
+
+                {/* Points */}
+                <ul className="text-sm  sm:text-lg  leading-snug md:text-lg  md:font-medium md:w-[34rem] 2xl:text-[20px] xl:font-medium 2xl:w-[39rem] text-gray-200  list-inside space-y-2">
+                  {superpowerData.certificate1.points.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+
+              
       </div>
+      
+                    
+      
+                  </div>
+      
+                {/* Certificate Card */}
+                <div className=" rounded-2xl shadow-lg flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6 xl:gap-1 2xl:gap-1 p-4 sm:p-5 md:p-16 2xl:p-40 transition-transform duration-300  w-full max-w-[99rem]  mx-auto">
+                  
+                  
+      
+                  <div className="flex-1 flex justify-center lg:justify-start text-center lg:text-left">
+                    <div className="text-white">
+                      {/* Title */}
+                      {/* <h3 className="text-lg sm:text-xl md:text-3xl 2xl:text-3xl font-semibold text-[#94D84F] mb-4">
+                        {superpowerData.certificate.title}
+                      </h3> */}
+      
+                      {/* Points */}
+                      <ul className="text-sm  sm:text-lg  leading-snug md:text-lg md:font-medium md:w-[34rem] 2xl:text-[20px] xl:font-medium 2xl:w-[39rem] text-gray-200  list-inside space-y-2">
+                        {superpowerData.certificate.points.map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+      
+                  {/* Image */}
+                  <div className="flex-1 flex justify-center h-full">
+                    <div className="w-full max-w-[220px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[489px] 2xl:max-w-[520px] aspect-[7/4] border border-[#d1d5db] rounded-xl overflow-hidden flex items-center justify-center bg-[#0f0f0f]">
+                      <img
+                        src={superpowerData.certificate.img}
+                        alt="Pixohype Certificate"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+      
+                </div>
 
         
       </section>
+
+      
 
       {/* Contact + Footer */}
       <section className="contact-section">
