@@ -159,7 +159,7 @@ const Why_Choose_Us_2 = () => {
 
           <h2 className="text-2xl sm:text-2xl font-bold text-white 2xl:text-4xl mb-5">Why Choose Us?</h2>
           <div className="w-full flex justify-center">
-            <div className="w-full max-w-4xl border border-[#2E2E2E] rounded-2xl">
+            <div className="w-full max-w-5xl border border-[#2E2E2E] rounded-2xl">
                   <table className="w-full text-left rounded-xl overflow-hidden font-poppins text-white">
                     <thead>
                         <tr className="bg-[#3F3F46] text-sm sm:text-base text-center">
@@ -188,7 +188,7 @@ const Why_Choose_Us_2 = () => {
                             <td className="py-3 px-4 border-r border-[#3F3F46]">
                                 {item.other}
                             </td>
-                            <td className="py-3 px-4">{item.pixora}</td>
+                            <td className="py-3 px-3">{item.pixora}</td>
                             </tr>
                         ))}
                     </tbody>

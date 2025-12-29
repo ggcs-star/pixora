@@ -273,7 +273,7 @@ export const featuresData = [
   {
     feature: "Trainer Experience",
     other: "Mostly academic",
-    pixora: "10+ years industry experience",
+    pixora: "10+ yrs industry experience (The Founder)",
   },
   {
     feature: "Batch Size",
