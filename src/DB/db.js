@@ -34,10 +34,10 @@ import Be from "../assets/Mission/Be.png";
 import PlacementSupport from "../assets/Mission/Placement-Support.png";
 
 // Contact Landing Page section
-import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 
-// Mentor Image 
+// Mentor Floating Icons With Mentor BG Image
 import MentorImage from "../assets/Meet_Your_Mentor_Img/Kavan_Img.png";
 import Ai from "../assets/Meet_Your_Mentor_Img/AI.svg";
 import Ps from "../assets/Meet_Your_Mentor_Img/PS.svg";
