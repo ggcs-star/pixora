@@ -214,16 +214,27 @@ const About2 = () => {
                     <div className="space-y-8 max-w-[560px] text-left">
           
                       {/* TITLE */}
-                      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight font-[poppins] ">
+                      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight font-[poppins] bg-gradient-to-r from-[#F7BB97] via-[#F988AE] to-[#F988AE]
+                         bg-clip-text text-transparent ">
                         {mentorData.title}
                       </h2>
           
                       {/* DESCRIPTION */}
                       <div className="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
                         {mentorData.description.map((text, index) => (
-                          <p key={index}>{text}</p>
+                          <p key={index}>
+                            {index === 0 ? (
+                              <>
+                                <span className="font-bold text-white">Kavan Suthar</span>
+                                {text.replace("Kavan Suthar", "")}
+                              </>
+                            ) : (
+                              text
+                            )}
+                          </p>
                         ))}
                       </div>
+
           
                       {/* STATS */}
                       <div className="flex flex-wrap gap-4 pt-4">
@@ -241,7 +252,7 @@ const About2 = () => {
                           </p>
                         </div>
           
-                        <div className="bg-[#1c1523] px-6 py-4 rounded-xl text-center min-w-[200px]">
+                        <div className="bg-[#1c1523] px-6 py-4 rounded-xl text-center min-w-[160px]">
                           <p className="text-sm font-semibold">
                             Projects that go
                             <br />

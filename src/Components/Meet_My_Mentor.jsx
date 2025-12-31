@@ -161,11 +161,26 @@ const MeetMyMentor = () => {
             </h2>
 
             {/* DESCRIPTION */}
-            <div className="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
+            {/* <div className="space-y-4 text-gray-300 text-sm sm:text-base  leading-relaxed">
               {mentorData.description.map((text, index) => (
                 <p key={index}>{text}</p>
               ))}
+            </div> */}
+            <div className="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
+              {mentorData.description.map((text, index) => (
+                <p key={index}>
+                  {index === 0 ? (
+                    <>
+                      <span className="font-bold text-white">Kavan Suthar</span>
+                      {text.replace("Kavan Suthar", "")}
+                    </>
+                  ) : (
+                    text
+                  )}
+                </p>
+              ))}
             </div>
+
 
             {/* STATS */}
             <div className="flex flex-wrap gap-4 pt-4">

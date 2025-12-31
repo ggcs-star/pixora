@@ -531,7 +531,7 @@ export const mentorData = {
   image: MentorImage,
 
   description: [
-    "He has spent over a decade inside the world he teaches.",
+    "Kavan Suthar has spent over a decade inside the world he teaches.",
     "His journey began in classrooms, helping students unlock creative tools and curious minds. For 3 years, he worked as an educational trainer.",
     "Then his path moved into the IT industry, where he spent more than 10 years working on real client projects, tight deadlines, feedback loops, revisions, and everything in between.",
     "Through those years, he noticed something important: many students finish courses knowing the software, but not creative decision making."
